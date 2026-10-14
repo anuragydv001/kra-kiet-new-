@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @page { size: landscape; margin: 1cm; }
+    body { font-family: Helvetica, sans-serif; font-size: 10pt; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid black; padding: 5px; text-align: left; }
+    th { background-color: #d9e1f2; font-weight: bold; }
+    .header { text-align: center; font-size: 14pt; font-weight: bold; margin-bottom: 20px; }
+</style>
+</head>
+<body>
+    <div class="header">KRA 12: Awards received for research/innovations</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Academic Year</th>
+                <th>Award ID</th>
+                <th>Name of Award</th>
+                <th>Award Category</th>
+                <th>Recipient Name</th>
+                <th>Faculty/Student</th>
+                <th>Awarding Org</th>
+                <th>Level</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for award in awards_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ cycle }}</td>
+                <td>{{ award.award_id }}</td>
+                <td>{{ award.name_of_award }}</td>
+                <td>{{ award.award_category }}</td>
+                <td>{{ award.recipient }}</td>
+                <td>{{ award.recipient_type }}</td>
+                <td>{{ award.awarding_org }}</td>
+                <td>{{ award.level }}</td>
+                <td>{{ award.date }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="10" style="text-align: center;">No awards added.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

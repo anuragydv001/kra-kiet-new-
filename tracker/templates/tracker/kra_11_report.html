@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @page {
+        size: A4;
+        margin: 1cm;
+        @frame header {
+            -pdf-frame-content: header_content;
+            top: 1cm;
+        }
+        @frame footer {
+            -pdf-frame-content: footer_content;
+            bottom: 1cm;
+        }
+    }
+    body {
+        font-family: Helvetica, sans-serif;
+        font-size: 11pt;
+    }
+    .header { text-align: center; font-weight: bold; }
+    .header h2 { margin-bottom: 0; }
+    .header h3 { margin-top: 5px; font-size: 12pt; }
+    
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; }
+    th, td { border: 1px solid black; padding: 6px; text-align: left; }
+    th { background-color: #f2f2f2; font-weight: bold; }
+    
+    .section-title { font-weight: bold; margin-top: 20px; font-size: 12pt; }
+    .signature-block { width: 100%; margin-top: 50px; }
+    .signature-box { width: 50%; float: left; }
+</style>
+</head>
+<body>
+
+    <div id="header_content" class="header">
+        <h2 style="color: #2b5c8f;">KIET GROUP OF INSTITUTIONS</h2>
+        <h3>Delhi-NCR, Ghaziabad</h3>
+        <hr>
+    </div>
+    
+    <div id="footer_content" style="text-align: right; font-size: 9pt;">
+        Page <pdf:pagenumber> of <pdf:pagecount>
+    </div>
+
+    <div class="header" style="margin-top: 30px;">
+        <h3>Report on Bridge Courses Conducted</h3>
+    </div>
+
+    <table>
+        <tr>
+            <td style="width: 40%;"><b>Name of the Department</b></td>
+            <td>{{ department }}</td>
+        </tr>
+        <tr>
+            <td><b>Academic Session / Year/ Semester</b></td>
+            <td>{{ cycle }}</td>
+        </tr>
+        <tr>
+            <td><b>Faculty Coordinator(s)</b></td>
+            <td>{{ faculty_coordinator }}</td>
+        </tr>
+    </table>
+
+    <div class="section-title">Detail of Bridge Courses:</div>
+    <table>
+        <thead>
+            <tr>
+                <th>S. No.</th>
+                <th>Course Name</th>
+                <th>Duration (Hours)</th>
+                <th>Mode Offline/ Online/ Hybrid</th>
+                <th>Resource Person</th>
+                <th>No. of Students Enrolled</th>
+                <th>No. of Students Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in bridge_courses %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ course.course_name }}</td>
+                <td>{{ course.duration }}</td>
+                <td>{{ course.mode }}</td>
+                <td>{{ course.resource_person }}</td>
+                <td>{{ course.enrolled }}</td>
+                <td>{{ course.completed }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="7" style="text-align: center;">No courses added yet.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="section-title">Course Content/Syllabus</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Module</th>
+                <th>Topic</th>
+                <th>No. of Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for content in course_content %}
+            <tr>
+                <td>{{ content.module }}</td>
+                <td>{{ content.topic }}</td>
+                <td>{{ content.hours }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="3" style="text-align: center;">No content added yet.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="section-title">Assessment and Certification</div>
+    <table>
+        <tr><td style="width: 40%;"><b>Assessment Method</b></td><td>{{ assessment_method }}</td></tr>
+        <tr><td><b>Minimum Attendance Requirement</b></td><td>{{ attendance_req }}</td></tr>
+        <tr><td><b>Passing/Completion Criteria</b></td><td>{{ passing_criteria }}</td></tr>
+        <tr><td><b>Certificate Issuing Authority</b></td><td>{{ cert_authority }}</td></tr>
+        <tr><td><b>Number of Certificates Issued</b></td><td>{{ num_certs_issued }}</td></tr>
+    </table>
+
+    <div class="section-title">OUTCOME AND IMPACT</div>
+    <p><b>Suggested Impact Indicators:</b></p>
+    <p>{{ impact_indicators|linebreaks }}</p>
+    
+    <br/>
+    <p><b>Student Feedback Summary - Overall Feedback Score:</b> {{ feedback_score }} / 5</p>
+    <p><b>Major Suggestions Received:</b></p>
+    <p>{{ major_suggestions|linebreaks }}</p>
+
+    <div class="signature-block">
+        <div class="signature-box">
+            <b>Prepared By:</b><br><br>
+            Name: ______________________<br><br>
+            Designation: ________________<br><br>
+            Signature: __________________<br><br>
+            Date: _______________________
+        </div>
+        <div class="signature-box">
+            <b>Approved By:</b><br><br>
+            Name: ______________________<br><br>
+            Designation: ________________<br><br>
+            Signature: __________________<br><br>
+            Date: _______________________
+        </div>
+    </div>
+
+</body>
+</html>

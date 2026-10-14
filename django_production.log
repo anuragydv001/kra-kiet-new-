@@ -1,0 +1,314 @@
+Watching for file changes with StatReloader
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+- Broken pipe from ('127.0.0.1', 55618)
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+- Broken pipe from ('127.0.0.1', 55635)
+"GET /api/core/kra-metrics/ HTTP/1.1" 200 10061
+- Broken pipe from ('127.0.0.1', 55637)
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+D:\KIET-KRA--main\kra_tracker_backend\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\KIET-KRA--main\kra_tracker_backend\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\KIET-KRA--main\tracker\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\KIET-KRA--main\tracker\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\KIET-KRA--main\tracker\urls.py changed, reloading.
+Watching for file changes with StatReloader
+<style> block 1: Ignoring CSS properties xhtml2pdf does not implement: border-collapse
+Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\KIET-KRA--main\.venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "D:\KIET-KRA--main\.venv\Lib\site-packages\django\utils\deprecation.py", line 441, in __call__
+    response = self.process_request(request)
+  File "D:\KIET-KRA--main\.venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "D:\KIET-KRA--main\.venv\Lib\site-packages\django\http\request.py", line 210, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+D:\KIET-KRA--main\kra_tracker_backend\settings.py changed, reloading.
+Watching for file changes with StatReloader
+<style> block 1: Ignoring CSS properties xhtml2pdf does not implement: border-collapse
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/achievements/upsert/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/achievements/upsert/
+"POST /api/tracker/achievements/upsert/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/export-vac-pdf/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/export-vac-pdf/
+"POST /api/tracker/export-vac-pdf/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/evidence-file/upload/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/evidence-file/upload/
+"POST /api/tracker/evidence-file/upload/ HTTP/1.1" 403 58
+Forbidden: /api/tracker/evidence-file/upload/
+"POST /api/tracker/evidence-file/upload/ HTTP/1.1" 403 58
+Forbidden: /api/tracker/evidence-file/upload/
+"POST /api/tracker/evidence-file/upload/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/tracker/export-vac-pdf/
+"POST /api/tracker/export-vac-pdf/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/tracker/export-vac-pdf/
+"POST /api/tracker/export-vac-pdf/ HTTP/1.1" 403 58
+Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4307
+- Broken pipe from ('127.0.0.1', 63886)
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/export-vac-pdf/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/export-vac-pdf/
+"POST /api/tracker/export-vac-pdf/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/export-vac-docx/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/export-vac-docx/
+"POST /api/tracker/export-vac-docx/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/achievements/upsert/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/achievements/upsert/
+"POST /api/tracker/achievements/upsert/ HTTP/1.1" 403 58
+Forbidden: /api/tracker/export-vac-pdf/
+"POST /api/tracker/export-vac-pdf/ HTTP/1.1" 403 58
+Forbidden: /api/tracker/export-vac-docx/
+"POST /api/tracker/export-vac-docx/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+D:\KIET-KRA--main\tracker\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\KIET-KRA--main\tracker\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\KIET-KRA--main\tracker\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/export-kra7-pdf/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/export-kra7-pdf/
+"POST /api/tracker/export-kra7-pdf/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/evidence-file/upload/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/evidence-file/upload/
+"POST /api/tracker/evidence-file/upload/ HTTP/1.1" 403 58
+Forbidden: /api/tracker/achievements/upsert/
+"POST /api/tracker/achievements/upsert/ HTTP/1.1" 403 58
+Watching for file changes with StatReloader
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+- Broken pipe from ('127.0.0.1', 61257)
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"OPTIONS /api/accounts/csrf/ HTTP/1.1" 200 0
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"GET /api/accounts/csrf/ HTTP/1.1" 200 80
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+Forbidden: /api/accounts/me/
+"OPTIONS /api/accounts/me/ HTTP/1.1" 200 0
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+Forbidden: /api/accounts/me/
+"GET /api/accounts/me/ HTTP/1.1" 403 58
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+"OPTIONS /api/core/kra-metrics/ HTTP/1.1" 200 0
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+Forbidden: /api/core/kra-metrics/
+"GET /api/core/kra-metrics/ HTTP/1.1" 403 58
+"OPTIONS /api/tracker/evidence-file/upload/ HTTP/1.1" 200 0
+Forbidden: /api/tracker/evidence-file/upload/
+"POST /api/tracker/evidence-file/upload/ HTTP/1.1" 403 58
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4307
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3583
+"GET /static/admin/css/base.css HTTP/1.1" 200 24538
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 15025
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2814
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1708
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3208
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2925

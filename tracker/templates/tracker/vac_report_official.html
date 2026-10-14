@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>REPORT ON VALUE ADDED COURSES, ADD-ON COURSES AND MOOCs</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.4cm 1.4cm 1.4cm;
+    @bottom-right {
+      content: "Page " counter(page) " | " counter(pages);
+      font-size: 9pt;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #666;
+    }
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    line-height: 1.35;
+    color: #111;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .header-table {
+    width: 100%;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #00236f;
+    padding-bottom: 6px;
+  }
+
+  .inst-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #00236f;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .inst-sub {
+    font-size: 7.5pt;
+    color: #444;
+    margin-top: 2px;
+  }
+
+  .doc-title-box {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  .doc-title {
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+  }
+
+  .doc-inst-name {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+
+  table.bordered-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+
+  table.bordered-table th, table.bordered-table td {
+    border: 1px solid #111;
+    padding: 4px 6px;
+    font-size: 8.5pt;
+  }
+
+  table.bordered-table th {
+    background-color: #f2f4f8;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .section-heading {
+    font-size: 9.5pt;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: #000;
+  }
+
+  .box-container {
+    border: 1px solid #111;
+    padding: 6px 8px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+  }
+
+  ul.clean-list {
+    margin: 3px 0 6px 18px;
+    padding: 0;
+  }
+
+  ul.clean-list li {
+    margin-bottom: 3px;
+    font-size: 8.5pt;
+  }
+
+  ol.clean-ol {
+    margin: 3px 0 6px 18px;
+    padding: 0;
+  }
+
+  ol.clean-ol li {
+    margin-bottom: 2px;
+    font-size: 8.5pt;
+  }
+
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  .bold { font-weight: bold; }
+
+  .sig-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+  }
+
+  .sig-table td {
+    border: 1px solid #111;
+    padding: 8px;
+    vertical-align: top;
+    width: 50%;
+    font-size: 8.5pt;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <table class="header-table">
+    <tr>
+      <td style="width: 20%; vertical-align: middle; text-align: left;">
+        <span style="font-size: 20pt; font-weight: bold; color: #00236f; font-family: serif;">KIET</span>
+      </td>
+      <td style="width: 80%; text-align: right; vertical-align: middle;">
+        <div class="inst-title">KIET UNIVERSITY</div>
+        <div class="inst-sub">DELHI-NCR, INDIA &bull; (Under Section 3 of the UGC Act, 1956)</div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="doc-title-box">
+    <div class="doc-title">REPORT ON VALUE ADDED COURSES, ADD-ON COURSES AND MOOCs</div>
+    <div class="doc-inst-name">KIET Deemed to be University, Ghaziabad</div>
+  </div>
+
+  <table class="bordered-table">
+    <tr>
+      <td style="width: 35%; font-weight: bold;">Name of the Department</td>
+      <td style="width: 65%;">{{ department|default:"—" }}</td>
+    </tr>
+    <tr>
+      <td style="font-weight: bold;">Academic Session / Year/ Semester</td>
+      <td>{{ academicSession|default:"" }} {% if semester %}&bull; {{ semester }}{% endif %}</td>
+    </tr>
+    <tr>
+      <td style="font-weight: bold;">Faculty Coordinator(s)</td>
+      <td>{{ facultyCoordinator|default:"—" }}</td>
+    </tr>
+    <tr>
+      <td style="font-weight: bold;">Head of the Department</td>
+      <td>{{ hodName|default:"—" }}</td>
+    </tr>
+  </table>
+
+  <div class="box-container">
+    <p style="margin: 0 0 5px 0;"><strong>Introduction - </strong>KIET Deemed to be University is committed to providing students with opportunities for holistic development and enhancing their employability, professional competencies, interdisciplinary knowledge and lifelong learning skills.</p>
+    <p style="margin: 0 0 5px 0;">In addition to the prescribed curriculum, the University offers <strong>Value Added Courses (VACs), Add-on Courses and Massive Open Online Courses (MOOCs)</strong> to provide students with exposure to emerging technologies, industry practices, professional skills, interdisciplinary learning and global learning resources.</p>
+    <p style="margin: 0 0 3px 0;">&bull; These courses are designed to complement the regular curriculum and contribute to the development of graduate attributes, employability skills and overall student development</p>
+  </div>
+
+  <div class="box-container" style="margin-top: 4px;">
+    <p style="margin: 0 0 4px 0;"><strong>Objectives of Value Added Courses - </strong>The major objectives of the Value Added Courses are:</p>
+    <ol class="clean-ol" style="margin-top: 2px; margin-bottom: 2px;">
+      <li>To supplement the knowledge acquired through the regular curriculum.</li>
+      <li>To provide exposure to emerging technologies and industry practices.</li>
+      <li>To develop employability and professional skills.</li>
+      <li>To promote interdisciplinary and experiential learning.</li>
+    </ol>
+  </div>
+
+  <div class="section-heading">Detail of Value Added Courses</div>
+  <table class="bordered-table">
+    <thead>
+      <tr>
+        <th style="width: 7%;">S. No.</th>
+        <th style="width: 25%;">Course Name</th>
+        <th style="width: 12%;">Duration (Hours)</th>
+        <th style="width: 13%;">Mode Offline/ Online/ Hybrid</th>
+        <th style="width: 19%;">Resource Person/ Agency</th>
+        <th style="width: 12%;">No. of Students Enrolled</th>
+        <th style="width: 12%;">No. of Students Completed</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for c in courses %}
+      <tr>
+        <td class="text-center">{{ forloop.counter }}</td>
+        <td>{{ c.courseName|default:"" }}</td>
+        <td class="text-center">{{ c.durationHours|default:"" }}</td>
+        <td class="text-center">{{ c.mode|default:"Offline" }}</td>
+        <td>{{ c.resourcePerson|default:"" }}</td>
+        <td class="text-center">{{ c.enrolled|default:"" }}</td>
+        <td class="text-center">{{ c.completed|default:"" }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td class="text-center">1</td>
+        <td></td>
+        <td class="text-center"></td>
+        <td class="text-center"></td>
+        <td></td>
+        <td class="text-center"></td>
+        <td class="text-center"></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="section-heading">Course Content/Syllabus</div>
+  <table class="bordered-table">
+    <thead>
+      <tr>
+        <th style="width: 15%;">Module</th>
+        <th style="width: 65%;">Topic</th>
+        <th style="width: 20%;">No. of Hours</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in syllabus %}
+      <tr>
+        <td class="text-center">{{ s.module|default:forloop.counter }}</td>
+        <td>{{ s.topic|default:"" }}</td>
+        <td class="text-center">{{ s.hours|default:"" }}</td>
+      </tr>
+      {% empty %}
+      <tr><td class="text-center">1</td><td></td><td></td></tr>
+      <tr><td class="text-center">2</td><td></td><td></td></tr>
+      <tr><td class="text-center">3</td><td></td><td></td></tr>
+      <tr><td class="text-center">4</td><td></td><td></td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page-break"></div>
+
+  <table class="header-table">
+    <tr>
+      <td style="width: 20%; vertical-align: middle; text-align: left;">
+        <span style="font-size: 20pt; font-weight: bold; color: #00236f; font-family: serif;">KIET</span>
+      </td>
+      <td style="width: 80%; text-align: right; vertical-align: middle;">
+        <div class="inst-title">KIET UNIVERSITY</div>
+        <div class="inst-sub">DELHI-NCR, INDIA &bull; (Under Section 3 of the UGC Act, 1956)</div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-heading" style="margin-top: 6px;">Learning Outcomes: - After successful completion of the course, students will be able to:</div>
+  {% if learningOutcomes %}
+  <ul class="clean-list">
+    {% for lo in learningOutcomes %}
+      {% if lo %}<li>{{ lo }}</li>{% endif %}
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p style="margin: 4px 0 10px 0; font-size: 8.5pt;">&bull; ____________________________________________________________________________<br>&bull; ____________________________________________________________________________</p>
+  {% endif %}
+
+  <div class="section-heading">Assessment and Certification</div>
+  <table class="bordered-table">
+    <thead>
+      <tr>
+        <th style="width: 45%; text-align: left;">Particular</th>
+        <th style="width: 55%; text-align: left;">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="bold">Assessment Method</td>
+        <td>{{ assessment.method|default:"—" }}</td>
+      </tr>
+      <tr>
+        <td class="bold">Minimum Attendance Requirement</td>
+        <td>{{ assessment.minAttendance|default:"—" }}</td>
+      </tr>
+      <tr>
+        <td class="bold">Passing/Completion Criteria</td>
+        <td>{{ assessment.passingCriteria|default:"—" }}</td>
+      </tr>
+      <tr>
+        <td class="bold">Certificate Issuing Authority</td>
+        <td>{{ assessment.issuingAuthority|default:"—" }}</td>
+      </tr>
+      <tr>
+        <td class="bold">Number of Certificates Issued</td>
+        <td>{{ assessment.certificatesIssued|default:"—" }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-heading" style="margin-top: 10px;">OUTCOME AND IMPACT</div>
+  <div style="font-weight: bold; font-size: 9pt; margin-bottom: 4px;">Suggested Impact Indicators</div>
+  <ul class="clean-list">
+    <li>&bull; Improvement in technical/professional skills{% if outcomeAndImpact.technicalSkills %}: <strong>{{ outcomeAndImpact.technicalSkills }}</strong>{% endif %}</li>
+    <li>&bull; Improvement in employability skills{% if outcomeAndImpact.employability %}: <strong>{{ outcomeAndImpact.employability }}</strong>{% endif %}</li>
+    <li>&bull; Industry certification obtained{% if outcomeAndImpact.industryCert %}: <strong>{{ outcomeAndImpact.industryCert }}</strong>{% endif %}</li>
+    <li>&bull; Successful completion/certification rate{% if outcomeAndImpact.completionRate %}: <strong>{{ outcomeAndImpact.completionRate }}</strong>{% endif %}</li>
+    <li>&bull; Internship opportunities{% if outcomeAndImpact.internships %}: <strong>{{ outcomeAndImpact.internships }}</strong>{% endif %}</li>
+    <li>&bull; Placement support/outcomes{% if outcomeAndImpact.placementSupport %}: <strong>{{ outcomeAndImpact.placementSupport }}</strong>{% endif %}</li>
+    <li>&bull; Student projects developed{% if outcomeAndImpact.studentProjects %}: <strong>{{ outcomeAndImpact.studentProjects }}</strong>{% endif %}</li>
+    <li>&bull; Participation in competitions/hackathons{% if outcomeAndImpact.hackathons %}: <strong>{{ outcomeAndImpact.hackathons }}</strong>{% endif %}</li>
+  </ul>
+
+  <div style="margin-top: 10px; font-weight: bold; font-size: 9pt;">
+    Student Feedback Summary: - Overall Feedback Score: <u>&nbsp;{{ feedback.score|default:"____" }}&nbsp;</u> / 5
+  </div>
+  <div style="font-weight: bold; font-size: 8.5pt; margin-top: 6px; margin-bottom: 4px;">Major Suggestions Received:</div>
+  <ol class="clean-ol" style="margin-top: 2px;">
+    {% for sug in feedback.suggestions %}
+      <li>{{ sug|default:"____________________________________________________________________" }}</li>
+    {% empty %}
+      <li>____________________________________________________________________</li>
+      <li>____________________________________________________________________</li>
+      <li>____________________________________________________________________</li>
+    {% endfor %}
+  </ol>
+
+  <table class="sig-table">
+    <tr>
+      <td>
+        <strong>Prepared By:</strong><br>
+        Name: {{ preparedBy.name|default:"______________________________" }}<br>
+        Designation: {{ preparedBy.designation|default:"________________________" }}<br>
+        Signature: {{ preparedBy.signature|default:"___________________________" }}<br>
+        Date: {{ preparedBy.date|default:"_______________________________" }}
+      </td>
+      <td>
+        <strong>Approved By:</strong><br>
+        Name: {{ approvedBy.name|default:"______________________________" }}<br>
+        Designation: {{ approvedBy.designation|default:"________________________" }}<br>
+        Signature: {{ approvedBy.signature|default:"___________________________" }}<br>
+        Date: {{ approvedBy.date|default:"_______________________________" }}
+      </td>
+    </tr>
+  </table>
+
+
+  <!-- ==================== PAGE 3 ==================== -->
+  <div class="page-break"></div>
+
+  <table class="header-table">
+    <tr>
+      <td style="width: 20%; vertical-align: middle; text-align: left;">
+        <span style="font-size: 20pt; font-weight: bold; color: #00236f; font-family: serif;">KIET</span>
+      </td>
+      <td style="width: 80%; text-align: right; vertical-align: middle;">
+        <div class="inst-title">KIET UNIVERSITY</div>
+        <div class="inst-sub">DELHI-NCR, INDIA &bull; (Under Section 3 of the UGC Act, 1956)</div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-heading" style="margin-top: 10px; font-size: 10pt;">
+    List of Supporting Documents: - The following documents shall be maintained for each VAC/Add-on Course:
+  </div>
+
+  <ul class="clean-list" style="margin-top: 10px; line-height: 1.6;">
+    {% for doc_title in supportingDocsList %}
+    <li>
+      &bull; {{ doc_title }}
+      {% for att in supportingDocuments %}
+        {% if att.title == doc_title and att.attached %}
+          <span style="color: #0b6623; font-weight: bold; font-size: 8pt;"> [Attached: {{ att.fileName }}]</span>
+        {% endif %}
+      {% endfor %}
+    </li>
+    {% endfor %}
+  </ul>
+
+</body>
+</html>

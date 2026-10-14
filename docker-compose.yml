@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=kra_db
+      - POSTGRES_USER=kra_user
+      - POSTGRES_PASSWORD=kra_password
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  api:
+    build: .
+    command: gunicorn kra_tracker_backend.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=kra_tracker_backend.settings
+      - DATABASE_URL=postgres://kra_user:kra_password@db:5432/kra_db
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+
+  celery_worker:
+    build: .
+    command: celery -A kra_tracker_backend worker -l info
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=kra_tracker_backend.settings
+      - DATABASE_URL=postgres://kra_user:kra_password@db:5432/kra_db
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+      - api
+
+  celery_beat:
+    build: .
+    command: celery -A kra_tracker_backend beat -l info
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=kra_tracker_backend.settings
+      - DATABASE_URL=postgres://kra_user:kra_password@db:5432/kra_db
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+      - api
+
+volumes:
+  postgres_data:
