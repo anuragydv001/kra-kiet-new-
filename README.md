@@ -1,2 +1,3 @@
-# KIET-KRA-
-Making a Web page for uploding and adding KRA's
+# KIET-KRA (kra-kiet-new-)
+Faculty KRA tracking and universal report generation system for KIET.
+
