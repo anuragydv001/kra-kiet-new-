@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>KRA Report — KIET Group of Institutions</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.4cm 1.4cm 1.4cm;
+    @bottom-right {
+      content: "Page " counter(page) " | " counter(pages);
+      font-size: 9pt;
+      font-family: 'Times New Roman', Times, serif;
+      color: #666;
+    }
+  }
+  body { font-family: 'Times New Roman', Times, serif; font-size: 9.5pt; line-height: 1.35; color: #111; }
+  .page-break { page-break-before: always; }
+  .header-box {
+    text-align: center;
+    border-bottom: 2.5pt solid #622423;
+    padding-bottom: 4pt;
+    margin-bottom: 10pt;
+  }
+  .logo-img {
+    height: 52pt;
+    margin: 0 auto;
+    display: block;
+  }
+  .inst-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #000;
+    margin-top: 4pt;
+    margin-bottom: 0;
+  }
+  .inst-sub {
+    font-size: 8.5pt;
+    color: #444;
+    margin-top: 1pt;
+    margin-bottom: 0;
+  }
+  .doc-title-box { text-align: center; margin-top: 8px; margin-bottom: 12px; }
+  .doc-title { font-size: 12pt; font-weight: bold; text-decoration: underline; margin: 0; }
+  .kra-badge { font-size: 10pt; font-weight: bold; color: #622423; margin-top: 3px; }
+  table.bordered-table { width: 100%; border-collapse: collapse; margin-top: 6px; margin-bottom: 8px; }
+  table.bordered-table th, table.bordered-table td { border: 0.75pt solid #111; padding: 4px 6px; font-size: 9pt; }
+  table.bordered-table th { background-color: #f7f7f7; font-weight: bold; text-align: center; }
+  .section-heading { font-size: 9.5pt; font-weight: bold; color: #622423; background: #fdf5f5; border-left: 3pt solid #622423; padding: 4px 8px; margin: 12px 0 6px 0; }
+  .info-row { display: flex; gap: 16px; margin-bottom: 6px; }
+  .info-item { flex: 1; }
+  .info-label { font-size: 8pt; color: #555; font-weight: bold; }
+  .info-value { font-size: 9pt; border-bottom: 1px solid #999; padding-bottom: 1px; min-height: 14px; }
+  .sig-table { width: 100%; margin-top: 40px; border-collapse: collapse; }
+  .sig-table td { width: 50%; padding: 6px; vertical-align: top; font-size: 9pt; }
+  .sig-line { border-top: 1px solid #333; margin-top: 30px; width: 80%; }
+  .rating-table td { text-align: center; }
+  .highlight-row { background: #fafafa; }
+</style>
+</head>
+<body>
+
+<div class="header-box">
+  {% if logo_b64 %}
+  <img src="data:image/png;base64,{{ logo_b64 }}" class="logo-img" alt="KIET Crest" />
+  {% endif %}
+  <p class="inst-title">Krishna Institute of Engineering &amp; Technology (KIET) (Deemed to be university)</p>
+  <p class="inst-sub">Delhi-NCR, Ghaziabad — ISO 9001:2015 Certified</p>
+</div>
+
+<div class="doc-title-box">
+  <p class="doc-title">{{ report_title|upper }}</p>
+  <p class="kra-badge">KRA {{ kra_number }}</p>
+</div>
+
+<table class="bordered-table">
+  <tr>
+    <td style="width:40%;"><b>Name of School/Department</b></td>
+    <td>{{ department }}</td>
+    <td style="width:25%;"><b>Academic Session</b></td>
+    <td>{{ academic_year }}</td>
+  </tr>
+  <tr>
+    <td><b>Reporting Period (Bi-Monthly Cycle)</b></td>
+    <td>{{ cycle }}</td>
+    <td><b>Date of Report</b></td>
+    <td>{{ report_date }}</td>
+  </tr>
+  <tr>
+    <td><b>Report Prepared By</b></td>
+    <td>{{ prepared_by }}</td>
+    <td><b>Designation</b></td>
+    <td>{{ designation }}</td>
+  </tr>
+</table>
+
+{% if rows %}
+<div class="section-heading">{{ table_title|default:"Activity Details" }}</div>
+<table class="bordered-table">
+  <thead>
+    <tr>
+      {% for col in columns %}<th>{{ col }}</th>{% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr class="{% if forloop.counter|divisibleby:2 %}highlight-row{% endif %}">
+      {% for cell in row %}<td>{{ cell }}</td>{% endfor %}
+    </tr>
+    {% empty %}
+    <tr><td colspan="{{ columns|length }}" style="text-align:center; color:#999;">No data entered.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+{% if survey_questions %}
+<div class="section-heading">Feedback Survey Responses</div>
+<table class="bordered-table rating-table">
+  <thead>
+    <tr>
+      <th style="width:5%;">S.No.</th>
+      <th style="width:55%;">Survey Statement</th>
+      {% for opt in rating_options %}<th style="width:8%;">{{ opt }}</th>{% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for q in survey_questions %}
+    <tr class="{% if forloop.counter|divisibleby:2 %}highlight-row{% endif %}">
+      <td style="text-align:center;">{{ forloop.counter }}</td>
+      <td>{{ q.statement }}</td>
+      {% for opt in rating_options %}
+      <td style="text-align:center;">{% if q.rating == opt %}✓{% else %}&nbsp;{% endif %}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% if overall_satisfaction %}
+<p style="margin-top:8px; font-size:9pt;"><b>Overall Satisfaction Rating:</b> {{ overall_satisfaction }} / 10</p>
+{% endif %}
+{% if suggestions %}
+<p style="font-size:9pt;"><b>Suggestions / Comments:</b></p>
+<p style="font-size:8.5pt; padding: 4px 8px; border-left: 3px solid #622423; background: #fafafa;">{{ suggestions }}</p>
+{% endif %}
+{% endif %}
+
+{% if extra_sections %}
+{% for section in extra_sections %}
+<div class="section-heading">{{ section.title }}</div>
+<table class="bordered-table">
+  {% for item in section.items %}
+  <tr>
+    <td style="width:40%; font-weight:bold;">{{ item.label }}</td>
+    <td>{{ item.value }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endfor %}
+{% endif %}
+
+{% if narrative %}
+<div class="section-heading">Outcome and Impact</div>
+<p style="font-size:8.5pt; padding:4px 8px; text-align:justify;">{{ narrative }}</p>
+{% endif %}
+
+<table class="sig-table">
+  <tr>
+    <td>
+      <b>Prepared By:</b>
+      <div class="sig-line"></div>
+      <p style="margin:4px 0 0 0;">{{ prepared_by }}<br>{{ designation }}<br>Date: {{ report_date }}</p>
+    </td>
+    <td>
+      <b>Reviewed &amp; Approved By:</b>
+      <div class="sig-line"></div>
+      <p style="margin:4px 0 0 0;">HOD / Dean<br>{{ department }}<br>Date: _______________</p>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

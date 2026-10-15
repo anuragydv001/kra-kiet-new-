@@ -12,3 +12,9 @@ db.sqlite3
 # Environments
 .env
 .env.*
+
+# Logs & temporary files
+*.log
+django_production.log
+scratch/
+

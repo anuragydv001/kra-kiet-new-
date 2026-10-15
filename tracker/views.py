@@ -192,6 +192,7 @@ import io
 
 from tracker.vac_reports import generate_vac_docx, SUPPORTING_DOCS_LIST
 from tracker.kra7_reports import generate_kra7_docx
+from tracker.kra_reports import generate_kra_docx, build_generic_ctx, get_kra_title, KRA_TITLES
 from .models import UploadedEvidenceFile
 from core.models import KRAMetric
 
@@ -203,16 +204,19 @@ class TemplatePreviewView(APIView):
         json_data = request.data
         achievement_id = json_data.get('achievement_id')
         kra_code = str(json_data.get('kraCode', 'KRA 1')).upper()
+        clean_num = ''.join(filter(str.isdigit, kra_code)) or '1'
         
         # Determine the HTML template based on the kra_code
-        if '1' in kra_code and not any(x in kra_code for x in ['10', '11', '12', '13', '14', '15', '16', '17', '18', '19']):
+        if clean_num == '1':
             template_path = 'tracker/vac_report_official.html'
-        elif kra_code == 'KRA-11':
+        elif clean_num == '7':
+            template_path = 'tracker/kra_7_report_official.html'
+        elif clean_num == '11':
             template_path = 'tracker/kra_11_report.html'
-        elif kra_code == 'KRA-12':
+        elif clean_num == '12':
             template_path = 'tracker/kra_12_template.html'
         else:
-            template_path = 'tracker/vac_report_official.html'
+            template_path = 'tracker/kra_generic_report.html'
         
         if achievement_id:
             try:
@@ -391,6 +395,69 @@ class KRA7ReportExportPDFView(APIView):
         buffer.seek(0)
         dept_slug = department.replace(' ', '_') if department else 'KRA7'
         filename = f"KRA_7_Curriculum_Feedback_Faculty_{dept_slug}.pdf"
+        response = HttpResponse(buffer.getvalue(), content_type='application/pdf')
+        response['Content-Disposition'] = f'attachment; filename="{filename}"'
+        return response
+
+class KRAReportExportDOCXView(APIView):
+    """ Unified endpoint to download official editable Word (.docx) document for any KRA. """
+    permission_classes = [AllowAny]
+
+    def post(self, request, *args, **kwargs):
+        data = request.data
+        raw_code = str(data.get('kraNumber') or data.get('kraCode', '') or '').strip()
+        kra_num = ''.join(filter(str.isdigit, raw_code)) or raw_code
+        user = request.user if (request.user and request.user.is_authenticated) else None
+        if not data.get('department'):
+            data['department'] = user.department.name if user and getattr(user, 'department', None) else 'CSE'
+        if not data.get('facultyName') and not data.get('coordinatorName') and not data.get('respondentName'):
+            name = (user.get_full_name() or user.username) if user else 'Faculty Coordinator'
+            data['facultyName'] = name
+            data['coordinatorName'] = name
+            data['respondentName'] = name
+
+        try:
+            docx_bytes = generate_kra_docx(kra_num, data)
+        except Exception as e:
+            return Response({'error': f'DOCX generation failed: {str(e)}'}, status=status.HTTP_400_BAD_REQUEST)
+
+        dept_slug = (data.get('department') or 'KRA').replace(' ', '_')
+        title = get_kra_title(kra_num).replace(' ', '_').replace('/', '_')
+        filename = f"KIET_KRA_{kra_num}_{title}_{dept_slug}.docx"
+        response = HttpResponse(
+            docx_bytes,
+            content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        )
+        response['Content-Disposition'] = f'attachment; filename="{filename}"'
+        return response
+
+class KRAReportExportPDFView(APIView):
+    """ Unified endpoint to download official PDF document for any KRA using kra_generic_report.html. """
+    permission_classes = [AllowAny]
+
+    def post(self, request, *args, **kwargs):
+        data = request.data
+        raw_code = str(data.get('kraNumber') or data.get('kraCode', '') or '').strip()
+        kra_num = ''.join(filter(str.isdigit, raw_code)) or raw_code
+        user = request.user if (request.user and request.user.is_authenticated) else None
+        if not data.get('department'):
+            data['department'] = user.department.name if user and getattr(user, 'department', None) else 'CSE'
+        if not data.get('preparedBy'):
+            data['preparedBy'] = (user.get_full_name() or user.username) if user else 'Faculty Coordinator'
+
+        title = data.get('reportTitle') or get_kra_title(kra_num)
+        context = build_generic_ctx(data, kra_num, title)
+
+        html_string = render_to_string('tracker/kra_generic_report.html', context)
+        buffer = io.BytesIO()
+        pisa_status = pisa.CreatePDF(html_string, dest=buffer)
+
+        if pisa_status.err:
+            return Response({'error': 'PDF generation failed'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        buffer.seek(0)
+        dept_slug = (data.get('department') or 'KRA').replace(' ', '_')
+        filename = f"KIET_KRA_{kra_num}_{dept_slug}.pdf"
         response = HttpResponse(buffer.getvalue(), content_type='application/pdf')
         response['Content-Disposition'] = f'attachment; filename="{filename}"'
         return response

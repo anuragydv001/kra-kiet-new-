@@ -10,6 +10,8 @@ from .views import (
     VACReportExportDOCXView,
     KRA7ReportExportPDFView,
     KRA7ReportExportDOCXView,
+    KRAReportExportPDFView,
+    KRAReportExportDOCXView,
     EvidenceFileUploadView
 )
 
@@ -26,6 +28,8 @@ urlpatterns = [
     path('export-vac-docx/', VACReportExportDOCXView.as_view(), name='export-vac-docx'),
     path('export-kra7-pdf/', KRA7ReportExportPDFView.as_view(), name='export-kra7-pdf'),
     path('export-kra7-docx/', KRA7ReportExportDOCXView.as_view(), name='export-kra7-docx'),
+    path('export-kra-pdf/', KRAReportExportPDFView.as_view(), name='export-kra-pdf'),
+    path('export-kra-docx/', KRAReportExportDOCXView.as_view(), name='export-kra-docx'),
     path('evidence-file/upload/', EvidenceFileUploadView.as_view(), name='evidence-file-upload'),
     path('evidence-file/<int:pk>/', EvidenceFileUploadView.as_view(), name='evidence-file-delete'),
 ]
