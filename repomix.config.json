@@ -1,0 +1,68 @@
+{
+  "output": {
+    "filePath": "repomix-output.xml",
+    "style": "xml",
+    "parsableStyle": true,
+    "fileSummary": true,
+    "directoryStructure": true,
+    "removeComments": true,
+    "removeEmptyLines": true,
+    "truncateBase64": true,
+    "instructionFilePath": "REPOMIX_INSTRUCTIONS.md",
+    "topFiles": [
+      "AI_PROJECT_CONTEXT.md",
+      "REPOMIX_INSTRUCTIONS.md",
+      "README.md",
+      "tracker/models.py",
+      "core/models.py",
+      "accounts/models.py",
+      "tracker/urls.py",
+      "tracker/views.py",
+      "tracker/kra_reports.py",
+      "frontend/context/AppContext.tsx",
+      "frontend/types/kra.ts",
+      "frontend/components/kra-forms/KRAFormRegistry.tsx",
+      "frontend/components/kra-forms/KRATemplateDataForm.tsx",
+      "frontend/components/kra-forms/OfficialKRAReportPreview.tsx"
+    ]
+  },
+  "include": [
+    "**/*"
+  ],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      "**/node_modules/**",
+      "**/.next/**",
+      "**/.venv/**",
+      "**/venv/**",
+      "**/__pycache__/**",
+      "*.sqlite3",
+      "*.log",
+      "django_production.log",
+      "scratch/**",
+      "kra-refrences/**",
+      "frontend/public/images/**",
+      "frontend/config/kietLogo.ts",
+      "tracker/templates/tracker/kra_7_report_official.html",
+      "**/*.png",
+      "**/*.jpg",
+      "**/*.jpeg",
+      "**/*.ico",
+      "**/*.gif",
+      "**/*.svg",
+      "**/*.pdf",
+      "**/*.docx",
+      "**/*.xlsx",
+      "package-lock.json",
+      "skills-lock.json",
+      "tsconfig.tsbuildinfo",
+      ".agents/**",
+      "repomix-output.xml"
+    ]
+  },
+  "security": {
+    "enableSecurityCheck": false
+  }
+}

@@ -1,0 +1,4697 @@
+<repomix><file_summary>This file is a merged representation of a subset of the codebase, containing specifically included files and files not matching ignore patterns, combined into a single document by Repomix.
+The content has been processed where comments have been removed, empty lines have been removed, content has been formatted for parsing in xml style, content has been compressed (code blocks are separated by ⋮---- delimiter), security check has been disabled.<purpose>This file contains a packed representation of a subset of the repository&apos;s contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.</purpose><file_format>The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Repository files, each consisting of:
+  - File path as an attribute
+  - Full contents of the file</file_format><usage_guidelines>- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+- Pay special attention to the Repository Instruction. These contain important context and guidelines specific to this project.</usage_guidelines><notes>- Some files may have been excluded based on .gitignore rules and Repomix&apos;s configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: **/*
+- Files matching these patterns are excluded: **/node_modules/**, **/.next/**, **/.venv/**, **/venv/**, **/__pycache__/**, *.sqlite3, *.log, django_production.log, scratch/**, kra-refrences/**, frontend/public/images/**, frontend/config/kietLogo.ts, tracker/templates/tracker/kra_7_report_official.html, **/*.png, **/*.jpg, **/*.jpeg, **/*.ico, **/*.gif, **/*.svg, **/*.pdf, **/*.docx, **/*.xlsx, package-lock.json, skills-lock.json, tsconfig.tsbuildinfo, .agents/**, repomix-output.xml
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Code comments have been removed from supported file types
+- Empty lines have been removed from all files
+- Content has been formatted for parsing in xml style
+- Content has been compressed - code blocks are separated by ⋮---- delimiter
+- Long base64 data strings (e.g., data:image/png;base64,...) have been truncated to reduce token count
+- Security check has been disabled - content may contain sensitive information
+- Files are sorted by Git change count (files with more changes are at the bottom)</notes></file_summary><directory_structure>accounts/
+  migrations/
+    __init__.py
+    0001_initial.py
+    0002_alter_user_role.py
+    0003_alter_user_department_auditlog.py
+  __init__.py
+  admin.py
+  apps.py
+  models.py
+  permissions.py
+  serializers.py
+  tests.py
+  urls.py
+  views.py
+core/
+  management/
+    commands/
+      __init__.py
+      seed_all.py
+      seed_kras.py
+    __init__.py
+  migrations/
+    __init__.py
+    0001_initial.py
+    0002_department_faculty_strength_and_more.py
+    0003_extratarget.py
+  __init__.py
+  admin.py
+  apps.py
+  models.py
+  serializers.py
+  tests.py
+  urls.py
+  views.py
+frontend/
+  app/
+    globals.css
+    layout.tsx
+    page.tsx
+  components/
+    dean/
+      DeanDashboard.tsx
+      DeanMyKRAs.tsx
+      DeanSubmissions.tsx
+      SplitTemplateEditor.tsx
+      TemplateFillEditor.tsx
+    kra-forms/
+      KRA12Form.tsx
+      KRA1Form.tsx
+      KRAActivityReportForm.tsx
+      KRAFeedbackSurveyForm.tsx
+      KRAFormRegistry.tsx
+      KRATemplateDataForm.tsx
+      MultiEvidenceUploader.tsx
+      OfficialKRA7ReportPreview.tsx
+      OfficialKRAReportPreview.tsx
+      OfficialVACReportPreview.tsx
+      SmartKRA7ReportBuilder.tsx
+      SmartUniversalReportBuilder.tsx
+      SmartVACReportBuilder.tsx
+      types.ts
+    modals/
+      AddKRAModal.tsx
+      ReturnKRAModal.tsx
+      TimelineModal.tsx
+    vc/
+      VCAnnouncements.tsx
+      VCDashboard.tsx
+      VCKRAManagement.tsx
+      VCKRAPreviewModal.tsx
+      VCReports.tsx
+      VCSubmissions.tsx
+    DualLoginView.tsx
+    DynamicKRAForm.tsx
+    NotificationPanel.tsx
+    ReportPreviewModal.tsx
+    SharedHeader.tsx
+    SharedSidebar.tsx
+    Toast.tsx
+    TopRoleSwitcher.tsx
+  config/
+    kraRefs.ts
+  context/
+    AppContext.tsx
+  services/
+    api.ts
+    kra7ReportService.ts
+    kraReportService.ts
+    kraSchemas.ts
+    kraUtils.ts
+    reportDoc.ts
+    seedData.ts
+    vacReportService.ts
+  types/
+    kra.ts
+  .gitignore
+  AGENTS.md
+  CLAUDE.md
+  eslint.config.mjs
+  next.config.ts
+  package.json
+  postcss.config.mjs
+  README.md
+  tsconfig.json
+kra_tracker_backend/
+  __init__.py
+  asgi.py
+  celery.py
+  settings.py
+  urls.py
+  wsgi.py
+Project details/
+  architecture.md
+  Decisions.md
+  design.md
+  Flow.md
+  memory.md
+  PRD.md
+  Rules.md
+  task.md
+tracker/
+  migrations/
+    __init__.py
+    0001_initial.py
+    0002_remove_evidence_file_remove_evidence_uploaded_at_and_more.py
+    0003_achievement_review_comment_alter_achievement_status_and_more.py
+    0004_achievement_custom_data.py
+    0005_uploadedevidencefile.py
+  templates/
+    tracker/
+      kra_11_report.html
+      kra_12_template.html
+      kra_generic_report.html
+      vac_report_official.html
+  __init__.py
+  admin.py
+  apps.py
+  kra_reports.py
+  kra7_reports.py
+  models.py
+  pdf_templates.py
+  serializers.py
+  tasks.py
+  tests.py
+  urls.py
+  vac_reports.py
+  views.py
+.dockerignore
+.gitignore
+AI_PROJECT_CONTEXT.md
+desktop.ini
+docker-compose.yml
+Dockerfile
+manage.py
+README.md
+REPOMIX_INSTRUCTIONS.md
+repomix.config.json
+requirements.txt</directory_structure><files>This section contains the contents of the repository&apos;s files.<file path="AI_PROJECT_CONTEXT.md"># KIET KRA Tracker &amp; Universal Accreditation Reporting System
+## Master Architecture, Domain Model &amp; Developer Playbook
+
+&gt; **Target Audience:** AI Coding Agents, Pair-Programmers, and Developers.  
+&gt; **Mission:** Provide an instant 360° mental model of the entire repository without consuming token budgets or requiring full-repo analysis.
+
+---
+
+## 1. Executive System Overview
+
+### 1.1 Problem Statement &amp; Solution
+- **Previous State:** KIET University historically tracked ~50 Key Result Areas (KRAs) across 13 engineering/management departments using a complex, error-prone manual Excel workbook. This caused data inconsistencies, dead Google Drive evidence links, unscaled target thresholds, and manual delays during NBA/NAAC accreditation audits.
+- **Current System:** A decoupled, role-based, intranet-hosted web application that:
+  1. Standardizes all ~50 KRAs into structured data schemas and archetypes.
+  2. Dynamically scales numeric targets based on department faculty/student strength (`target = base_target * faculty_strength`).
+  3. Enforces strict bi-monthly submission cycles with automated email reminders and administrative deadline exceptions.
+  4. Provides a split-screen live report builder for faculty/deans with pixel-perfect letterhead preview.
+  5. Houses a dual-engine document exporter: produces official, audit-ready **PDFs** (via `xhtml2pdf`) and editable **Word (.docx)** documents (via `python-docx`).
+  6. Stores raw JSON evidence and file attachments locally on the college intranet for 100% data privacy.
+
+### 1.2 Technology Stack
+| Layer | Technologies |
+|---|---|
+| **Frontend** | Next.js 14+ (App Router), React 18, TypeScript, Tailwind CSS, Axios, Lucide Icons |
+| **Backend** | Python 3.12, Django 5+, Django REST Framework (DRF), Celery 5+, Redis (Broker), SQLite (local dev) / PostgreSQL (production) |
+| **Document Generation** | `python-docx` (Word engine), `xhtml2pdf` + HTML templates (PDF engine) |
+| **Authentication** | Session &amp; Token-based DRF Authentication with CSRF protection |
+| **Infrastructure** | Docker, Docker Compose, Nginx (local campus intranet deployment) |
+
+---
+
+## 2. Directory Layout &amp; Key Locations
+
+```text
+d:\KIET-KRA--main/
+├── core/                           # Institution master definitions
+│   ├── models.py                   # Department, KRAMetric, AccreditationCriteria, ExtraTarget
+│   ├── views.py &amp; urls.py          # Master data REST endpoints
+│   └── management/commands/        # Seed scripts (e.g. init_kra_data)
+├── accounts/                       # Identity &amp; Role Management
+│   ├── models.py                   # User (AbstractUser), AuditLog
+│   └── views.py &amp; urls.py          # Login, Logout, CSRF, Current User (&apos;/me/&apos;)
+├── tracker/                        # Core KRA Tracking, Cycles &amp; Reporting Engine
+│   ├── models.py                   # BiMonthlyCycle, CycleException, Achievement, Evidence, UploadedEvidenceFile
+│   ├── views.py                    # AchievementViewSet, stats, export views, file upload handlers
+│   ├── urls.py                     # Tracker routing endpoints
+│   ├── kra_reports.py              # Word (.docx) styling and report builder engine for all KRAs
+│   └── templates/tracker/          # HTML report templates (e.g. kra_generic_report.html)
+├── frontend/                       # Next.js App Router Client
+│   ├── app/                        # App router pages (page.tsx, layout.tsx, globals.css)
+│   ├── components/
+│   │   ├── SharedHeader.tsx        # Top institution header with user profile &amp; role switcher
+│   │   ├── SharedSidebar.tsx       # Department / Menu navigation
+│   │   ├── TopRoleSwitcher.tsx     # Role switch dropdown (Dean ↔ Super Admin / VC)
+│   │   ├── dean/                   # Dean dashboard, submission lists, split editor
+│   │   │   ├── DeanDashboard.tsx   # Summary metric cards, cycle status, quick actions
+│   │   │   ├── DeanMyKRAs.tsx      # Filterable 50-KRA grid/table with criteria tags
+│   │   │   ├── SplitTemplateEditor.tsx # Interactive 50/50 split: Form on left, live Preview on right
+│   │   │   └── DeanSubmissions.tsx # History of submitted achievements &amp; statuses
+│   │   ├── vc/                     # Super Admin / Vice-Chancellor / IQAC views
+│   │   │   ├── VCDashboard.tsx     # Institution-wide performance analytics &amp; heatmaps
+│   │   │   ├── VCSubmissions.tsx   # Review queue to approve or reject submissions with feedback
+│   │   │   ├── VCKRAManagement.tsx # KRA metric configuration &amp; target management
+│   │   │   └── VCReports.tsx       # Aggregated institution NBA/NAAC audit report generator
+│   │   └── kra-forms/              # KRA Form &amp; Live Preview System
+│   │       ├── KRAFormRegistry.tsx # Route map dispatching KRA # to specialized or universal form
+│   │       ├── KRATemplateDataForm.tsx # Universal 10-archetype dynamic form builder
+│   │       ├── OfficialKRAReportPreview.tsx # Universal pixel-perfect letterhead preview
+│   │       ├── SmartVACReportBuilder.tsx # Specialized KRA 1 (Value Added Courses)
+│   │       ├── SmartKRA7ReportBuilder.tsx # Specialized KRA 7 (Curriculum Feedback)
+│   │       └── MultiEvidenceUploader.tsx # Local multi-file attachment uploader
+│   ├── context/
+│   │   └── AppContext.tsx          # Master client state (user, active cycle, achievements, cache)
+│   ├── services/
+│   │   ├── api.ts                  # Axios client configured with CSRF tokens and baseURL
+│   │   ├── kraReportService.ts     # PDF &amp; DOCX export API dispatchers
+│   │   └── seedData.ts             # Default fallback KRAs and initial institution data
+│   └── types/
+│       └── kra.ts                  # TypeScript types for KRAs, Achievements, Cycles, Submissions
+```
+
+---
+
+## 3. Data Models &amp; Relational Architecture
+
+### 3.1 `core` App Models
+1. **`Department`**
+   - `name`: string (e.g. `&apos;Computer Science &amp; Engineering&apos;`, `&apos;ECE&apos;`, `&apos;IT&apos;`).
+   - `faculty_strength`: integer (used as multiplier for dynamic KRA annual targets).
+   - `student_strength`: integer.
+2. **`AccreditationCriteria`**
+   - `nba_code`: string (e.g. `&apos;NBA Criterion 2&apos;`).
+   - `naac_code`: string (e.g. `&apos;NAAC Criterion 1.1&apos;`).
+3. **`KRAMetric`**
+   - `serial_number`: string (e.g. `&apos;KRA 1&apos;`, `&apos;KRA 7&apos;`).
+   - `activity_description`: text.
+   - `target_type`: `&apos;Numeric&apos;` | `&apos;Percentage&apos;` | `&apos;Boolean&apos;`.
+   - `annual_target`: string (number or descriptive threshold).
+   - `criteria`: ForeignKey → `AccreditationCriteria`.
+
+### 3.2 `accounts` App Models
+1. **`User` (extends `AbstractUser`)**
+   - `role`: `&apos;SUPER_ADMIN&apos;` (VC / Director / IQAC) or `&apos;DEAN&apos;` (Department Dean/HOD).
+   - `department`: OneToOneField → `Department` (null for Super Admin).
+2. **`AuditLog`**
+   - Tracks actions, user, timestamp, IP, before_state, after_state for compliance.
+
+### 3.3 `tracker` App Models
+1. **`BiMonthlyCycle`**
+   - `academic_year`: e.g. `&apos;2026-2027&apos;`.
+   - `cycle_name`: choices = `[&apos;JUL-AUG&apos;, &apos;SEP-OCT&apos;, &apos;NOV-DEC&apos;, &apos;JAN-FEB&apos;, &apos;MAR-APR&apos;, &apos;MAY-JUN&apos;]`.
+   - `deadline`: DateField (automated emails triggered 5 days prior).
+   - `is_active`: boolean.
+2. **`CycleException`**
+   - Allows reopening a cycle for a specific department beyond standard deadline.
+   - `cycle`, `department`, `open_until`, `reason`, `opened_by`.
+3. **`Achievement` (Central Entity)**
+   - `department`: FK → `Department`.
+   - `kra_metric`: FK → `KRAMetric`.
+   - `cycle`: FK → `BiMonthlyCycle`.
+   - `status`: `&apos;DRAFT&apos;` | `&apos;SUBMITTED&apos;` | `&apos;REJECTED&apos;` | `&apos;APPROVED&apos;`.
+   - `numeric_value`: DecimalField (for numeric metrics).
+   - `remarks`: text.
+   - `review_comment`: text (rejection reason or admin feedback).
+   - `custom_data`: **JSONField** (Stores the entire structured form state for the specific KRA template, including tabular rows, coordinator names, dates, surveys, etc.).
+   - `submitted_by`: FK → `User`.
+   - **`dynamic_target` property**: Calculates `base_target * department.faculty_strength` dynamically.
+4. **`UploadedEvidenceFile`**
+   - Attached to `Achievement`.
+   - `document_type`, `file`, `filename`, `file_size_kb`, `uploaded_at`, `uploaded_by`.
+
+---
+
+## 4. The KRA Form &amp; Universal Reporting System
+
+Every KRA submission requires structured evidence that can be previewed live and exported into official KIET University documents.
+
+### 4.1 The 10 Universal KRA Archetypes
+To avoid writing 50 separate forms, all ~50 KRAs map onto 10 standard archetypes handled by `KRATemplateDataForm.tsx` &amp; `SmartUniversalReportBuilder.tsx`:
+1. **VAC / Certificate Course** (Course title, duration, enrolled count, syllabus, coordinator).
+2. **Curriculum Feedback &amp; Action Taken** (Stakeholder surveys, percentage satisfaction, actions).
+3. **Research, Publications &amp; Patents** (Paper title, journal/conference, Scopus/SCI, DOI, authors).
+4. **Workshops, FDPs &amp; Conferences Organized** (Event title, dates, speakers, participants, budget).
+5. **Student Competitions &amp; Hackathons** (Event name, team members, prize won, level).
+6. **Industry MOUs &amp; Supported Labs** (Company name, validity, scope, outcomes).
+7. **Placements &amp; Higher Studies** (Student list, company, CTC, university admitted).
+8. **Exam Results &amp; Remedial Actions** (Subject, pass %, fail count, corrective plan).
+9. **Mentoring &amp; Student Counseling** (Mentee batches, sessions conducted, issues resolved).
+10. **Institutional Governance &amp; Committees** (Committee name, meetings held, key minutes).
+
+### 4.2 Split Screen Architecture
+- Located in `frontend/components/dean/SplitTemplateEditor.tsx`.
+- **Left Panel:** Interactive form (`KRATemplateDataForm`, `SmartVACReportBuilder`, or `SmartKRA7ReportBuilder`). As the user types, the state updates in real time.
+- **Right Panel:** Live Official Document Preview (`OfficialKRAReportPreview.tsx`). Matches the exact layout, maroon/blue KIET header, metadata tables, dynamic table rows, photo spaces, and sign-off blocks.
+- **Top Actions:**
+  - `Save Draft`: Persists state to `custom_data` with status `DRAFT`.
+  - `Submit for Approval`: Validates required fields, sets status `SUBMITTED`.
+  - `Export PDF`: Calls `/api/tracker/export-kra-pdf/`.
+  - `Export DOCX`: Calls `/api/tracker/export-kra-docx/`.
+
+---
+
+## 5. Dual-Engine Document Export Architecture
+
+Both PDF and Word exports match official KIET University document formatting:
+- **Header:** KIET University Logo, Department Name, Academic Year, Cycle, Date.
+- **Title Block:** Official KRA Code, Formal Accreditation Title, Prepared By, Designation.
+- **Summary Metadata Table:** Coordinator details, venue, dates, target vs achieved.
+- **Data Table:** Dynamic tabular rows matching the specific KRA (with shaded header rows).
+- **Survey / Rating Grid (if applicable):** Questions, Likert scales, averages.
+- **Action Taken / Narrative:** Descriptive paragraphs and remedial plans.
+- **Signatures Block:** Faculty Coordinator, Head of Department, Dean of Faculty.
+
+### 5.1 PDF Exporter (`tracker/views.py` + `xhtml2pdf`)
+- **Endpoint:** `POST /api/tracker/export-kra-pdf/`
+- **Template:** `tracker/templates/tracker/kra_generic_report.html`
+- **Mechanism:** Takes the submitted JSON data, renders HTML with embedded CSS, converts to PDF stream using `xhtml2pdf.pisa`.
+
+### 5.2 Word (.docx) Exporter (`tracker/kra_reports.py` + `python-docx`)
+- **Endpoint:** `POST /api/tracker/export-kra-docx/`
+- **Mechanism:** Builds a clean, editable Word `.docx` file programmatically:
+  - Header styling with KIET Blue (`RGBColor(0, 35, 111)`) and Maroon (`RGBColor(98, 36, 35)`).
+  - Shaded table headers with custom borders.
+  - Formatted paragraphs, bullets, and table widths.
+
+---
+
+## 6. Key REST API Endpoints
+
+| Method | Endpoint | Description | Permissions |
+|---|---|---|---|
+| `POST` | `/api/accounts/login/` | User authentication (username &amp; password) | Public |
+| `POST` | `/api/accounts/logout/` | User logout | Authenticated |
+| `GET` | `/api/accounts/me/` | Fetch current authenticated user &amp; role | Authenticated |
+| `GET` | `/api/accounts/csrf/` | Retrieve CSRF cookie | Public |
+| `GET` | `/api/core/departments/` | List all departments &amp; strengths | Authenticated |
+| `GET` | `/api/core/kra-metrics/` | List all 50 KRA definitions &amp; criteria | Authenticated |
+| `GET` | `/api/tracker/cycles/` | List academic cycles &amp; deadlines | Authenticated |
+| `GET` | `/api/tracker/achievements/` | List achievements (filtered by dept/cycle) | Authenticated |
+| `POST` | `/api/tracker/achievements/upsert/` | Create or update achievement with `custom_data` | Dean / Admin |
+| `GET` | `/api/tracker/dashboard-stats/` | Dashboard metrics, completion rates, totals | Authenticated |
+| `POST` | `/api/tracker/export-kra-pdf/` | Generate official PDF report for any KRA | AllowAny |
+| `POST` | `/api/tracker/export-kra-docx/` | Generate editable Word (.docx) for any KRA | AllowAny |
+| `POST` | `/api/tracker/evidence-file/upload/` | Upload supporting document/image | Dean / Admin |
+| `DELETE` | `/api/tracker/evidence-file/&lt;id&gt;/` | Delete uploaded file | Dean / Admin |
+
+---
+
+## 7. Developer Playbook: How to Make Changes
+
+### 7.1 How to Add or Modify a Specialized KRA Form
+1. Create or update the form component in `frontend/components/kra-forms/MyKRAForm.tsx`.
+2. Register the component in `frontend/components/kra-forms/KRAFormRegistry.tsx`:
+   ```tsx
+   import MyKRAForm from &apos;./MyKRAForm&apos;;
+   
+   // Inside getKRAFormComponent(kraNumber):
+   if (cleanNum === 15) {
+     return &lt;MyKRAForm {...props} /&gt;;
+   }
+   ```
+3. Ensure the form saves its data into `achievement.custom_data` via `onSave(formData)`.
+
+### 7.2 How to Adjust Report Layouts
+- **For PDF:** Edit `tracker/templates/tracker/kra_generic_report.html`. Note: `xhtml2pdf` supports standard CSS 2.1 (avoid flexbox/grid; use standard `&lt;table&gt;` layout).
+- **For DOCX:** Edit `tracker/kra_reports.py`. Check `generate_kra_report_docx(data)`.
+- **For React Live Preview:** Edit `frontend/components/kra-forms/OfficialKRAReportPreview.tsx`.
+
+### 7.3 How to Run Backend Locally
+```powershell
+# From root directory:
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+### 7.4 How to Run Frontend Locally
+```powershell
+cd frontend
+npm install
+npm run dev
+# Accessible at http://localhost:3000
+```
+
+### 7.5 Docker Full Stack Deployment
+```powershell
+docker-compose up --build -d
+```
+Runs:
+- `db`: PostgreSQL container
+- `redis`: Redis broker container
+- `backend`: Django web application (Gunicorn)
+- `celery`: Background worker for bi-monthly deadline reminders
+- `frontend`: Next.js production server
+- `nginx`: Reverse proxy routing requests on the local intranet</file><file path="REPOMIX_INSTRUCTIONS.md"># REPOMIX AI CODING INSTRUCTIONS
+## Project: KIET KRA Tracker &amp; Universal Accreditation Reporting System
+
+Welcome AI Agent. This file is an optimized Repomix bundle containing the core architecture, data schemas, backend endpoints, and frontend components for the KIET KRA Tracker.
+
+### 1. Essential Mental Model
+- This is an enterprise web app replacing an Excel sheet for 13 academic departments tracking ~50 Key Result Areas (KRAs) for NBA &amp; NAAC accreditation.
+- **Backend:** Django 5 + Django REST Framework + Celery/Redis. Base apps: `core`, `accounts`, `tracker`.
+- **Frontend:** Next.js 14+ (App Router), React 18, Tailwind CSS, TypeScript in `frontend/`.
+- **Key Models:**
+  - `KRAMetric` (`serial_number`, `annual_target`, `target_type`)
+  - `Department` (`faculty_strength`, `student_strength`)
+  - `BiMonthlyCycle` (`JUL-AUG`, `SEP-OCT`, etc., `deadline`)
+  - `Achievement` (links `department` + `kra_metric` + `cycle`; stores structured form data in `custom_data` JSONField)
+- **Target Scaling:** `dynamic_target = base_target * department.faculty_strength` (for Numeric KRAs).
+
+### 2. KRA Form &amp; Report Pipeline
+- Deans fill KRA reports using `SplitTemplateEditor.tsx` (left: form, right: live official preview `OfficialKRAReportPreview.tsx`).
+- Forms are routed via `frontend/components/kra-forms/KRAFormRegistry.tsx`.
+- Form state is stored directly in `achievement.custom_data`.
+- Dual Document Exporting:
+  - **PDF:** `POST /api/tracker/export-kra-pdf/` -&gt; `tracker/views.py` renders `tracker/templates/tracker/kra_generic_report.html` via `xhtml2pdf`.
+  - **Word DOCX:** `POST /api/tracker/export-kra-docx/` -&gt; `tracker/kra_reports.py` builds `.docx` via `python-docx`.
+
+### 3. Key Conventions for Modifications
+- When adding/modifying forms: update `frontend/components/kra-forms/` and register in `KRAFormRegistry.tsx`.
+- When updating report formats: maintain consistency between `OfficialKRAReportPreview.tsx`, `kra_generic_report.html`, and `kra_reports.py`.
+- Preserve existing comments and docstrings.
+- Always check `AI_PROJECT_CONTEXT.md` at the top of this bundle for deep architectural references.</file><file path="repomix.config.json">{
+  &quot;output&quot;: {
+    &quot;filePath&quot;: &quot;repomix-output.xml&quot;,
+    &quot;style&quot;: &quot;xml&quot;,
+    &quot;parsableStyle&quot;: true,
+    &quot;fileSummary&quot;: true,
+    &quot;directoryStructure&quot;: true,
+    &quot;removeComments&quot;: true,
+    &quot;removeEmptyLines&quot;: true,
+    &quot;truncateBase64&quot;: true,
+    &quot;instructionFilePath&quot;: &quot;REPOMIX_INSTRUCTIONS.md&quot;,
+    &quot;topFiles&quot;: [
+      &quot;AI_PROJECT_CONTEXT.md&quot;,
+      &quot;REPOMIX_INSTRUCTIONS.md&quot;,
+      &quot;README.md&quot;,
+      &quot;tracker/models.py&quot;,
+      &quot;core/models.py&quot;,
+      &quot;accounts/models.py&quot;,
+      &quot;tracker/urls.py&quot;,
+      &quot;tracker/views.py&quot;,
+      &quot;tracker/kra_reports.py&quot;,
+      &quot;frontend/context/AppContext.tsx&quot;,
+      &quot;frontend/types/kra.ts&quot;,
+      &quot;frontend/components/kra-forms/KRAFormRegistry.tsx&quot;,
+      &quot;frontend/components/kra-forms/KRATemplateDataForm.tsx&quot;,
+      &quot;frontend/components/kra-forms/OfficialKRAReportPreview.tsx&quot;
+    ]
+  },
+  &quot;include&quot;: [
+    &quot;**/*&quot;
+  ],
+  &quot;ignore&quot;: {
+    &quot;useGitignore&quot;: true,
+    &quot;useDefaultPatterns&quot;: true,
+    &quot;customPatterns&quot;: [
+      &quot;**/node_modules/**&quot;,
+      &quot;**/.next/**&quot;,
+      &quot;**/.venv/**&quot;,
+      &quot;**/venv/**&quot;,
+      &quot;**/__pycache__/**&quot;,
+      &quot;*.sqlite3&quot;,
+      &quot;*.log&quot;,
+      &quot;django_production.log&quot;,
+      &quot;scratch/**&quot;,
+      &quot;kra-refrences/**&quot;,
+      &quot;frontend/public/images/**&quot;,
+      &quot;frontend/config/kietLogo.ts&quot;,
+      &quot;tracker/templates/tracker/kra_7_report_official.html&quot;,
+      &quot;**/*.png&quot;,
+      &quot;**/*.jpg&quot;,
+      &quot;**/*.jpeg&quot;,
+      &quot;**/*.ico&quot;,
+      &quot;**/*.gif&quot;,
+      &quot;**/*.svg&quot;,
+      &quot;**/*.pdf&quot;,
+      &quot;**/*.docx&quot;,
+      &quot;**/*.xlsx&quot;,
+      &quot;package-lock.json&quot;,
+      &quot;skills-lock.json&quot;,
+      &quot;tsconfig.tsbuildinfo&quot;,
+      &quot;.agents/**&quot;,
+      &quot;repomix-output.xml&quot;
+    ]
+  },
+  &quot;security&quot;: {
+    &quot;enableSecurityCheck&quot;: false
+  }
+}</file><file path="accounts/migrations/__init__.py"></file><file path="accounts/migrations/0001_initial.py">class Migration(migrations.Migration)
+⋮----
+initial = True
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="accounts/migrations/0002_alter_user_role.py">class Migration(migrations.Migration)
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="accounts/migrations/0003_alter_user_department_auditlog.py">class Migration(migrations.Migration)
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="accounts/__init__.py"></file><file path="accounts/admin.py">class CustomUserAdmin(UserAdmin)
+⋮----
+fieldsets = UserAdmin.fieldsets + (</file><file path="accounts/apps.py">class AccountsConfig(AppConfig)
+⋮----
+name = &apos;accounts&apos;</file><file path="accounts/models.py">class User(AbstractUser)
+⋮----
+ROLE_CHOICES = (
+⋮----
+role = models.CharField(max_length=20, choices=ROLE_CHOICES, default=&apos;DEAN&apos;)
+department = models.OneToOneField(Department, on_delete=models.SET_NULL, null=True, blank=True, related_name=&apos;dean_user&apos;)
+⋮----
+def __str__(self)
+⋮----
+class AuditLog(models.Model)
+⋮----
+user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+action = models.CharField(max_length=50)
+object_type = models.CharField(max_length=50)
+object_id = models.CharField(max_length=50)
+before_state = models.JSONField(blank=True, null=True)
+after_state = models.JSONField(blank=True, null=True)
+timestamp = models.DateTimeField(auto_now_add=True)
+ip_address = models.GenericIPAddressField(blank=True, null=True)</file><file path="accounts/permissions.py">class IsSuperAdmin(permissions.BasePermission)
+⋮----
+def has_permission(self, request, view)
+⋮----
+class IsDean(permissions.BasePermission)
+⋮----
+class IsDeanOrSuperAdmin(permissions.BasePermission)
+⋮----
+class IsSuperAdminOrReadOnly(permissions.BasePermission)
+⋮----
+class IsOwnerDepartmentOrReadOnly(permissions.BasePermission)
+⋮----
+def has_object_permission(self, request, view, obj)</file><file path="accounts/serializers.py">class UserSerializer(serializers.ModelSerializer)
+⋮----
+class Meta
+⋮----
+model = User
+fields = [&apos;id&apos;, &apos;username&apos;, &apos;email&apos;, &apos;role&apos;, &apos;department&apos;, &apos;password&apos;]
+extra_kwargs = {&apos;password&apos;: {&apos;write_only&apos;: True}}
+⋮----
+def create(self, validated_data)
+⋮----
+password = validated_data.pop(&apos;password&apos;, None)
+user = super().create(validated_data)
+⋮----
+def update(self, instance, validated_data)
+⋮----
+user = super().update(instance, validated_data)</file><file path="accounts/tests.py"></file><file path="accounts/urls.py">router = DefaultRouter()
+⋮----
+urlpatterns = [</file><file path="accounts/views.py">class CSRFTokenView(APIView)
+⋮----
+permission_classes = [AllowAny]
+def get(self, request)
+⋮----
+class LoginView(APIView)
+⋮----
+def post(self, request)
+⋮----
+username = request.data.get(&apos;username&apos;)
+password = request.data.get(&apos;password&apos;)
+user = authenticate(request, username=username, password=password)
+⋮----
+class LogoutView(APIView)
+⋮----
+class CurrentUserView(APIView)
+⋮----
+permission_classes = [IsAuthenticated]
+⋮----
+serializer = UserSerializer(request.user)
+⋮----
+class UserViewSet(viewsets.ModelViewSet)
+⋮----
+queryset = User.objects.all()
+serializer_class = UserSerializer
+permission_classes = [IsSuperAdmin]</file><file path="core/management/commands/__init__.py"></file><file path="core/management/commands/seed_all.py">DEPARTMENTS = [
+⋮----
+CYCLES = [
+⋮----
+class Command(BaseCommand)
+⋮----
+help = &apos;Seeds departments, cycles, default users, and KRA metrics&apos;
+⋮----
+def handle(self, *args, **options)
+⋮----
+# Super admin
+⋮----
+admin = User.objects.create_superuser(
+⋮----
+# VC user
+⋮----
+vc = User.objects.create_user(
+⋮----
+# Dean user for CSE
+cse_dept = Department.objects.filter(name=&apos;CSE&apos;).first()
+⋮----
+dean = User.objects.create_user(</file><file path="core/management/commands/seed_kras.py">class Command(BaseCommand)
+⋮----
+help = &apos;Seeds KRA Metrics correctly from KSOP sheet&apos;
+⋮----
+def handle(self, *args, **kwargs)
+⋮----
+file_path = os.path.join(settings.BASE_DIR, &apos;kra-refrences&apos;, &apos;KIET_KRA_Monthly_Dept_Wise_Achievement_Tracker.xlsx&apos;)
+⋮----
+file_path = r&quot;C:\Users\Lenovo\Desktop\KIET KRA\kra-refrences\KIET_KRA_Monthly_Dept_Wise_Achievement_Tracker.xlsx&quot;
+⋮----
+wb = openpyxl.load_workbook(file_path, data_only=True)
+⋮----
+# Clear existing wrong KRAs to start fresh
+⋮----
+# Use KSOP sheet which has all KRAs
+sheet = None
+⋮----
+sheet = wb[&quot;KSOP&quot;]
+⋮----
+sheet = wb.worksheets[1]
+⋮----
+added_count = 0
+⋮----
+s_no_raw = str(row[0]).strip()
+⋮----
+nba_ref = str(row[1]).strip() if row[1] else &quot;&quot;
+naac_ref = str(row[2]).strip() if row[2] else &quot;&quot;
+activity = str(row[3]).strip() if row[3] else &quot;&quot;
+target = str(row[4]).strip() if row[4] else &quot;&quot;
+⋮----
+# Extract the &quot;KRA X&quot; part as serial_number, e.g. &quot;KRA 1&quot;
+serial_num = f&quot;KRA {int(float(s_no_raw))}&quot;
+⋮----
+# Create Criteria
+⋮----
+# Determine target type
+t_type = &apos;Numeric&apos;
+⋮----
+t_type = &apos;Percentage&apos;
+⋮----
+t_type = &apos;Boolean&apos;</file><file path="core/management/__init__.py"></file><file path="core/migrations/__init__.py"></file><file path="core/migrations/0001_initial.py">class Migration(migrations.Migration)
+⋮----
+initial = True
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="core/migrations/0002_department_faculty_strength_and_more.py">class Migration(migrations.Migration)
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="core/migrations/0003_extratarget.py">class Migration(migrations.Migration)
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="core/__init__.py"></file><file path="core/admin.py"></file><file path="core/apps.py">class CoreConfig(AppConfig)
+⋮----
+name = &apos;core&apos;</file><file path="core/models.py">class Department(models.Model)
+⋮----
+name = models.CharField(max_length=100, unique=True)
+faculty_strength = models.PositiveIntegerField(default=1)
+student_strength = models.PositiveIntegerField(default=1)
+⋮----
+def __str__(self)
+⋮----
+class AccreditationCriteria(models.Model)
+⋮----
+nba_code = models.CharField(max_length=50, blank=True, null=True)
+naac_code = models.CharField(max_length=50, blank=True, null=True)
+⋮----
+class KRAMetric(models.Model)
+⋮----
+TARGET_TYPES = (
+⋮----
+serial_number = models.CharField(max_length=50, unique=True)
+activity_description = models.TextField()
+target_type = models.CharField(max_length=20, choices=TARGET_TYPES)
+annual_target = models.CharField(max_length=100)
+criteria = models.ForeignKey(AccreditationCriteria, on_delete=models.CASCADE, related_name=&apos;metrics&apos;)
+⋮----
+class ExtraTarget(models.Model)
+⋮----
+GROUP_CHOICES = (
+department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name=&apos;extra_targets&apos;)
+group = models.CharField(max_length=20, choices=GROUP_CHOICES)
+label = models.CharField(max_length=100)
+target = models.CharField(max_length=100)
+achieved = models.CharField(max_length=100, blank=True, null=True)</file><file path="core/serializers.py">class DepartmentSerializer(serializers.ModelSerializer)
+⋮----
+class Meta
+⋮----
+model = Department
+fields = &apos;__all__&apos;
+⋮----
+class AccreditationCriteriaSerializer(serializers.ModelSerializer)
+⋮----
+model = AccreditationCriteria
+⋮----
+class KRAMetricSerializer(serializers.ModelSerializer)
+⋮----
+model = KRAMetric</file><file path="core/tests.py"></file><file path="core/urls.py">router = DefaultRouter()
+⋮----
+urlpatterns = [</file><file path="core/views.py">class DepartmentViewSet(viewsets.ModelViewSet)
+⋮----
+queryset = Department.objects.all()
+serializer_class = DepartmentSerializer
+permission_classes = [IsSuperAdminOrReadOnly]
+⋮----
+class AccreditationCriteriaViewSet(viewsets.ModelViewSet)
+⋮----
+queryset = AccreditationCriteria.objects.all()
+serializer_class = AccreditationCriteriaSerializer
+⋮----
+class KRAMetricViewSet(viewsets.ModelViewSet)
+⋮----
+queryset = KRAMetric.objects.all()
+serializer_class = KRAMetricSerializer
+⋮----
+def get_queryset(self)</file><file path="frontend/app/globals.css">@layer base {
+⋮----
+:root {
+⋮----
+body {
+⋮----
+.material-symbols-outlined {
+⋮----
+.custom-scroll::-webkit-scrollbar {
+.custom-scroll::-webkit-scrollbar-thumb {
+⋮----
+body * {
+#printable-report, #printable-report * {
+#printable-report {</file><file path="frontend/app/layout.tsx">import type { Metadata } from &quot;next&quot;;
+⋮----
+export default function RootLayout({
+  children,
+}: Readonly&lt;{
+  children: React.ReactNode;
+}&gt;)</file><file path="frontend/app/page.tsx">import React, { useState } from &apos;react&apos;;
+import { AppProvider, useApp } from &apos;../context/AppContext&apos;;
+import { DepartmentCode, KRAMaster, KRASubmission } from &apos;../types/kra&apos;;
+import {
+  buildKraDefinitionHtml,
+  buildSubmissionReportHtml,
+} from &apos;../services/reportDoc&apos;;
+⋮----
+import SharedHeader from &apos;../components/SharedHeader&apos;;
+import SharedSidebar from &apos;../components/SharedSidebar&apos;;
+import Toast from &apos;../components/Toast&apos;;
+import DualLoginView from &apos;../components/DualLoginView&apos;;
+import ReportPreviewModal, {
+  ReportPreviewState,
+} from &apos;../components/ReportPreviewModal&apos;;
+⋮----
+import AddKRAModal from &apos;../components/modals/AddKRAModal&apos;;
+import ReturnKRAModal from &apos;../components/modals/ReturnKRAModal&apos;;
+import TimelineModal from &apos;../components/modals/TimelineModal&apos;;
+⋮----
+import VCDashboard from &apos;../components/vc/VCDashboard&apos;;
+import VCKRAManagement from &apos;../components/vc/VCKRAManagement&apos;;
+import VCSubmissions from &apos;../components/vc/VCSubmissions&apos;;
+import VCReports from &apos;../components/vc/VCReports&apos;;
+import VCAnnouncements from &apos;../components/vc/VCAnnouncements&apos;;
+import VCKRAPreviewModal from &apos;../components/vc/VCKRAPreviewModal&apos;;
+⋮----
+import DeanDashboard from &apos;../components/dean/DeanDashboard&apos;;
+import DeanMyKRAs from &apos;../components/dean/DeanMyKRAs&apos;;
+import DeanSubmissions from &apos;../components/dean/DeanSubmissions&apos;;
+import SplitTemplateEditor from &apos;../components/dean/SplitTemplateEditor&apos;;
+⋮----
+const handlePreviewSubmission = (sub: KRASubmission) =&gt;
+⋮----
+const handleOpenConsolidatedPreview = (sub: KRASubmission) =&gt;
+⋮----
+const handlePreviewKra = (kra: KRAMaster) =&gt;
+⋮----
+const handleInspectDept = (dept: DepartmentCode) =&gt;
+⋮----
+&lt;DualLoginView onLoginSuccess=
+⋮----
+onOpenAddKRAModal=
+⋮----
+onOpenReturnModal=
+⋮----
+onClick=
+⋮----
+setIsAuthenticated(true);
+setShowDualLogin(false);</file><file path="frontend/components/dean/DeanDashboard.tsx">import React from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { KRASubmission } from &apos;../../types/kra&apos;;
+import { formatProgress, isNumericMetric } from &apos;../../services/kraUtils&apos;;
+⋮----
+export default function DeanDashboard({
+  onOpenSplit,
+  onPreviewSubmission,
+}: {
+onOpenSplit: (kraCode: string)
+⋮----
+onClick=</file><file path="frontend/components/dean/DeanMyKRAs.tsx">import React from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { KRASubmission, SubmissionStatus } from &apos;../../types/kra&apos;;
+import { formatProgress, isNumericMetric } from &apos;../../services/kraUtils&apos;;
+⋮----
+⋮----
+onClick=</file><file path="frontend/components/dean/DeanSubmissions.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { KRASubmission, SubmissionStatus } from &apos;../../types/kra&apos;;
+import { formatProgress, isNumericMetric } from &apos;../../services/kraUtils&apos;;
+⋮----
+onClick=</file><file path="frontend/components/dean/TemplateFillEditor.tsx">import React, { useState } from &apos;react&apos;;
+import { CompletedDocument, ReportFormat } from &apos;../../types/kra&apos;;
+import { defaultTableColumns, isDocFilled } from &apos;../../services/kraUtils&apos;;
+⋮----
+export interface TemplateFillEditorProps {
+  kind: &apos;Report Format&apos; | &apos;Summary Template&apos;;
+  format: ReportFormat;
+  doc?: CompletedDocument;
+  deanName: string;
+  cycle: string;
+  onChange: (doc: CompletedDocument) =&gt; void;
+  onPreview: () =&gt; void;
+  onDownload: () =&gt; void;
+}
+⋮----
+const ensureDoc = (): CompletedDocument
+⋮----
+const patch = (updates: Partial&lt;CompletedDocument&gt;)
+⋮----
+const patchField = (label: string, value: string)
+⋮----
+const patchCell = (rowIdx: number, colIdx: number, value: string) =&gt;
+⋮----
+const addRow = () =&gt;
+⋮----
+const removeRow = (rowIdx: number) =&gt;
+⋮----
+{/* Document header */}
+⋮----
+{/* Original template (uploaded by the VC) */}
+⋮----
+{/* Auto-filled, read-only context */}
+⋮----
+{/* Editable header fields */}</file><file path="frontend/components/kra-forms/KRA12Form.tsx">import React from &apos;react&apos;;
+import { KRAFormProps } from &apos;./types&apos;;
+⋮----
+onChange=</file><file path="frontend/components/kra-forms/KRA1Form.tsx">import React, { useState } from &apos;react&apos;;
+import { KRAFormProps } from &apos;./types&apos;;
+import { VACReportData, VACCourseRow, VACSyllabusRow } from &apos;../../types/kra&apos;;
+import { getInitialVACReportData } from &apos;../../services/vacReportService&apos;;
+⋮----
+const updateVAC = (updater: (prev: VACReportData) =&gt; VACReportData) =&gt;
+⋮----
+const handleAddCourse = () =&gt;
+⋮----
+const handleUpdateCourse = (idx: number, patch: Partial&lt;VACCourseRow&gt;) =&gt;
+⋮----
+const handleRemoveCourse = (idx: number) =&gt;
+⋮----
+const handleAddSyllabus = () =&gt;
+⋮----
+const handleUpdateSyllabus = (idx: number, patch: Partial&lt;VACSyllabusRow&gt;) =&gt;
+⋮----
+const handleRemoveSyllabus = (idx: number) =&gt;
+⋮----
+{/* Auto-filled Institutional Context */}
+⋮----
+onChange=
+⋮----
+{/* Section D: Syllabus */}
+⋮----
+{/* Section E: Learning Outcomes */}
+⋮----
+updateVAC((prev) =&gt; (
+⋮----
+{/* Section G: Outcome and Impact */}
+⋮----
+{/* Section H: Student Feedback */}</file><file path="frontend/components/kra-forms/KRAActivityReportForm.tsx">import React, { useState } from &apos;react&apos;;
+import { KRAFormProps } from &apos;./types&apos;;
+import MultiEvidenceUploader from &apos;./MultiEvidenceUploader&apos;;
+⋮----
+interface ActivityColumn {
+  key: string;
+  label: string;
+  placeholder?: string;
+  type?: string;
+}
+⋮----
+interface ActivityConfig {
+  title: string;
+  tableTitle: string;
+  columns: ActivityColumn[];
+  defaultRows: Record&lt;string, any&gt;[];
+  extraFields: { key: string; label: string; placeholder?: string; type?: string; isTextarea?: boolean }[];
+  impactLabel?: string;
+}
+⋮----
+const updateField = (field: string, val: any) =&gt;
+⋮----
+const updateRow = (index: number, key: string, val: any) =&gt;
+⋮----
+const addRow = () =&gt;
+⋮----
+const removeRow = (index: number) =&gt;
+⋮----
+{/* Sub-Header Tabs */}
+⋮----
+onChange=
+⋮----
+onChange={(e) =&gt; updateRow(rIdx, col.key, e.target.value)}
+                          placeholder={col.placeholder || &apos;&apos;}
+                          className=&quot;w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded bg-white focus:border-[#00236f]&quot;
+                        /&gt;
+                      &lt;/div&gt;
+                    ))}
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              ))}
+            &lt;/div&gt;
+            &lt;div className=&quot;pt-3 border-t flex justify-between&quot;&gt;
+              &lt;button
+                type=&quot;button&quot;
+                onClick={() =&gt; setActiveTab(&apos;info&apos;)}
+                className=&quot;px-3 py-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 border border-slate-300 rounded transition cursor-pointer&quot;
+              &gt;
+                Back to Details
+              &lt;/button&gt;
+              &lt;button
+                type=&quot;button&quot;
+                onClick={() =&gt; setActiveTab(&apos;outcomes&apos;)}
+                className=&quot;px-4 py-1.5 text-xs font-bold text-white bg-[#00236f] hover:bg-[#001b55] rounded shadow-xs transition flex items-center gap-1 cursor-pointer&quot;
+              &gt;
+                &lt;span&gt;Proceed to Outcomes &amp;amp; Impact&lt;/span&gt;
+                &lt;span className=&quot;material-symbols-outlined text-[16px]&quot;&gt;arrow_forward&lt;/span&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        )}
+        {}
+        {activeTab === &apos;outcomes&apos; &amp;&amp; (
+          &lt;div className=&quot;bg-white border border-[#c5c5d3] rounded-lg p-4 space-y-4 shadow-xs&quot;&gt;
+            &lt;div className=&quot;border-b pb-2&quot;&gt;
+              &lt;h3 className=&quot;font-bold text-xs text-[#00236f] uppercase tracking-wider&quot;&gt;
+                {config.impactLabel || &apos;Outcomes, Observations &amp; Summary&apos;}
+              &lt;/h3&gt;
+              &lt;p className=&quot;text-[11px] text-slate-500 mt-0.5&quot;&gt;
+                Summarize outcomes, participant feedback, and recommendations.
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;label className=&quot;block text-xs font-semibold text-slate-700 mb-1&quot;&gt;
+                Summary of Outcomes &amp;amp; Impact on Students / Department:
+              &lt;/label&gt;
+              &lt;textarea
+                rows={5}
+                value={custom.narrative || custom.impactSummary || &apos;&apos;}
+onChange=
+⋮----
+&lt;span className=&quot;text-[10px] text-slate-400&quot;&gt;Date:</file><file path="frontend/components/kra-forms/KRAFeedbackSurveyForm.tsx">import React, { useState } from &apos;react&apos;;
+import { KRAFormProps } from &apos;./types&apos;;
+import MultiEvidenceUploader from &apos;./MultiEvidenceUploader&apos;;
+⋮----
+const updateField = (field: string, val: any) =&gt;
+⋮----
+const handleRating = (qId: number, val: number) =&gt;
+⋮----
+onChange=
+⋮----
+updateField(&apos;contactNumber&apos;, e.target.value);
+updateField(&apos;mobileNumber&apos;, e.target.value);</file><file path="frontend/components/kra-forms/KRATemplateDataForm.tsx">import React, { useState } from &apos;react&apos;;
+import { KRAFormProps } from &apos;./types&apos;;
+import MultiEvidenceUploader from &apos;./MultiEvidenceUploader&apos;;
+⋮----
+interface ColumnDef {
+  key: string;
+  label: string;
+  placeholder?: string;
+  type?: string;
+}
+⋮----
+interface TemplatePreset {
+  title: string;
+  metricLabel: string;
+  columns: ColumnDef[];
+  sampleRow: Record&lt;string, any&gt;;
+}
+⋮----
+const updateField = (field: string, val: any) =&gt;
+⋮----
+const updateRow = (index: number, key: string, val: any) =&gt;
+⋮----
+const addRow = () =&gt;
+⋮----
+const removeRow = (index: number) =&gt;
+⋮----
+{/* Sub-Header Tabs */}
+⋮----
+onChange=
+⋮----
+&lt;span className=&quot;text-[10px] text-slate-400 mt-1 block&quot;&gt;Date:</file><file path="frontend/components/kra-forms/MultiEvidenceUploader.tsx">import React from &apos;react&apos;;
+⋮----
+const handleFileUpload = (e: React.ChangeEvent&lt;HTMLInputElement&gt;, type: string) =&gt;
+⋮----
+const removeEvidence = (type: string) =&gt;</file><file path="frontend/components/kra-forms/OfficialKRA7ReportPreview.tsx">import React from &apos;react&apos;;
+import { KRA7ReportData } from &apos;../../types/kra&apos;;
+import { KRA7_SURVEY_QUESTIONS } from &apos;../../services/kra7ReportService&apos;;
+⋮----
+interface OfficialKRA7ReportPreviewProps {
+  reportData: KRA7ReportData;
+  scale?: number;
+}
+⋮----
+export default function OfficialKRA7ReportPreview({
+  reportData,
+  scale = 1,
+}: OfficialKRA7ReportPreviewProps)
+⋮----
+const renderCheckmark = (questionId: number, ratingCol: number) =&gt;
+⋮----
+{/* Table 1: Feedback Survey Form for Faculty member (Questions 1 - 6) */}
+⋮----
+{/* Page 1 Footer */}
+⋮----
+{/* ================= PAGE 2 ================= */}
+⋮----
+{/* Institutional Header (Repeated on Page 2 as in official template) */}
+⋮----
+{/* eslint-disable-next-line @next/next/no-img-element */}
+⋮----
+{/* Table 1 Continuation: Questions 7 - 10 */}
+⋮----
+{/* Table 2: Overall Satisfaction on scale of 1 to 10 */}</file><file path="frontend/components/kra-forms/OfficialKRAReportPreview.tsx">import React from &apos;react&apos;;
+⋮----
+interface OfficialKRAReportPreviewProps {
+  reportData: any;
+  scale?: number;
+}
+⋮----
+export default function OfficialKRAReportPreview({
+  reportData,
+  scale = 1,
+}: OfficialKRAReportPreviewProps)
+⋮----
+// Header component with official KIET logo and maroon divider matching KRA 7
+const KietOfficialHeader = () =&gt; (
+    &lt;div className=&quot;text-center pb-2 mb-3&quot;&gt;
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      &lt;img
+        src=&quot;/images/kiet_university_logo.png&quot;
+        alt=&quot;KIET Deemed to be University Official Crest&quot;
+        className=&quot;h-16 mx-auto object-contain max-w-[280px]&quot;
+      /&gt;
+      &lt;p className=&quot;font-serif font-bold text-[12.5px] text-black mt-1 mb-0 tracking-tight&quot;&gt;
+        Krishna Institute of Engineering &amp;amp; Technology (KIET) (Deemed to be university)
+      &lt;/p&gt;
+      &lt;p className=&quot;font-serif text-[10px] text-slate-600 mt-0.5&quot;&gt;
+        Delhi-NCR, Ghaziabad — ISO 9001:2015 Certified
+      &lt;/p&gt;
+      &lt;div className=&quot;w-full border-b-[2.5px] border-[#622423] mt-2&quot; /&gt;
+    &lt;/div&gt;
+  );
+⋮----
+{/* eslint-disable-next-line @next/next/no-img-element */}
+⋮----
+// Common dual signature block matching official KIET proforma
+const KietSignatureBlock = (
+⋮----
+const renderCheckmark = (qId: number, val: number) =&gt;
+⋮----
+const getVal = (item: any, idx1Based: number, key: string, fallback: any = &apos;&apos;): any =&gt;
+⋮----
+// ─────────────────────────────────────────────────────────────────────────
+// KRA 8: Curriculum Feedback (Employer and Industry)
+// ─────────────────────────────────────────────────────────────────────────
+⋮----
+{/* Outcome &amp; Impact Narrative */}</file><file path="frontend/components/kra-forms/OfficialVACReportPreview.tsx">import React from &apos;react&apos;;
+import { VACReportData } from &apos;../../types/kra&apos;;
+⋮----
+{/* Section G: OUTCOME AND IMPACT */}
+⋮----
+{/* Section H: Student Feedback Summary */}</file><file path="frontend/components/kra-forms/SmartKRA7ReportBuilder.tsx">import React, { useState, useEffect, useMemo } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { DepartmentCode, BimonthlyCycle, KRA7ReportData } from &apos;../../types/kra&apos;;
+import {
+  getInitialKRA7ReportData,
+  validateKRA7Report,
+  downloadKRA7Docx,
+  downloadKRA7Pdf,
+  KRA7_SURVEY_QUESTIONS,
+  KRA7_RATING_OPTIONS,
+} from &apos;../../services/kra7ReportService&apos;;
+import OfficialKRA7ReportPreview from &apos;./OfficialKRA7ReportPreview&apos;;
+import { uploadEvidenceFile } from &apos;../../services/vacReportService&apos;;
+⋮----
+interface SmartKRA7ReportBuilderProps {
+  kraCode: string;
+  departmentCode: DepartmentCode;
+  cycle: BimonthlyCycle;
+  onClose: () =&gt; void;
+}
+⋮----
+const patchField = &lt;K extends keyof KRA7ReportData&gt;(field: K, val: KRA7ReportData[K]) =&gt;
+⋮----
+const handleRatingChange = (questionId: number, ratingVal: number) =&gt;
+⋮----
+const handleSatisfactionChange = (score: number) =&gt;
+⋮----
+const handleSaveDraft = async () =&gt;
+⋮----
+const handleSubmitToVC = () =&gt;
+⋮----
+const handleExportDocx = async () =&gt;
+⋮----
+const handleExportPdf = async () =&gt;
+⋮----
+const handleFileUpload = async (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt;
+⋮----
+onClick=
+⋮----
+onChange=</file><file path="frontend/components/kra-forms/SmartUniversalReportBuilder.tsx">import React, { useState, useMemo } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { DepartmentCode, BimonthlyCycle, SubmissionFormData } from &apos;../../types/kra&apos;;
+import { getKraRefs } from &apos;../../config/kraRefs&apos;;
+import { downloadKRAGenericDocx, downloadKRAGenericPdf } from &apos;../../services/kraReportService&apos;;
+import OfficialKRAReportPreview from &apos;./OfficialKRAReportPreview&apos;;
+import KRAFeedbackSurveyForm from &apos;./KRAFeedbackSurveyForm&apos;;
+import KRAActivityReportForm, { KRA_ACTIVITY_CONFIGS } from &apos;./KRAActivityReportForm&apos;;
+import KRATemplateDataForm, { KRA_PRESETS } from &apos;./KRATemplateDataForm&apos;;
+⋮----
+interface SmartUniversalReportBuilderProps {
+  kraCode: string;
+  departmentCode: DepartmentCode;
+  cycle: BimonthlyCycle;
+  onClose: () =&gt; void;
+}
+⋮----
+export default function SmartUniversalReportBuilder({
+  kraCode,
+  departmentCode,
+  cycle,
+  onClose,
+}: SmartUniversalReportBuilderProps)
+⋮----
+const patchFormData = (updates: Partial&lt;SubmissionFormData&gt;) =&gt;
+⋮----
+// Save Draft
+const handleSaveDraft = async () =&gt;
+⋮----
+const handleSubmitToVC = () =&gt;
+⋮----
+const handleExportDocx = async () =&gt;
+⋮----
+const handleExportPdf = async () =&gt;
+⋮----
+onClick=</file><file path="frontend/components/kra-forms/SmartVACReportBuilder.tsx">import React, { useState, useEffect, useMemo } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { DepartmentCode, BimonthlyCycle, VACReportData, VACCourseRow, VACSyllabusRow } from &apos;../../types/kra&apos;;
+import {
+  getInitialVACReportData,
+  validateVACReport,
+  downloadVACDocx,
+  downloadVACPdf,
+  uploadEvidenceFile,
+  deleteEvidenceFile,
+  VACValidationResult
+} from &apos;../../services/vacReportService&apos;;
+import OfficialVACReportPreview from &apos;./OfficialVACReportPreview&apos;;
+import { api, isMockMode } from &apos;../../services/api&apos;;
+⋮----
+interface SmartVACReportBuilderProps {
+  kraCode: string;
+  departmentCode: DepartmentCode;
+  cycle: BimonthlyCycle;
+  onClose: () =&gt; void;
+}
+⋮----
+// Patch report data state and clear specific field error
+const updateReport = (updater: (prev: VACReportData) =&gt; VACReportData) =&gt;
+⋮----
+const patchField = &lt;K extends keyof VACReportData&gt;(field: K, val: VACReportData[K]) =&gt;
+⋮----
+// Course row management
+const handleAddCourse = () =&gt;
+⋮----
+const handleUpdateCourse = (idx: number, patch: Partial&lt;VACCourseRow&gt;) =&gt;
+⋮----
+const handleRemoveCourse = (idx: number) =&gt;
+⋮----
+const handleAddSyllabus = () =&gt;
+⋮----
+const handleUpdateSyllabus = (idx: number, patch: Partial&lt;VACSyllabusRow&gt;) =&gt;
+⋮----
+const handleRemoveSyllabus = (idx: number) =&gt;
+⋮----
+// Learning Outcomes
+const handleAddOutcome = () =&gt;
+⋮----
+const handleUpdateOutcome = (idx: number, val: string) =&gt;
+⋮----
+const handleRemoveOutcome = (idx: number) =&gt;
+⋮----
+// Feedback suggestions
+const handleAddSuggestion = () =&gt;
+⋮----
+const handleUpdateSuggestion = (idx: number, val: string) =&gt;
+⋮----
+const handleRemoveSuggestion = (idx: number) =&gt;
+⋮----
+// File Upload handling for Section J
+const handleFileUpload = async (e: React.ChangeEvent&lt;HTMLInputElement&gt;, docId: number, docTitle: string) =&gt;
+⋮----
+const handleRemoveFile = async (docId: number) =&gt;
+⋮----
+const handleSaveDraft = async () =&gt;
+⋮----
+const handleValidate = () =&gt;
+⋮----
+const handleSubmit = async () =&gt;
+⋮----
+const handleExportPdf = async () =&gt;
+⋮----
+const handleExportDocx = async () =&gt;
+⋮----
+onClick=
+⋮----
+onChange=
+⋮----
+{/* SECTION D: SYLLABUS */}
+⋮----
+{/* SECTION E: LEARNING OUTCOMES */}
+⋮----
+{/* SECTION G: OUTCOME AND IMPACT */}
+⋮----
+patchField(&apos;feedback&apos;,</file><file path="frontend/components/kra-forms/types.ts">export interface KRAFormProps {
+  kraCode: string;
+  departmentName: string;
+  cycle: string;
+  hodName?: string;
+  formData: any;
+  patchFormData: (updates: Partial&lt;any&gt;) =&gt; void;
+}</file><file path="frontend/components/modals/AddKRAModal.tsx">import React, { useEffect, useState } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import {
+  DepartmentCode,
+  KRAMaster,
+  MetricType,
+  METRIC_TYPES,
+  ReportFileType,
+  ReportFormat,
+} from &apos;../../types/kra&apos;;
+⋮----
+interface FormatDraft {
+  id: string;
+  name: string;
+  description: string;
+  fileName: string;
+  fileType: ReportFileType;
+}
+⋮----
+const emptyFormat = (): FormatDraft =&gt; (
+⋮----
+&lt;input
+⋮----
+const toFormatDraft = (f: ReportFormat): FormatDraft =&gt; (
+⋮----
+const addFormat = (setter: React.Dispatch&lt;React.SetStateAction&lt;FormatDraft[]&gt;&gt;)
+const removeFormat = (
+    setter: React.Dispatch&lt;React.SetStateAction&lt;FormatDraft[]&gt;&gt;,
+    id: string
+)
+const updateFormat = (
+    setter: React.Dispatch&lt;React.SetStateAction&lt;FormatDraft[]&gt;&gt;,
+    id: string,
+    patch: Partial&lt;FormatDraft&gt;
+) =&gt; setter((prev) =&gt; prev.map((f) =&gt; (f.id === id ?
+const attachFile = (
+    setter: React.Dispatch&lt;React.SetStateAction&lt;FormatDraft[]&gt;&gt;,
+    id: string,
+    file: File | null
+) =&gt;
+⋮----
+const handleSelectAll = (select: boolean)
+const handleToggleDept = (dept: DepartmentCode)
+⋮----
+const resetForm = () =&gt;
+⋮----
+const toReportFormats = (list: FormatDraft[]): ReportFormat[]
+⋮----
+const handleSubmit = (e: React.FormEvent) =&gt;
+⋮----
+onChange=
+⋮----
+onRemove=
+onUpdate=
+onFile=</file><file path="frontend/components/modals/ReturnKRAModal.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+⋮----
+export default function ReturnKRAModal({
+  submissionId,
+  isOpen,
+  onClose,
+}: {
+  submissionId: string | null;
+  isOpen: boolean;
+onClose: ()
+⋮----
+const handleSubmit = (e: React.FormEvent) =&gt;
+⋮----
+onChange=</file><file path="frontend/components/modals/TimelineModal.tsx">import React from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;</file><file path="frontend/components/vc/VCAnnouncements.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { DepartmentCode } from &apos;../../types/kra&apos;;
+⋮----
+const handleSelectAll = (select: boolean) =&gt;
+⋮----
+const handleToggleDept = (code: DepartmentCode) =&gt;
+⋮----
+const handleDispatch = (e: React.FormEvent) =&gt;
+⋮----
+onChange=</file><file path="frontend/components/vc/VCDashboard.tsx">import React from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { DepartmentCode } from &apos;../../types/kra&apos;;
+import { buildInstitutionalReportHtml, downloadHtmlFile } from &apos;../../services/reportDoc&apos;;
+⋮----
+const handleExportSummary = () =&gt;
+⋮----
+onClick=</file><file path="frontend/components/vc/VCKRAManagement.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { DepartmentCode, KRAMaster, METRIC_TYPES } from &apos;../../types/kra&apos;;
+⋮----
+showToast(`$
+⋮----
+onClick=</file><file path="frontend/components/vc/VCKRAPreviewModal.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { CompletedDocument, KRASubmission, ReportFormat } from &apos;../../types/kra&apos;;
+import {
+  formatProgress,
+  isDocFilled,
+  isNumericMetric,
+  isValidHttpUrl,
+  submissionCompletion,
+} from &apos;../../services/kraUtils&apos;;
+import { buildSubmissionReportHtml, downloadHtmlFile } from &apos;../../services/reportDoc&apos;;
+import OfficialVACReportPreview from &apos;../kra-forms/OfficialVACReportPreview&apos;;
+import { downloadVACPdf, downloadVACDocx } from &apos;../../services/vacReportService&apos;;
+⋮----
+type DocTab = &apos;vac_report&apos; | &apos;proforma&apos; | &apos;template&apos; | &apos;format&apos;;
+⋮----
+function InfoCell(
+⋮----
+/**
+ * SINGLE consolidated VC KRA preview.
+ * Shows the KRA information, all submitted documents (Performa, Report Template,
+ * Report Format), completion status, evidence including the Google Drive link,
+ * and the Preview / Download / Approve / Return actions in one interface.
+ * All content comes from the same submission state the Dean filled.
+ */
+⋮----
+const handleDownload = () =&gt;
+⋮----
+const tabBtn = (key: DocTab, label: string, icon: string) =&gt;
+⋮----
+onClick=
+⋮----
+Progress:
+⋮----
+{/* SUBMITTED DOCUMENTS */}
+⋮----
+await downloadVACPdf(sub.formData.vacReport!, dept?.name || sub.dept);
+showToast(&apos;Official VAC PDF downloaded successfully&apos;);</file><file path="frontend/components/vc/VCReports.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { KRASubmission, BIMONTHLY_CYCLES } from &apos;../../types/kra&apos;;
+import { formatProgress, isNumericMetric } from &apos;../../services/kraUtils&apos;;
+import {
+  buildSubmissionReportHtml,
+  buildInstitutionalReportHtml,
+  downloadHtmlFile,
+  InstitutionalReportRow,
+} from &apos;../../services/reportDoc&apos;;
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+} from &apos;recharts&apos;;
+⋮----
+const handleDownloadSubmission = (sub: KRASubmission) =&gt;
+⋮----
+onClick=
+⋮----
+downloadHtmlFile(</file><file path="frontend/components/vc/VCSubmissions.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { KRASubmission, SubmissionStatus, BIMONTHLY_CYCLES } from &apos;../../types/kra&apos;;
+import { formatProgress, isNumericMetric } from &apos;../../services/kraUtils&apos;;
+import { buildSubmissionReportHtml, downloadHtmlFile } from &apos;../../services/reportDoc&apos;;
+⋮----
+const handleDownload = (sub: KRASubmission) =&gt;
+⋮----
+onClick=</file><file path="frontend/components/DualLoginView.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../context/AppContext&apos;;
+import { DepartmentCode } from &apos;../types/kra&apos;;
+import { api, fetchCsrfToken } from &apos;../services/api&apos;;
+⋮----
+const handleLoginVC = async (e: React.FormEvent) =&gt;
+⋮----
+const handleLoginDean = async (e: React.FormEvent) =&gt;
+⋮----
+onClick=</file><file path="frontend/components/DynamicKRAForm.tsx">import React, { useState } from &apos;react&apos;;
+import { KRASchema, FormField, TableColumn } from &apos;../services/kraSchemas&apos;;
+⋮----
+interface DynamicKRAFormProps {
+  schema: KRASchema;
+  value: Record&lt;string, any&gt;;
+  onChange: (newValue: Record&lt;string, any&gt;) =&gt; void;
+}
+⋮----
+const handleFieldChange = (fieldName: string, fieldValue: any) =&gt;
+⋮----
+const handleTableChange = (fieldName: string, rowIndex: number, colName: string, colValue: any) =&gt;
+⋮----
+const addTableRow = (fieldName: string) =&gt;
+⋮----
+const removeTableRow = (fieldName: string, rowIndex: number) =&gt;
+⋮----
+const handleFileUpload = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt;
+⋮----
+onChange=</file><file path="frontend/components/NotificationPanel.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../context/AppContext&apos;;
+import { AppNotification, NotificationKind } from &apos;../types/kra&apos;;
+⋮----
+function KindBadge(
+⋮----
+const handleClick = (n: AppNotification) =&gt;</file><file path="frontend/components/ReportPreviewModal.tsx">import React from &apos;react&apos;;
+import { downloadHtmlFile } from &apos;../services/reportDoc&apos;;
+⋮----
+export interface ReportPreviewState {
+  title: string;
+  html: string;
+  fileName: string;
+}
+⋮----
+export default function ReportPreviewModal({
+  preview,
+  onClose,
+}: {
+  preview: ReportPreviewState | null;
+onClose: ()
+⋮----
+onClick=</file><file path="frontend/components/SharedHeader.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../context/AppContext&apos;;
+import NotificationPanel from &apos;./NotificationPanel&apos;;
+⋮----
+onClick=
+⋮----
+&lt;NotificationPanel onClose=</file><file path="frontend/components/SharedSidebar.tsx">import React from &apos;react&apos;;
+import { useApp } from &apos;../context/AppContext&apos;;
+⋮----
+const handleTabClick = (label: string) =&gt;
+⋮----
+const handleRoleToggle = () =&gt;
+⋮----
+onClick=</file><file path="frontend/components/Toast.tsx">import React from &apos;react&apos;;
+import { useApp } from &apos;../context/AppContext&apos;;
+⋮----
+export default function Toast()</file><file path="frontend/components/TopRoleSwitcher.tsx">import React, { useState } from &apos;react&apos;;
+import { useApp } from &apos;../context/AppContext&apos;;
+import { DepartmentCode } from &apos;../types/kra&apos;;
+⋮----
+import { api } from &apos;../services/api&apos;;
+⋮----
+export default function TopRoleSwitcher({
+  onSelectDualLogin,
+}: {
+onSelectDualLogin?: ()
+⋮----
+const handleRoleChange = async (newRole: &apos;vc&apos; | &apos;dean&apos;) =&gt;
+⋮----
+const handleDeptSelect = async (deptCode: DepartmentCode) =&gt;
+⋮----
+setRole(&apos;dean&apos;);
+openSplitEditor(&apos;KRA 01&apos;);
+⋮----
+onClick=</file><file path="frontend/config/kraRefs.ts">export function getKraRefs(kraCode: string):</file><file path="frontend/context/AppContext.tsx">import React, { createContext, useContext, useState } from &apos;react&apos;;
+import {
+  AppNotification,
+  DepartmentCode,
+  DepartmentInfo,
+  KRAMaster,
+  KRASubmission,
+  Announcement,
+  BimonthlyCycle,
+  BIMONTHLY_CYCLES,
+  SubmissionFormData,
+  SubmissionStatus,
+} from &apos;../types/kra&apos;;
+import {
+  ALL_DEPARTMENTS,
+  INITIAL_KRAS,
+  INITIAL_SUBMISSIONS,
+  INITIAL_ANNOUNCEMENTS,
+  INITIAL_NOTIFICATIONS,
+} from &apos;../services/seedData&apos;;
+import { claimDisplay, computeProgress, contributionProgress } from &apos;../services/kraUtils&apos;;
+import { api, isMockMode, fetchCsrfToken } from &apos;../services/api&apos;;
+⋮----
+interface ToastState {
+  show: boolean;
+  message: string;
+  type?: &apos;success&apos; | &apos;info&apos; | &apos;error&apos;;
+}
+⋮----
+export interface DepartmentStats {
+  progress: number;
+  assignedCount: number;
+  approvedCount: number;
+  draftCount: number;
+  submittedCount: number;
+  pendingCount: number;
+  returnedCount: number;
+  exceededCount: number;
+}
+⋮----
+export interface GlobalStats {
+  totalDepts: number;
+  totalKRAs: number;
+  activeKRAs: number;
+  pendingReview: number;
+  approvedTotal: number;
+  returnedTotal: number;
+}
+⋮----
+interface AppContextType {
+  role: &apos;vc&apos; | &apos;dean&apos;;
+  currentDept: DepartmentCode;
+  selectedCycle: BimonthlyCycle;
+  activeNavTab: string;
+  departments: DepartmentInfo[];
+  kras: KRAMaster[];
+  submissions: KRASubmission[];
+  announcements: Announcement[];
+  notifications: AppNotification[];
+  toast: ToastState;
+  timelineModalSubmission: KRASubmission | null;
+  splitKraCode: string | null;
+  setRole: (role: &apos;vc&apos; | &apos;dean&apos;) =&gt; void;
+  setCurrentDept: (dept: DepartmentCode) =&gt; void;
+  setSelectedCycle: (cycle: BimonthlyCycle) =&gt; void;
+  setActiveNavTab: (tab: string) =&gt; void;
+  showToast: (message: string, type?: &apos;success&apos; | &apos;info&apos; | &apos;error&apos;) =&gt; void;
+  hideToast: () =&gt; void;
+  openTimelineModal: (submission?: KRASubmission | null) =&gt; void;
+  closeTimelineModal: () =&gt; void;
+  markNotificationRead: (id: string) =&gt; void;
+  markAllNotificationsRead: () =&gt; void;
+  openSplitEditor: (kraCode: string) =&gt; void;
+  closeSplitEditor: () =&gt; void;
+  addKRA: (kra: KRAMaster) =&gt; void;
+  updateKRA: (code: string, updates: Partial&lt;KRAMaster&gt;) =&gt; void;
+  deleteKRA: (code: string) =&gt; void;
+  saveDraftSubmission: (
+    kraCode: string,
+    dept: DepartmentCode,
+    cycle: BimonthlyCycle,
+    formData: SubmissionFormData
+  ) =&gt; void;
+  submitKRAtoVC: (
+    kraCode: string,
+    dept: DepartmentCode,
+    cycle: BimonthlyCycle,
+    formData: SubmissionFormData
+  ) =&gt; void;
+  approveSubmission: (submissionId: string) =&gt; void;
+  returnSubmission: (submissionId: string, reason: string) =&gt; void;
+  resubmitKRA: (submissionId: string, formData: SubmissionFormData) =&gt; void;
+  approveAllPending: () =&gt; void;
+  createAnnouncement: (announcement: Omit&lt;Announcement, &apos;id&apos; | &apos;createdAt&apos; | &apos;author&apos;&gt;) =&gt; void;
+  getSubmission: (
+    kraCode: string,
+    dept: DepartmentCode,
+    cycle: BimonthlyCycle
+  ) =&gt; KRASubmission | undefined;
+  getDepartmentStats: (deptCode: DepartmentCode) =&gt; DepartmentStats;
+  getGlobalStats: () =&gt; GlobalStats;
+}
+⋮----
+function nowStamp():
+⋮----
+export function AppProvider(
+⋮----
+const loadLiveBackendData = async () =&gt;
+⋮----
+const showToast = (message: string, type: &apos;success&apos; | &apos;info&apos; | &apos;error&apos; = &apos;success&apos;) =&gt;
+const hideToast = () =&gt; setToast((t) =&gt; (
+⋮----
+const openTimelineModal = (submission: KRASubmission | null = null) =&gt;
+const closeTimelineModal = ()
+⋮----
+const addNotification = (n: Omit&lt;AppNotification, &apos;id&apos; | &apos;time&apos; | &apos;read&apos;&gt;) =&gt;
+⋮----
+const markNotificationRead = (id: string) =&gt;
+⋮----
+const markAllNotificationsRead = () =&gt;
+⋮----
+const openSplitEditor = (kraCode: string)
+const closeSplitEditor = ()
+⋮----
+const addKRA = (kra: KRAMaster) =&gt;
+⋮----
+const updateKRA = (code: string, updates: Partial&lt;KRAMaster&gt;) =&gt;
+⋮----
+const deleteKRA = (code: string) =&gt;
+⋮----
+const getSubmission = (kraCode: string, dept: DepartmentCode, cycle: BimonthlyCycle)
+⋮----
+const upsertSubmission = (
+    kraCode: string,
+    dept: DepartmentCode,
+    cycle: BimonthlyCycle,
+    formData: SubmissionFormData,
+    status: SubmissionStatus,
+    stage: string,
+    actor: string,
+    remarks: string
+) =&gt;
+⋮----
+const saveDraftSubmission = (
+    kraCode: string,
+    dept: DepartmentCode,
+    cycle: BimonthlyCycle,
+    formData: SubmissionFormData
+) =&gt;
+⋮----
+const submitKRAtoVC = (
+    kraCode: string,
+    dept: DepartmentCode,
+    cycle: BimonthlyCycle,
+    formData: SubmissionFormData
+) =&gt;
+⋮----
+const approveSubmission = (submissionId: string) =&gt;
+⋮----
+const returnSubmission = (submissionId: string, reason: string) =&gt;
+⋮----
+const resubmitKRA = (submissionId: string, formData: SubmissionFormData) =&gt;
+⋮----
+const approveAllPending = () =&gt;
+⋮----
+const createAnnouncement = (
+    announcement: Omit&lt;Announcement, &apos;id&apos; | &apos;createdAt&apos; | &apos;author&apos;&gt;
+) =&gt;
+⋮----
+const getDepartmentStats = (deptCode: DepartmentCode): DepartmentStats =&gt;
+⋮----
+const getGlobalStats = (): GlobalStats =&gt; (</file><file path="frontend/services/api.ts">import axios from &apos;axios&apos;;
+⋮----
+export const isMockMode = (): boolean =&gt;
+⋮----
+export const fetchCsrfToken = async () =&gt;</file><file path="frontend/services/kra7ReportService.ts">import { api } from &apos;./api&apos;;
+import { KRA7ReportData } from &apos;../types/kra&apos;;
+⋮----
+export interface KRA7QuestionItem {
+  id: number;
+  statement: string;
+}
+⋮----
+export function getInitialKRA7ReportData(
+  departmentName: string = &apos;&apos;,
+  deanName: string = &apos;&apos;,
+  deanEmail: string = &apos;&apos;,
+  academicYear: string = &apos;2026-2027&apos;,
+  existingData?: Partial&lt;KRA7ReportData&gt;
+): KRA7ReportData
+⋮----
+export interface KRA7ValidationResult {
+  isValid: boolean;
+  errors: Record&lt;string, string&gt;;
+}
+⋮----
+export function validateKRA7Report(data: KRA7ReportData): KRA7ValidationResult
+⋮----
+export async function downloadKRA7Docx(reportData: KRA7ReportData, deptName: string)
+⋮----
+export async function downloadKRA7Pdf(reportData: KRA7ReportData, deptName: string)</file><file path="frontend/services/kraReportService.ts">import { api } from &apos;./api&apos;;
+⋮----
+export interface GenericKRAReportData {
+  kraNumber: string;
+  reportTitle: string;
+  department: string;
+  academicYear: string;
+  cycle: string;
+  reportDate?: string;
+  preparedBy: string;
+  designation: string;
+  coordinatorName?: string;
+  respondentName?: string;
+  organization?: string;
+  email?: string;
+  mobileNumber?: string;
+  subject?: string;
+  tableTitle?: string;
+  columns?: string[];
+  rows?: (string | number)[][];
+  surveyQuestions?: { id: number; statement: string; rating?: number | null }[];
+  ratings?: Record&lt;string | number, number&gt;;
+  ratingOptions?: string[];
+  overallSatisfaction?: number | string;
+  suggestions?: string;
+  extraSections?: { title: string; items: { label: string; value: string }[] }[];
+  narrative?: string;
+  [key: string]: any;
+}
+⋮----
+export async function downloadKRAGenericDocx(data: GenericKRAReportData, filename?: string)
+⋮----
+export async function downloadKRAGenericPdf(data: GenericKRAReportData, filename?: string)</file><file path="frontend/services/kraSchemas.ts">export type FieldType = &apos;text&apos; | &apos;number&apos; | &apos;textarea&apos; | &apos;dynamic_table&apos;;
+⋮----
+export interface TableColumn {
+  name: string;
+  label: string;
+  type: &apos;text&apos; | &apos;number&apos;;
+}
+⋮----
+export interface FormField {
+  name: string;
+  label: string;
+  type: FieldType;
+  tableColumns?: TableColumn[];
+}
+⋮----
+export interface KRASchema {
+  kraCode: string;
+  title: string;
+  fields: FormField[];
+  evidenceChecklist: string[];
+}</file><file path="frontend/services/kraUtils.ts">import {
+  CompletedDocument,
+  KRAMaster,
+  MetricType,
+  ReportFormat,
+  SubmissionFormData,
+  SubmissionStatus,
+} from &apos;../types/kra&apos;;
+⋮----
+export function isNumericMetric(metric: MetricType): boolean
+⋮----
+export function parseAchievement(formData: SubmissionFormData): number
+⋮----
+/**
+ * progress = min(achievement / annualTarget * 100, 100)
+ * Never exceeds 100. Only meaningful for numeric / percentage metrics.
+ */
+export function computeProgress(
+  kra: KRAMaster,
+  formData: SubmissionFormData
+):
+⋮----
+/** Formats a progress value for display, e.g. 33.33% or 100%. */
+export function formatProgress(progress: number): string
+⋮----
+/** Human readable achievement claim for any metric type. */
+export function claimDisplay(kra: KRAMaster, formData: SubmissionFormData): string
+⋮----
+export function contributionProgress(
+  kra: KRAMaster,
+  status: SubmissionStatus,
+  progress: number
+): number
+⋮----
+export function metricUnit(metric: MetricType): string
+⋮----
+/**
+ * Policy/Compliance KRAs are status based — achievement is a compliance status,
+ * never a numeric value divided by the annual target. Never show
+ * achievement / annualTarget style progress for these KRAs.
+ */
+export function hasNumericProgress(metric: MetricType): boolean
+⋮----
+/** Validates an external evidence URL — only http:// or https:// values are accepted. */
+export function isValidHttpUrl(value: string): boolean
+⋮----
+/** Default column layout for an XLSX-style tabular template. */
+export function defaultTableColumns(): string[]
+⋮----
+export function isDocFilled(doc?: CompletedDocument): boolean
+⋮----
+// Column 0 is the auto &quot;S.No.&quot; column — it never counts as real content.
+⋮----
+function findDoc(docs: CompletedDocument[] | undefined, formatId: string): CompletedDocument | undefined
+⋮----
+/** True when every VC-uploaded document of this kind has been completed by the Dean. */
+export function documentsCompleted(
+  formats: ReportFormat[],
+  docs: CompletedDocument[] | undefined
+): boolean
+⋮----
+/** Is the current bimonthly achievement entry complete for this metric type? */
+export function performaCompleted(kra: KRAMaster | undefined, formData: SubmissionFormData): boolean
+⋮----
+export interface SubmissionCompletion {
+  performa: boolean;
+  reportFormat: boolean;
+  reportTemplate: boolean;
+  evidence: boolean;
+  hasReportFormat: boolean;
+  hasReportTemplate: boolean;
+}
+⋮----
+export function submissionCompletion(
+  kra: KRAMaster | undefined,
+  formData: SubmissionFormData
+): SubmissionCompletion</file><file path="frontend/services/reportDoc.ts">import {
+  CompletedDocument,
+  KRAMaster,
+  KRASubmission,
+  ReportFormat,
+} from &apos;../types/kra&apos;;
+import { formatProgress, isNumericMetric } from &apos;./kraUtils&apos;;
+import { KIET_LOGO_BASE64 } from &apos;../config/kietLogo&apos;;
+⋮----
+function esc(value: unknown): string
+⋮----
+function docShell(title: string, body: string): string
+⋮----
+function headerBlock(subtitle: string): string
+⋮----
+function row(label: string, value: string): string
+⋮----
+function formatList(list: ReportFormat[]): string
+⋮----
+/** VC-facing KRA definition proforma (used by &quot;Inspect Proforma&quot;). */
+export function buildKraDefinitionHtml(kra: KRAMaster): string
+⋮----
+function completedDocBody(format: ReportFormat, doc?: CompletedDocument): string
+⋮----
+/** Sections appended to the submission report so the VC download contains the filled documents. */
+function completedDocsSection(kra: KRAMaster, sub: KRASubmission): string
+⋮----
+/** Standalone preview / download for ONE completed VC-uploaded document. */
+export function buildCompletedDocumentHtml(options: {
+  kra: KRAMaster;
+  format: ReportFormat;
+  doc?: CompletedDocument;
+  kind: &apos;Prescribed Report Format&apos; | &apos;Summary Report Template&apos;;
+  deptName: string;
+  deptCode: string;
+  deanName: string;
+  cycle: string;
+}): string
+⋮----
+export function buildEvidenceSummaryHtml(options: {
+  kra: KRAMaster;
+  deptName: string;
+  deptCode: string;
+  deanName: string;
+  cycle: string;
+  formData: KRASubmission[&apos;formData&apos;];
+}): string
+⋮----
+/** Dean/VC-facing achievement proforma, rendered live from form data. */
+export function buildSubmissionReportHtml(
+  kra: KRAMaster,
+  sub: KRASubmission,
+  deptName: string
+): string
+⋮----
+export interface InstitutionalReportRow {
+  code: string;
+  name: string;
+  dean: string;
+  assigned: number;
+  approved: number;
+  exceeded: number;
+  progress: number;
+}
+⋮----
+/** Institution-wide summary used by the Reports page export. */
+export function buildInstitutionalReportHtml(rows: InstitutionalReportRow[]): string
+⋮----
+/** Triggers a real file download of the generated HTML report (printable / save-as-PDF ready). */
+export function downloadHtmlFile(html: string, fileName: string): void
+⋮----
+export function buildKRA12Html(kra: KRAMaster, sub: KRASubmission, deptName: string): string
+⋮----
+export function buildVACOfficialHtml(
+  kra: KRAMaster,
+  sub: KRASubmission,
+  deptName: string
+): string</file><file path="frontend/services/seedData.ts">import { Announcement, AppNotification, DepartmentInfo, KRAMaster, KRASubmission } from &apos;../types/kra&apos;;</file><file path="frontend/services/vacReportService.ts">import { api, isMockMode } from &apos;./api&apos;;
+import { VACReportData, VACSupportingDocItem } from &apos;../types/kra&apos;;
+⋮----
+export function getInitialVACReportData(
+  departmentName: string = &apos;&apos;,
+  deanName: string = &apos;&apos;,
+  academicYear: string = &apos;2026-2027&apos;,
+  existingData?: Partial&lt;VACReportData&gt;
+): VACReportData
+⋮----
+export interface VACValidationResult {
+  isValid: boolean;
+  errors: Record&lt;string, string&gt;;
+}
+⋮----
+export function validateVACReport(data: VACReportData): VACValidationResult
+⋮----
+// Validate Syllabus
+⋮----
+// Feedback score validation (0 to 5)
+⋮----
+export async function uploadEvidenceFile(
+  file: File,
+  documentType: string,
+  kraCode: string = &apos;KRA 1&apos;,
+  cycle: string = &apos;July - August&apos;
+): Promise&lt;
+⋮----
+export async function deleteEvidenceFile(fileId: number): Promise&lt;void&gt;
+⋮----
+export async function downloadVACDocx(reportData: VACReportData, deptName: string)
+⋮----
+export async function downloadVACPdf(reportData: VACReportData, deptName: string)</file><file path="frontend/types/kra.ts">export type DepartmentCode =
+  | &apos;CSE&apos;
+  | &apos;CSE (AI)&apos;
+  | &apos;CSE (AIML)&apos;
+  | &apos;IT&apos;
+  | &apos;CS&apos;
+  | &apos;CSIT&apos;
+  | &apos;EEE&apos;
+  | &apos;ECE&apos;
+  | &apos;ME&apos;
+  | &apos;KSOM&apos;
+  | &apos;MCA&apos;
+  | &apos;KSOP&apos;
+  | &apos;ASH&apos;;
+⋮----
+export interface DepartmentInfo {
+  code: DepartmentCode;
+  name: string;
+  deanName: string;
+  deanEmail: string;
+  facultyStrength: number;
+  studentStrength: number;
+}
+⋮----
+export type MetricType =
+  | &apos;Direct Numeric&apos;
+  | &apos;Percentage&apos;
+  | &apos;Yes/No&apos;
+  | &apos;Descriptive&apos;
+  | &apos;Evidence Based&apos;
+  | &apos;Policy/Compliance&apos;;
+⋮----
+export type ReportFileType = &apos;DOCX&apos; | &apos;XLSX&apos; | &apos;PDF&apos;;
+⋮----
+export interface ReportFormat {
+  id: string;
+  name: string;
+  description?: string;
+  fileName?: string;
+  fileType?: ReportFileType;
+}
+⋮----
+export interface KRAMaster {
+  code: string;
+  title: string;
+  nbaRef: string;
+  naacRef: string;
+  metricType: MetricType;
+  annualTarget: number;
+  annualTargetDisplay?: string;
+  targetDescription: string;
+  prescribedReportFormats: ReportFormat[];
+  summaryTemplates: ReportFormat[];
+  assignedDepts: DepartmentCode[];
+  status: &apos;Active&apos; | &apos;Draft&apos; | &apos;Inactive&apos;;
+}
+⋮----
+export type BimonthlyCycle =
+  | &apos;July – August&apos;
+  | &apos;September – October&apos;
+  | &apos;November – December&apos;
+  | &apos;January – February&apos;
+  | &apos;March – April&apos;
+  | &apos;May – June&apos;;
+⋮----
+export type SubmissionStatus = &apos;Draft&apos; | &apos;Submitted&apos; | &apos;Approved&apos; | &apos;Returned&apos;;
+⋮----
+export interface TimelineEvent {
+  id: string;
+  stage: string;
+  date: string;
+  actor: string;
+  remarks?: string;
+}
+⋮----
+export interface SubmissionFormData {
+  coordName?: string;
+  targetDesc?: string;
+  achievementClaim?: string;
+  yesNoChoice?: &apos;Yes&apos; | &apos;No&apos;;
+  descriptiveText?: string;
+  evidenceStatus?: string;
+  complianceStatus?: string;
+  remarks?: string;
+  evidenceFileName?: string;
+  evidenceFileSize?: string;
+  customFields?: any;
+  customEvidence?: any[];
+  evidenceDriveLink?: string;
+  reportFormatDocs?: CompletedDocument[];
+  summaryTemplateDocs?: CompletedDocument[];
+  vacReport?: VACReportData;
+  kra7Report?: KRA7ReportData;
+  dynamicData?: Record&lt;string, any&gt;;
+  isEvidenceNeeded?: boolean;
+}
+⋮----
+export interface VACCourseRow {
+  id: string;
+  courseName: string;
+  durationHours: number | &apos;&apos;;
+  mode: &apos;Offline&apos; | &apos;Online&apos; | &apos;Hybrid&apos;;
+  resourcePerson: string;
+  enrolled: number | &apos;&apos;;
+  completed: number | &apos;&apos;;
+}
+⋮----
+export interface VACSyllabusRow {
+  id: string;
+  module: string;
+  topic: string;
+  hours: number | &apos;&apos;;
+}
+⋮----
+export interface VACAssessmentData {
+  method: string;
+  minAttendance: string;
+  passingCriteria: string;
+  issuingAuthority: string;
+  certificatesIssued: number | &apos;&apos;;
+}
+⋮----
+export interface VACOutcomeImpact {
+  technicalSkills?: string;
+  employability?: string;
+  industryCert?: string;
+  completionRate?: string;
+  internships?: string;
+  placementSupport?: string;
+  studentProjects?: string;
+  hackathons?: string;
+}
+⋮----
+export interface VACFeedbackData {
+  score: number | &apos;&apos;;
+  suggestions: string[];
+}
+⋮----
+export interface VACSignatory {
+  name: string;
+  designation: string;
+  signature?: string;
+  date: string;
+}
+⋮----
+export interface VACSupportingDocItem {
+  id: number;
+  title: string;
+  attached: boolean;
+  fileName?: string;
+  fileSize?: string;
+  fileUrl?: string;
+  fileId?: number;
+}
+⋮----
+export interface VACReportData {
+  academicSession: string;
+  semester: string;
+  facultyCoordinator: string;
+  hodName: string;
+  courses: VACCourseRow[];
+  syllabus: VACSyllabusRow[];
+  learningOutcomes: string[];
+  assessment: VACAssessmentData;
+  outcomeAndImpact: VACOutcomeImpact;
+  feedback: VACFeedbackData;
+  preparedBy: VACSignatory;
+  approvedBy: VACSignatory;
+  supportingDocuments: VACSupportingDocItem[];
+}
+⋮----
+export interface KRA7ReportData {
+  academicYear: string;
+  semester: string;
+  department: string;
+  facultyName: string;
+  designation: string;
+  email: string;
+  mobileNumber: string;
+  subject: string;
+  ratings: Record&lt;number, number&gt;;
+  overallSatisfaction: number | null;
+  suggestions: string;
+  signatureName: string;
+  signatureDate: string;
+  evidenceFile?: {
+    id?: number;
+    fileName?: string;
+    fileUrl?: string;
+    fileSize?: string;
+  };
+}
+⋮----
+export interface KRASubmission {
+  id: string;
+  kraCode: string;
+  kraTitle: string;
+  dept: DepartmentCode;
+  deanName: string;
+  cycle: BimonthlyCycle;
+  metricType: MetricType;
+  /** Snapshot of the Annual Target at submission time. */
+  annualTarget: number;
+  /** Human readable achievement claim (e.g. &quot;30%&quot;, &quot;5&quot;, &quot;Yes&quot;). */
+  claim: string;
+  /** Numeric achievement (0 for non-numeric metrics). */
+  numericClaim: number;
+  /** 0..100 (2 decimal precision). Only meaningful for numeric/percentage metrics. */
+  progress: number;
+  isTargetExceeded: boolean;
+  submittedDate: string;
+  status: SubmissionStatus;
+  returnReason?: string;
+  formData: SubmissionFormData;
+  timeline: TimelineEvent[];
+}
+⋮----
+/** Snapshot of the Annual Target at submission time. */
+⋮----
+/** Human readable achievement claim (e.g. &quot;30%&quot;, &quot;5&quot;, &quot;Yes&quot;). */
+⋮----
+/** Numeric achievement (0 for non-numeric metrics). */
+⋮----
+/** 0..100 (2 decimal precision). Only meaningful for numeric/percentage metrics. */
+⋮----
+export interface Announcement {
+  id: string;
+  title: string;
+  message: string;
+  priority: &apos;High / Urgent&apos; | &apos;Normal&apos; | &apos;Informational&apos;;
+  deadline: string;
+  targetDepts: DepartmentCode[];
+  createdAt: string;
+  author: string;
+}
+⋮----
+export interface UserSession {
+  role: &apos;vc&apos; | &apos;dean&apos;;
+  deptCode: DepartmentCode;
+  name: string;
+  title: string;
+  initials: string;
+  email: string;
+}
+⋮----
+export interface CompletedDocument {
+  formatId: string;
+  fields: Record&lt;string, string&gt;;
+  narrative: string;
+  table: TemplateTable;
+  completedAt?: string;
+}
+⋮----
+export interface TemplateTable {
+  columns: string[];
+  rows: string[][];
+}
+⋮----
+export type NotificationKind =
+  | &apos;announcement&apos;
+  | &apos;kra-assigned&apos;
+  | &apos;submission-returned&apos;
+  | &apos;submission-approved&apos;
+  | &apos;reminder&apos;;
+⋮----
+export interface AppNotification {
+  id: string;
+  title: string;
+  message: string;
+  time: string;
+  read: boolean;
+  kind: NotificationKind;
+  targetDepts: DepartmentCode[];
+  kraCode?: string;
+  submissionId?: string;
+  announcementId?: string;
+}</file><file path="frontend/.gitignore"># See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts</file><file path="frontend/AGENTS.md">&lt;!-- BEGIN:nextjs-agent-rules --&gt;
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file&apos;s directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+&lt;!-- END:nextjs-agent-rules --&gt;</file><file path="frontend/CLAUDE.md">@AGENTS.md</file><file path="frontend/eslint.config.mjs"></file><file path="frontend/next.config.ts">import type { NextConfig } from &quot;next&quot;;</file><file path="frontend/package.json">{
+  &quot;name&quot;: &quot;frontend&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;private&quot;: true,
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;next dev&quot;,
+    &quot;build&quot;: &quot;next build&quot;,
+    &quot;start&quot;: &quot;next start&quot;,
+    &quot;lint&quot;: &quot;eslint&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;axios&quot;: &quot;^1.20.0&quot;,
+    &quot;lucide-react&quot;: &quot;^1.51.0&quot;,
+    &quot;next&quot;: &quot;16.3.8&quot;,
+    &quot;react&quot;: &quot;19.2.8&quot;,
+    &quot;react-dom&quot;: &quot;19.2.8&quot;,
+    &quot;recharts&quot;: &quot;^3.10.1&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@tailwindcss/postcss&quot;: &quot;^4&quot;,
+    &quot;@types/node&quot;: &quot;^20&quot;,
+    &quot;@types/react&quot;: &quot;^19&quot;,
+    &quot;@types/react-dom&quot;: &quot;^19&quot;,
+    &quot;eslint&quot;: &quot;^9&quot;,
+    &quot;eslint-config-next&quot;: &quot;16.3.8&quot;,
+    &quot;tailwindcss&quot;: &quot;^4&quot;,
+    &quot;typescript&quot;: &quot;^5&quot;
+  }
+}</file><file path="frontend/postcss.config.mjs"></file><file path="frontend/README.md">This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&amp;filter=next.js&amp;utm_source=create-next-app&amp;utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.</file><file path="frontend/tsconfig.json">{
+  &quot;compilerOptions&quot;: {
+    &quot;target&quot;: &quot;ES2017&quot;,
+    &quot;lib&quot;: [&quot;dom&quot;, &quot;dom.iterable&quot;, &quot;esnext&quot;],
+    &quot;allowJs&quot;: true,
+    &quot;skipLibCheck&quot;: true,
+    &quot;strict&quot;: true,
+    &quot;noEmit&quot;: true,
+    &quot;esModuleInterop&quot;: true,
+    &quot;module&quot;: &quot;esnext&quot;,
+    &quot;moduleResolution&quot;: &quot;bundler&quot;,
+    &quot;resolveJsonModule&quot;: true,
+    &quot;isolatedModules&quot;: true,
+    &quot;jsx&quot;: &quot;react-jsx&quot;,
+    &quot;incremental&quot;: true,
+    &quot;plugins&quot;: [
+      {
+        &quot;name&quot;: &quot;next&quot;
+      }
+    ],
+    &quot;paths&quot;: {
+      &quot;@/*&quot;: [&quot;./*&quot;]
+    }
+  },
+  &quot;include&quot;: [
+    &quot;next-env.d.ts&quot;,
+    &quot;**/*.ts&quot;,
+    &quot;**/*.tsx&quot;,
+    &quot;.next/types/**/*.ts&quot;,
+    &quot;.next/dev/types/**/*.ts&quot;,
+    &quot;**/*.mts&quot;
+  ],
+  &quot;exclude&quot;: [&quot;node_modules&quot;]
+}</file><file path="kra_tracker_backend/__init__.py">__all__ = (&apos;celery_app&apos;,)</file><file path="kra_tracker_backend/asgi.py">application = get_asgi_application()</file><file path="kra_tracker_backend/celery.py">app = Celery(&apos;kra_tracker_backend&apos;)</file><file path="kra_tracker_backend/settings.py">BASE_DIR = Path(__file__).resolve().parent.parent
+⋮----
+SECRET_KEY = &apos;django-insecure-qgy^^3$4l#3v&amp;l1pr@6#pmv4fs6h84sw$rd4t%1r@92l7ert1a&apos;
+⋮----
+DEBUG = True
+⋮----
+ALLOWED_HOSTS = [&apos;localhost&apos;, &apos;127.0.0.1&apos;, &apos;testserver&apos;, &apos;*&apos;]
+⋮----
+INSTALLED_APPS = [
+⋮----
+MIDDLEWARE = [
+⋮----
+ROOT_URLCONF = &apos;kra_tracker_backend.urls&apos;
+⋮----
+TEMPLATES = [
+⋮----
+WSGI_APPLICATION = &apos;kra_tracker_backend.wsgi.application&apos;
+⋮----
+DATABASES = {
+⋮----
+AUTH_PASSWORD_VALIDATORS = [
+⋮----
+LANGUAGE_CODE = &apos;en-us&apos;
+⋮----
+TIME_ZONE = &apos;UTC&apos;
+⋮----
+USE_I18N = True
+⋮----
+USE_TZ = True
+⋮----
+STATIC_URL = &apos;static/&apos;
+MEDIA_URL = &apos;/media/&apos;
+MEDIA_ROOT = BASE_DIR / &apos;media&apos;
+⋮----
+EMAIL_BACKEND = &apos;django.core.mail.backends.smtp.EmailBackend&apos;
+EMAIL_HOST = &apos;smtp.gmail.com&apos;
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get(&apos;EMAIL_HOST_USER&apos;, &apos;kiet.kra.alerts@gmail.com&apos;)
+EMAIL_HOST_PASSWORD = os.environ.get(&apos;EMAIL_HOST_PASSWORD&apos;, &apos;your-16-character-app-password&apos;)
+⋮----
+AUTH_USER_MODEL = &apos;accounts.User&apos;
+⋮----
+CORS_ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGIN_REGEXES = [
+CORS_ALLOW_CREDENTIALS = True
+CSRF_TRUSTED_ORIGINS = [
+SESSION_COOKIE_SAMESITE = &apos;Lax&apos;
+CSRF_COOKIE_SAMESITE = &apos;Lax&apos;
+⋮----
+REST_FRAMEWORK = {
+⋮----
+CELERY_BROKER_URL = &apos;redis://localhost:6379/0&apos;
+CELERY_RESULT_BACKEND = &apos;redis://localhost:6379/0&apos;
+CELERY_ACCEPT_CONTENT = [&apos;json&apos;]
+CELERY_TASK_SERIALIZER = &apos;json&apos;
+CELERY_TIMEZONE = TIME_ZONE
+⋮----
+LOGGING = {
+⋮----
+EMAIL_HOST_PASSWORD = os.environ.get(&apos;EMAIL_HOST_PASSWORD&apos;, &apos;pujvdzyxussbyfrb&apos;)</file><file path="kra_tracker_backend/urls.py">urlpatterns = [</file><file path="kra_tracker_backend/wsgi.py">application = get_wsgi_application()</file><file path="Project details/architecture.md"># System Architecture
+
+## 1. Tech Stack
+- **Frontend:** Next.js (App Router), React, Tailwind CSS
+- **Backend:** Python, Django, Django REST Framework (DRF)
+- **Database:** PostgreSQL
+- **Background Tasks:** Celery, Redis (for email reminders)
+- **Deployment:** Docker, Docker Compose, Nginx (Local Intranet)
+
+## 2. Architecture Overview
+The application follows a decoupled client-server architecture interacting via REST APIs. 
+- The Next.js frontend is served locally.
+- The Django backend exposes secured endpoints.
+- Celery workers continuously monitor the Postgres DB for deadlines and use Redis as a message broker to dispatch emails.
+
+## 3. Proposed Folder Structure
+```text
+/kiet-kra
+├── /frontend
+│   ├── /app          # Next.js App Router
+│   ├── /components   # Reusable UI (Tailwind)
+│   ├── /lib          # API calls (Axios)
+│   └── package.json
+├── /backend
+│   ├── /core         # Django base app &amp; Auth
+│   ├── /tracker      # KRA &amp; Achievement logic
+│   ├── /reports      # Template Engine &amp; PDF generation
+│   ├── manage.py
+│   └── requirements.txt
+├── /nginx            # Reverse proxy config
+└── docker-compose.yml
+```</file><file path="Project details/Decisions.md"># Architecture &amp; Tech Decisions
+
+## 1. Why Next.js over React SPA?
+- **Decision:** Use Next.js App Router.
+- **Reason:** Provides built-in routing, better performance via server components, and is the enterprise standard for React. It handles heavy data fetching (for Admin dashboards) more efficiently than standard client-side React.
+
+## 2. Why Django &amp; PostgreSQL?
+- **Decision:** Use Django with DRF and Postgres.
+- **Reason:** Django offers high security out-of-the-box, a built-in admin panel for emergency database management, and a robust ORM that easily handles the complex relational mapping between Departments, dynamic KRAs, and bi-monthly achievements. Postgres enforces strict data integrity.
+
+## 3. Why Local Intranet via Docker?
+- **Decision:** Host on local college servers instead of AWS/Cloud.
+- **Reason:** Ensures 100% data privacy. By using Docker, we avoid &quot;it works on my machine&quot; issues. IT staff can deploy the entire stack with a single `docker-compose up` command.
+
+## 4. Why Celery &amp; Redis for Emails?
+- **Decision:** Offload email tasks to Celery.
+- **Reason:** If we put a sleep timer or a synchronous loop in Django to check for deadlines 5 days prior, the server will crash. Celery runs asynchronously in the background, checking the database daily without interrupting the main web application.
+
+## 5. Why Live Preview Templates?
+- **Decision:** Generate PDFs on the fly based on form data.
+- **Reason:** Ensures standard formatting across all 13 departments. Faculty no longer have to design their own Word documents; they just fill a form and the system generates the official compliance document.
+
+
+## 6. Why Data-Driven Evidence over Manual File Uploads?
+- **Decision:** The Evidence model stores raw JSON data (document_data) instead of requiring an explicit file upload.
+- **Reason:** Faculty should be able to edit their reports later without having to re-upload PDFs. The frontend form saves the raw JSON to the database, and the backend handles generating the final PDF automatically upon export.</file><file path="Project details/design.md"># Design System
+
+## 1. Color Palette
+- **Primary (Brand):** Deep Blue (`#1E3A8A` / Tailwind `blue-900`) - Used for headers, primary buttons.
+- **Secondary:** Slate (`#475569` / Tailwind `slate-600`) - Used for secondary text and borders.
+- **Background:** Light Gray (`#F8FAFC` / Tailwind `slate-50`) - Main application background.
+- **Accent/Success:** Emerald (`#10B981` / Tailwind `emerald-500`) - For &quot;Approved&quot; or &quot;Target Met&quot; badges.
+- **Warning:** Amber (`#F59E0B` / Tailwind `amber-500`) - For &quot;Pending&quot; or &quot;In Review&quot;.
+- **Danger:** Rose (`#E11D48` / Tailwind `rose-600`) - For missed deadlines or errors.
+
+## 2. Typography
+- **Primary Font:** Inter (or system sans-serif).
+- **Headings:** Bold, dark blue, tightly spaced.
+- **Data Tables:** Monospaced numbers for tabular data (achievements/targets) to ensure decimal alignment.
+
+## 3. UI Components
+- **Forms:** Clean, bordered inputs with subtle focus rings (`ring-blue-500`).
+- **Cards:** Slight shadow (`shadow-sm`), rounded corners (`rounded-lg`), white background.
+- **Layout:** Fixed sidebar navigation for Super Admins/HODs, top app bar for user profile/logout.</file><file path="Project details/Flow.md"># Execution Flow
+
+## 1. Deployment Entry Point
+1. College IT runs `docker-compose up`.
+2. **Nginx** container starts, listening on local IP port 80.
+3. Nginx routes `/api/*` traffic to the **Django Gunicorn** container.
+4. Nginx routes `/` traffic to the **Next.js** container.
+5. **Redis** and **Celery** worker containers boot up to monitor emails.
+
+## 2. User Authentication Flow
+1. User navigates to local IP. Next.js loads the Login Page.
+2. User enters credentials -&gt; POST `/api/auth/login/`.
+3. Django verifies credentials against Postgres DB and returns Session Cookies.
+4. Next.js stores tokens securely. Route middleware redirects user based on Role (Admin -&gt; Admin Dashboard, HOD -&gt; Department Dashboard).
+
+## 3. Data Entry &amp; Live Preview Flow
+1. Faculty selects a KRA.
+2. Next.js renders the specific Template Form for that KRA.
+3. As Faculty types, Next.js debounces the input and sends POST `/api/tracker/preview/`.
+4. Django Template Engine processes the JSON, generates a PDF in memory, and returns the binary stream.
+5. Next.js renders the PDF in the Split-Screen UI.
+6. Faculty clicks &quot;Submit&quot; -&gt; POST `/api/tracker/achievements/` -&gt; Saved permanently to Postgres.
+
+## 4. Automated Email Flow
+1. Celery Beat runs a cron task every day at 00:01 AM.
+2. The task queries `BiMonthlyCycle` where `deadline == today + 5 days`.
+3. If true, fetches all Faculty/HOD emails associated with pending KRAs for that cycle.
+4. Dispatches email jobs to Redis queue.
+5. Celery Worker consumes the queue and sends SMTP emails.</file><file path="Project details/memory.md"># Project Memory &amp; Status
+
+## Current Status
+- **Phase:** Development Phase 1 (Backend Initialization).
+- **Next Step:** Refactored Roles: Removed FACULTY/HOD and enforced DEAN and SUPER_ADMIN roles across models and APIs.! Awaiting Frontend Integration.
+
+## Completed Items
+- Defined tech stack (Next.js, Django, Postgres, Docker).
+- Established 4-member parallel workflow.
+- Removed JWT and implemented Django Session Authentication.
+- Backend 1: Core models and base app initialized.
+- Refactored Evidence model to use JSON form data instead of manual uploads.
+- Backend 2: Created CycleException model and DRAFT/SUBMITTED/REJECTED/APPROVED per-KRA workflow.
+- Backend 2: Refactored generic PDF engine into a versioned Template Registry.
+- Backend 2: Built Admin Reporting API (DashboardStatsView) aggregating college-wide KRA compliance.
+- Backend 2: Set up Celery &amp; Redis for asynchronous background tasks.
+- Backend 2: Wrote &apos;send_deadline_reminders&apos; task to email HODs 5 days before deadlines.
+- Backend 2: Implemented TemplatePreviewView using ReportLab to generate on-the-fly PDFs from JSON form data.
+- Backend 2: Built tracker app Serializers and Views (REST APIs) including the Template API stub.
+- Backend 2: tracker app models (BiMonthlyCycle, Achievement, Evidence) created and migrated.
+- Finalized local intranet deployment strategy.
+- Created SRS and Defense Guide artifacts.
+- Created Desktop project management files.
+
+## Important Decisions Logged
+- **Dynamic Calculation:** Shifted from hardcoded KRA targets to dynamic calculation based on department strength.
+- **Live Preview:** Added template generation engine to replace raw data entry.
+- **Intranet Only:** Removed AWS/Vercel dependency for privacy/security compliance.
+
+## Bugs &amp; Fixes
+- *(None yet. System is in pre-development phase).*</file><file path="Project details/PRD.md"># Product Requirements Document (PRD)
+
+## 1. Product Overview
+The KIET KRA Tracker is a centralized, role-based Enterprise Web Application designed to replace the existing Excel-based tracking mechanism. It tracks Key Result Areas (KRAs) across various departments for NBA and NAAC accreditation standards.
+
+## 2. Problem Statement
+Currently, the institution uses a manual, error-prone Excel sheet with 13 department tabs to track ~50 KRAs. This leads to data inconsistency, broken Google Drive evidence links, lack of dynamic target scaling based on department strength, and significant delays in generating compliance reports.
+
+## 3. Goals
+- Eliminate manual spreadsheet entry.
+- Ensure strict data typing (numbers vs text).
+- Securely store evidence locally without relying on external cloud links.
+- Automate reminders and report generation.
+- Dynamically scale KRA targets based on faculty/student strength.
+
+## 4. Target Users
+1. **Super Admin (IQAC/Management):** Global overview, report generation, system management.
+2. **HOD (Head of Department):** Department-level dashboard to monitor faculty progress.
+3. **Faculty:** Fills out standardized templates and uploads evidence.
+
+## 5. Core Features
+- **Dynamic KRA Distribution:** Targets automatically multiply based on department faculty/student counts.
+- **Template &amp; Live Preview:** Standardized forms for data entry that instantly generate a PDF preview before submission.
+- **Automated Email Reminders:** Emails sent 5 days before bi-monthly deadlines.
+- **Intranet Security:** Completely local deployment via Docker.
+- **Role-Based Access Control:** Strict data isolation between departments.</file><file path="Project details/Rules.md"># Project Rules &amp; AI Guidelines
+
+&gt; **ATTENTION AI AGENTS:** If you are an AI reading this file, you must strictly adhere to all rules below. Treat this folder as your primary context.
+
+## 1. AI Execution &amp; Workflow Directives
+- **Read Before Acting:** Before writing code, always read 	ask.md to know what is next, and read memory.md to understand the current state.
+- **Always Branch:** NEVER push directly to main for new features. Always create a new Git branch for your specific task (e.g., git checkout -b feat/task-name).
+- **Continuous Documentation:** Update Project details (memory.md, 	ask.md) after every new piece of work is completed, and explicitly detail to the user what was done.
+
+## 2. General Principles
+- **DRY (Don&apos;t Repeat Yourself):** Extract reusable logic in both Next.js components and Django services.
+- **Fail Fast:** Validate data at the frontend boundary, and strictly enforce it at the Django ORM level.
+- **Security First:** Never expose local file paths. Always use Django Session Authentication for API access.
+
+## 3. Tech &amp; Coding Standards
+- **Next.js / Frontend:** TypeScript strictly. Tailwind CSS for styling. Components must be functional and use Hooks.
+- **Django / Backend:** Follow PEP8 styling guidelines. Keep &quot;Fat Models, Thin Views&quot;. Use Django REST Framework Serializers for validation.
+
+## 4. Project Structure Rules
+- API responses must be standardized: { &quot;data&quot;: ..., &quot;message&quot;: &quot;...&quot;, &quot;status&quot;: ... }
+- Use environmental variables (.env) for secrets.</file><file path="Project details/task.md"># Full Project Task Breakdown (Phases 1-3)
+
+This document tracks the tasks for all 4 members across the entire 15-day timeline.
+
+---
+
+## Backend Member 1 (Architecture &amp; Security)
+
+### Phase 1: Foundation (Completed)
+- [x] Initialize Django project and Postgres connection.
+- [x] Implement Custom User Model (Roles: Super Admin, Dean).
+- [x] Implement `Department` model with `faculty_strength` and `student_strength`.
+- [x] Implement `KRA_Metric` model and logic for dynamic target calculation.
+- [x] Setup Django Session Authentication configuration.
+
+### Phase 2: API &amp; Permissions
+- [x] Create `core/serializers.py` for Departments, Users, and KRAs.
+- [x] Create `core/views.py` (CRUD REST endpoints for Super Admins).
+- [x] Implement Custom Permissions (e.g., `IsSuperAdmin`, `IsHOD`) to strictly isolate department data.
+- [x] Write the Python property/signal logic to actively multiply KRA targets by department strength.
+
+### Phase 3: Final Polish
+- [x] Conduct final security audit (Ensure no N+1 query problems in the ORM).
+- [x] Remove all debug prints and ensure logging is configured for production.
+
+---
+
+## Backend Member 2 (Core Engine &amp; Mail)
+
+### Phase 1: Transactional Models (Completed)
+- [x] Implement `BiMonthlyCycle` model with deadlines.
+- [x] Implement `Achievement` model linking KRAs and Departments.
+- [x] Refactor `Evidence` model to store JSON `document_data` instead of manual PDF uploads.
+
+### Phase 2: Transactional APIs &amp; Template Engine
+- [x] Create `tracker/serializers.py` for Cycles, Achievements, and Evidence.
+- [x] Build `tracker/views.py`: API for Faculty to GET assigned KRAs and POST form data.
+- [x] Build Template API: Accept JSON form data, save it to `document_data`, and generate a live PDF using ReportLab.
+
+### Phase 3: Background Tasks &amp; Reporting
+- [x] Setup Celery &amp; Redis inside the Django project.
+- [x] Write background task to email HODs exactly 5 days before a `BiMonthlyCycle` deadline.
+- [x] Build Admin Reporting API: Aggregate all department KRA data to serve the institutional dashboard charts.
+
+---
+
+## Frontend Member 1 (Admin &amp; Deployment)
+
+### Phase 1: Intranet Setup &amp; Auth
+- [ ] Initialize Next.js (App Router) project with Tailwind CSS.
+- [ ] Set up basic `docker-compose.yml` for local intranet testing (Next + Django + Postgres).
+- [ ] Build Login UI and configure Axios to send `withCredentials: true` for Django Sessions.
+
+### Phase 2: Admin Command Center
+- [ ] Build Super Admin Dashboard layout (Sidebar, Header).
+- [ ] Integrate Chart.js or Recharts to visualize institutional progress (consuming Backend 2&apos;s Aggregation API).
+- [ ] Build Admin screens to manage Users, Departments, and assign dynamic KRAs.
+
+### Phase 3: Export &amp; Final Deployment
+- [ ] Build the Live Report Export UI (Buttons to download PDF/Excel compliance reports).
+- [ ] Configure Nginx reverse proxy routing inside Docker to correctly route `/api/` to Django and `/` to Next.js.
+
+---
+
+## Frontend Member 2 (HOD/Faculty Portal)
+
+### Phase 1: Dashboard Foundation
+- [ ] Build Dean dashboard layout.
+- [ ] Fetch and display assigned KRAs based on the logged-in user&apos;s department.
+- [ ] Build progress bars showing specific department targets vs current achievements.
+
+### Phase 2: Dynamic Data Entry Forms
+- [ ] Build standard numeric/percentage input forms for basic KRAs.
+- [ ] Build detailed Template Forms for complex KRAs (e.g., Event details, Attendees).
+- [ ] Implement client-side validation so faculty cannot enter text into math fields.
+
+### Phase 3: Split-Screen Live Preview UI
+- [ ] Build the Split-Screen UI: Form inputs on the left, PDF viewer component on the right.
+- [ ] Hook up the debounce function: When faculty stops typing for 1 second, ping the Backend 2 Template API to refresh the PDF preview on the right.
+- [ ] Build the final &quot;Submit &amp; Approve&quot; confirmation flow.</file><file path="tracker/migrations/__init__.py"></file><file path="tracker/migrations/0001_initial.py">class Migration(migrations.Migration)
+⋮----
+initial = True
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="tracker/migrations/0002_remove_evidence_file_remove_evidence_uploaded_at_and_more.py">class Migration(migrations.Migration)
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="tracker/migrations/0003_achievement_review_comment_alter_achievement_status_and_more.py">class Migration(migrations.Migration)
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="tracker/migrations/0004_achievement_custom_data.py">class Migration(migrations.Migration)
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="tracker/migrations/0005_uploadedevidencefile.py">class Migration(migrations.Migration)
+⋮----
+dependencies = [
+⋮----
+operations = [</file><file path="tracker/templates/tracker/kra_11_report.html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+    @page {
+        size: A4;
+        margin: 1cm;
+        @frame header {
+            -pdf-frame-content: header_content;
+            top: 1cm;
+        }
+        @frame footer {
+            -pdf-frame-content: footer_content;
+            bottom: 1cm;
+        }
+    }
+    body {
+        font-family: Helvetica, sans-serif;
+        font-size: 11pt;
+    }
+    .header { text-align: center; font-weight: bold; }
+    .header h2 { margin-bottom: 0; }
+    .header h3 { margin-top: 5px; font-size: 12pt; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; }
+    th, td { border: 1px solid black; padding: 6px; text-align: left; }
+    th { background-color: #f2f2f2; font-weight: bold; }
+    .section-title { font-weight: bold; margin-top: 20px; font-size: 12pt; }
+    .signature-block { width: 100%; margin-top: 50px; }
+    .signature-box { width: 50%; float: left; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;header_content&quot; class=&quot;header&quot;&gt;
+        &lt;h2 style=&quot;color: #2b5c8f;&quot;&gt;KIET GROUP OF INSTITUTIONS&lt;/h2&gt;
+        &lt;h3&gt;Delhi-NCR, Ghaziabad&lt;/h3&gt;
+        &lt;hr&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;footer_content&quot; style=&quot;text-align: right; font-size: 9pt;&quot;&gt;
+        Page &lt;pdf:pagenumber&gt; of &lt;pdf:pagecount&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;header&quot; style=&quot;margin-top: 30px;&quot;&gt;
+        &lt;h3&gt;Report on Bridge Courses Conducted&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td style=&quot;width: 40%;&quot;&gt;&lt;b&gt;Name of the Department&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;{{ department }}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Academic Session / Year/ Semester&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;{{ cycle }}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Faculty Coordinator(s)&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;{{ faculty_coordinator }}&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;div class=&quot;section-title&quot;&gt;Detail of Bridge Courses:&lt;/div&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;S. No.&lt;/th&gt;
+                &lt;th&gt;Course Name&lt;/th&gt;
+                &lt;th&gt;Duration (Hours)&lt;/th&gt;
+                &lt;th&gt;Mode Offline/ Online/ Hybrid&lt;/th&gt;
+                &lt;th&gt;Resource Person&lt;/th&gt;
+                &lt;th&gt;No. of Students Enrolled&lt;/th&gt;
+                &lt;th&gt;No. of Students Completed&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            {% for course in bridge_courses %}
+            &lt;tr&gt;
+                &lt;td&gt;{{ forloop.counter }}&lt;/td&gt;
+                &lt;td&gt;{{ course.course_name }}&lt;/td&gt;
+                &lt;td&gt;{{ course.duration }}&lt;/td&gt;
+                &lt;td&gt;{{ course.mode }}&lt;/td&gt;
+                &lt;td&gt;{{ course.resource_person }}&lt;/td&gt;
+                &lt;td&gt;{{ course.enrolled }}&lt;/td&gt;
+                &lt;td&gt;{{ course.completed }}&lt;/td&gt;
+            &lt;/tr&gt;
+            {% empty %}
+            &lt;tr&gt;&lt;td colspan=&quot;7&quot; style=&quot;text-align: center;&quot;&gt;No courses added yet.&lt;/td&gt;&lt;/tr&gt;
+            {% endfor %}
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;div class=&quot;section-title&quot;&gt;Course Content/Syllabus&lt;/div&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Module&lt;/th&gt;
+                &lt;th&gt;Topic&lt;/th&gt;
+                &lt;th&gt;No. of Hours&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            {% for content in course_content %}
+            &lt;tr&gt;
+                &lt;td&gt;{{ content.module }}&lt;/td&gt;
+                &lt;td&gt;{{ content.topic }}&lt;/td&gt;
+                &lt;td&gt;{{ content.hours }}&lt;/td&gt;
+            &lt;/tr&gt;
+            {% empty %}
+            &lt;tr&gt;&lt;td colspan=&quot;3&quot; style=&quot;text-align: center;&quot;&gt;No content added yet.&lt;/td&gt;&lt;/tr&gt;
+            {% endfor %}
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;div class=&quot;section-title&quot;&gt;Assessment and Certification&lt;/div&gt;
+    &lt;table&gt;
+        &lt;tr&gt;&lt;td style=&quot;width: 40%;&quot;&gt;&lt;b&gt;Assessment Method&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{{ assessment_method }}&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;Minimum Attendance Requirement&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{{ attendance_req }}&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;Passing/Completion Criteria&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{{ passing_criteria }}&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;Certificate Issuing Authority&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{{ cert_authority }}&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;Number of Certificates Issued&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{{ num_certs_issued }}&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;div class=&quot;section-title&quot;&gt;OUTCOME AND IMPACT&lt;/div&gt;
+    &lt;p&gt;&lt;b&gt;Suggested Impact Indicators:&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;{{ impact_indicators|linebreaks }}&lt;/p&gt;
+    &lt;br/&gt;
+    &lt;p&gt;&lt;b&gt;Student Feedback Summary - Overall Feedback Score:&lt;/b&gt; {{ feedback_score }} / 5&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Major Suggestions Received:&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;{{ major_suggestions|linebreaks }}&lt;/p&gt;
+    &lt;div class=&quot;signature-block&quot;&gt;
+        &lt;div class=&quot;signature-box&quot;&gt;
+            &lt;b&gt;Prepared By:&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+            Name: ______________________&lt;br&gt;&lt;br&gt;
+            Designation: ________________&lt;br&gt;&lt;br&gt;
+            Signature: __________________&lt;br&gt;&lt;br&gt;
+            Date: _______________________
+        &lt;/div&gt;
+        &lt;div class=&quot;signature-box&quot;&gt;
+            &lt;b&gt;Approved By:&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+            Name: ______________________&lt;br&gt;&lt;br&gt;
+            Designation: ________________&lt;br&gt;&lt;br&gt;
+            Signature: __________________&lt;br&gt;&lt;br&gt;
+            Date: _______________________
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</file><file path="tracker/templates/tracker/kra_12_template.html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+    @page { size: landscape; margin: 1cm; }
+    body { font-family: Helvetica, sans-serif; font-size: 10pt; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid black; padding: 5px; text-align: left; }
+    th { background-color: #d9e1f2; font-weight: bold; }
+    .header { text-align: center; font-size: 14pt; font-weight: bold; margin-bottom: 20px; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;header&quot;&gt;KRA 12: Awards received for research/innovations&lt;/div&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Sl. No.&lt;/th&gt;
+                &lt;th&gt;Academic Year&lt;/th&gt;
+                &lt;th&gt;Award ID&lt;/th&gt;
+                &lt;th&gt;Name of Award&lt;/th&gt;
+                &lt;th&gt;Award Category&lt;/th&gt;
+                &lt;th&gt;Recipient Name&lt;/th&gt;
+                &lt;th&gt;Faculty/Student&lt;/th&gt;
+                &lt;th&gt;Awarding Org&lt;/th&gt;
+                &lt;th&gt;Level&lt;/th&gt;
+                &lt;th&gt;Date&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            {% for award in awards_list %}
+            &lt;tr&gt;
+                &lt;td&gt;{{ forloop.counter }}&lt;/td&gt;
+                &lt;td&gt;{{ cycle }}&lt;/td&gt;
+                &lt;td&gt;{{ award.award_id }}&lt;/td&gt;
+                &lt;td&gt;{{ award.name_of_award }}&lt;/td&gt;
+                &lt;td&gt;{{ award.award_category }}&lt;/td&gt;
+                &lt;td&gt;{{ award.recipient }}&lt;/td&gt;
+                &lt;td&gt;{{ award.recipient_type }}&lt;/td&gt;
+                &lt;td&gt;{{ award.awarding_org }}&lt;/td&gt;
+                &lt;td&gt;{{ award.level }}&lt;/td&gt;
+                &lt;td&gt;{{ award.date }}&lt;/td&gt;
+            &lt;/tr&gt;
+            {% empty %}
+            &lt;tr&gt;&lt;td colspan=&quot;10&quot; style=&quot;text-align: center;&quot;&gt;No awards added.&lt;/td&gt;&lt;/tr&gt;
+            {% endfor %}
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</file><file path="tracker/templates/tracker/kra_generic_report.html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;KRA Report — KIET Group of Institutions&lt;/title&gt;
+&lt;style&gt;
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.4cm 1.4cm 1.4cm;
+    @bottom-right {
+      content: &quot;Page &quot; counter(page) &quot; | &quot; counter(pages);
+      font-size: 9pt;
+      font-family: &apos;Times New Roman&apos;, Times, serif;
+      color: #666;
+    }
+  }
+  body { font-family: &apos;Times New Roman&apos;, Times, serif; font-size: 9.5pt; line-height: 1.35; color: #111; }
+  .page-break { page-break-before: always; }
+  .header-box {
+    text-align: center;
+    border-bottom: 2.5pt solid #622423;
+    padding-bottom: 4pt;
+    margin-bottom: 10pt;
+  }
+  .logo-img {
+    height: 52pt;
+    margin: 0 auto;
+    display: block;
+  }
+  .inst-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #000;
+    margin-top: 4pt;
+    margin-bottom: 0;
+  }
+  .inst-sub {
+    font-size: 8.5pt;
+    color: #444;
+    margin-top: 1pt;
+    margin-bottom: 0;
+  }
+  .doc-title-box { text-align: center; margin-top: 8px; margin-bottom: 12px; }
+  .doc-title { font-size: 12pt; font-weight: bold; text-decoration: underline; margin: 0; }
+  .kra-badge { font-size: 10pt; font-weight: bold; color: #622423; margin-top: 3px; }
+  table.bordered-table { width: 100%; border-collapse: collapse; margin-top: 6px; margin-bottom: 8px; }
+  table.bordered-table th, table.bordered-table td { border: 0.75pt solid #111; padding: 4px 6px; font-size: 9pt; }
+  table.bordered-table th { background-color: #f7f7f7; font-weight: bold; text-align: center; }
+  .section-heading { font-size: 9.5pt; font-weight: bold; color: #622423; background: #fdf5f5; border-left: 3pt solid #622423; padding: 4px 8px; margin: 12px 0 6px 0; }
+  .info-row { display: flex; gap: 16px; margin-bottom: 6px; }
+  .info-item { flex: 1; }
+  .info-label { font-size: 8pt; color: #555; font-weight: bold; }
+  .info-value { font-size: 9pt; border-bottom: 1px solid #999; padding-bottom: 1px; min-height: 14px; }
+  .sig-table { width: 100%; margin-top: 40px; border-collapse: collapse; }
+  .sig-table td { width: 50%; padding: 6px; vertical-align: top; font-size: 9pt; }
+  .sig-line { border-top: 1px solid #333; margin-top: 30px; width: 80%; }
+  .rating-table td { text-align: center; }
+  .highlight-row { background: #fafafa; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;header-box&quot;&gt;
+  {% if logo_b64 %}
+  &lt;img src=&quot;data:image/png;base64,{{ logo_b64 }}&quot; class=&quot;logo-img&quot; alt=&quot;KIET Crest&quot; /&gt;
+  {% endif %}
+  &lt;p class=&quot;inst-title&quot;&gt;Krishna Institute of Engineering &amp;amp; Technology (KIET) (Deemed to be university)&lt;/p&gt;
+  &lt;p class=&quot;inst-sub&quot;&gt;Delhi-NCR, Ghaziabad — ISO 9001:2015 Certified&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;doc-title-box&quot;&gt;
+  &lt;p class=&quot;doc-title&quot;&gt;{{ report_title|upper }}&lt;/p&gt;
+  &lt;p class=&quot;kra-badge&quot;&gt;KRA {{ kra_number }}&lt;/p&gt;
+&lt;/div&gt;
+&lt;table class=&quot;bordered-table&quot;&gt;
+  &lt;tr&gt;
+    &lt;td style=&quot;width:40%;&quot;&gt;&lt;b&gt;Name of School/Department&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;{{ department }}&lt;/td&gt;
+    &lt;td style=&quot;width:25%;&quot;&gt;&lt;b&gt;Academic Session&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;{{ academic_year }}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;Reporting Period (Bi-Monthly Cycle)&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;{{ cycle }}&lt;/td&gt;
+    &lt;td&gt;&lt;b&gt;Date of Report&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;{{ report_date }}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;Report Prepared By&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;{{ prepared_by }}&lt;/td&gt;
+    &lt;td&gt;&lt;b&gt;Designation&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;{{ designation }}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+{% if rows %}
+&lt;div class=&quot;section-heading&quot;&gt;{{ table_title|default:&quot;Activity Details&quot; }}&lt;/div&gt;
+&lt;table class=&quot;bordered-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      {% for col in columns %}&lt;th&gt;{{ col }}&lt;/th&gt;{% endfor %}
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    {% for row in rows %}
+    &lt;tr class=&quot;{% if forloop.counter|divisibleby:2 %}highlight-row{% endif %}&quot;&gt;
+      {% for cell in row %}&lt;td&gt;{{ cell }}&lt;/td&gt;{% endfor %}
+    &lt;/tr&gt;
+    {% empty %}
+    &lt;tr&gt;&lt;td colspan=&quot;{{ columns|length }}&quot; style=&quot;text-align:center; color:#999;&quot;&gt;No data entered.&lt;/td&gt;&lt;/tr&gt;
+    {% endfor %}
+  &lt;/tbody&gt;
+&lt;/table&gt;
+{% endif %}
+{% if survey_questions %}
+&lt;div class=&quot;section-heading&quot;&gt;Feedback Survey Responses&lt;/div&gt;
+&lt;table class=&quot;bordered-table rating-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;width:5%;&quot;&gt;S.No.&lt;/th&gt;
+      &lt;th style=&quot;width:55%;&quot;&gt;Survey Statement&lt;/th&gt;
+      {% for opt in rating_options %}&lt;th style=&quot;width:8%;&quot;&gt;{{ opt }}&lt;/th&gt;{% endfor %}
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    {% for q in survey_questions %}
+    &lt;tr class=&quot;{% if forloop.counter|divisibleby:2 %}highlight-row{% endif %}&quot;&gt;
+      &lt;td style=&quot;text-align:center;&quot;&gt;{{ forloop.counter }}&lt;/td&gt;
+      &lt;td&gt;{{ q.statement }}&lt;/td&gt;
+      {% for opt in rating_options %}
+      &lt;td style=&quot;text-align:center;&quot;&gt;{% if q.rating == opt %}✓{% else %}&amp;nbsp;{% endif %}&lt;/td&gt;
+      {% endfor %}
+    &lt;/tr&gt;
+    {% endfor %}
+  &lt;/tbody&gt;
+&lt;/table&gt;
+{% if overall_satisfaction %}
+&lt;p style=&quot;margin-top:8px; font-size:9pt;&quot;&gt;&lt;b&gt;Overall Satisfaction Rating:&lt;/b&gt; {{ overall_satisfaction }} / 10&lt;/p&gt;
+{% endif %}
+{% if suggestions %}
+&lt;p style=&quot;font-size:9pt;&quot;&gt;&lt;b&gt;Suggestions / Comments:&lt;/b&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size:8.5pt; padding: 4px 8px; border-left: 3px solid #622423; background: #fafafa;&quot;&gt;{{ suggestions }}&lt;/p&gt;
+{% endif %}
+{% endif %}
+{% if extra_sections %}
+{% for section in extra_sections %}
+&lt;div class=&quot;section-heading&quot;&gt;{{ section.title }}&lt;/div&gt;
+&lt;table class=&quot;bordered-table&quot;&gt;
+  {% for item in section.items %}
+  &lt;tr&gt;
+    &lt;td style=&quot;width:40%; font-weight:bold;&quot;&gt;{{ item.label }}&lt;/td&gt;
+    &lt;td&gt;{{ item.value }}&lt;/td&gt;
+  &lt;/tr&gt;
+  {% endfor %}
+&lt;/table&gt;
+{% endfor %}
+{% endif %}
+{% if narrative %}
+&lt;div class=&quot;section-heading&quot;&gt;Outcome and Impact&lt;/div&gt;
+&lt;p style=&quot;font-size:8.5pt; padding:4px 8px; text-align:justify;&quot;&gt;{{ narrative }}&lt;/p&gt;
+{% endif %}
+&lt;table class=&quot;sig-table&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;b&gt;Prepared By:&lt;/b&gt;
+      &lt;div class=&quot;sig-line&quot;&gt;&lt;/div&gt;
+      &lt;p style=&quot;margin:4px 0 0 0;&quot;&gt;{{ prepared_by }}&lt;br&gt;{{ designation }}&lt;br&gt;Date: {{ report_date }}&lt;/p&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;b&gt;Reviewed &amp;amp; Approved By:&lt;/b&gt;
+      &lt;div class=&quot;sig-line&quot;&gt;&lt;/div&gt;
+      &lt;p style=&quot;margin:4px 0 0 0;&quot;&gt;HOD / Dean&lt;br&gt;{{ department }}&lt;br&gt;Date: _______________&lt;/p&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</file><file path="tracker/templates/tracker/vac_report_official.html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;REPORT ON VALUE ADDED COURSES, ADD-ON COURSES AND MOOCs&lt;/title&gt;
+&lt;style&gt;
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.4cm 1.4cm 1.4cm;
+    @bottom-right {
+      content: &quot;Page &quot; counter(page) &quot; | &quot; counter(pages);
+      font-size: 9pt;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #666;
+    }
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    line-height: 1.35;
+    color: #111;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+  .header-table {
+    width: 100%;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #00236f;
+    padding-bottom: 6px;
+  }
+  .inst-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #00236f;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .inst-sub {
+    font-size: 7.5pt;
+    color: #444;
+    margin-top: 2px;
+  }
+  .doc-title-box {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+  .doc-title {
+    font-size: 11pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+  }
+  .doc-inst-name {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+  table.bordered-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+  table.bordered-table th, table.bordered-table td {
+    border: 1px solid #111;
+    padding: 4px 6px;
+    font-size: 8.5pt;
+  }
+  table.bordered-table th {
+    background-color: #f2f4f8;
+    font-weight: bold;
+    text-align: center;
+  }
+  .section-heading {
+    font-size: 9.5pt;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: #000;
+  }
+  .box-container {
+    border: 1px solid #111;
+    padding: 6px 8px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+  }
+  ul.clean-list {
+    margin: 3px 0 6px 18px;
+    padding: 0;
+  }
+  ul.clean-list li {
+    margin-bottom: 3px;
+    font-size: 8.5pt;
+  }
+  ol.clean-ol {
+    margin: 3px 0 6px 18px;
+    padding: 0;
+  }
+  ol.clean-ol li {
+    margin-bottom: 2px;
+    font-size: 8.5pt;
+  }
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  .bold { font-weight: bold; }
+  .sig-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+  }
+  .sig-table td {
+    border: 1px solid #111;
+    padding: 8px;
+    vertical-align: top;
+    width: 50%;
+    font-size: 8.5pt;
+    line-height: 1.6;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table class=&quot;header-table&quot;&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;width: 20%; vertical-align: middle; text-align: left;&quot;&gt;
+        &lt;span style=&quot;font-size: 20pt; font-weight: bold; color: #00236f; font-family: serif;&quot;&gt;KIET&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td style=&quot;width: 80%; text-align: right; vertical-align: middle;&quot;&gt;
+        &lt;div class=&quot;inst-title&quot;&gt;KIET UNIVERSITY&lt;/div&gt;
+        &lt;div class=&quot;inst-sub&quot;&gt;DELHI-NCR, INDIA &amp;bull; (Under Section 3 of the UGC Act, 1956)&lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;div class=&quot;doc-title-box&quot;&gt;
+    &lt;div class=&quot;doc-title&quot;&gt;REPORT ON VALUE ADDED COURSES, ADD-ON COURSES AND MOOCs&lt;/div&gt;
+    &lt;div class=&quot;doc-inst-name&quot;&gt;KIET Deemed to be University, Ghaziabad&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;table class=&quot;bordered-table&quot;&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;width: 35%; font-weight: bold;&quot;&gt;Name of the Department&lt;/td&gt;
+      &lt;td style=&quot;width: 65%;&quot;&gt;{{ department|default:&quot;—&quot; }}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;font-weight: bold;&quot;&gt;Academic Session / Year/ Semester&lt;/td&gt;
+      &lt;td&gt;{{ academicSession|default:&quot;&quot; }} {% if semester %}&amp;bull; {{ semester }}{% endif %}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;font-weight: bold;&quot;&gt;Faculty Coordinator(s)&lt;/td&gt;
+      &lt;td&gt;{{ facultyCoordinator|default:&quot;—&quot; }}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;font-weight: bold;&quot;&gt;Head of the Department&lt;/td&gt;
+      &lt;td&gt;{{ hodName|default:&quot;—&quot; }}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;div class=&quot;box-container&quot;&gt;
+    &lt;p style=&quot;margin: 0 0 5px 0;&quot;&gt;&lt;strong&gt;Introduction - &lt;/strong&gt;KIET Deemed to be University is committed to providing students with opportunities for holistic development and enhancing their employability, professional competencies, interdisciplinary knowledge and lifelong learning skills.&lt;/p&gt;
+    &lt;p style=&quot;margin: 0 0 5px 0;&quot;&gt;In addition to the prescribed curriculum, the University offers &lt;strong&gt;Value Added Courses (VACs), Add-on Courses and Massive Open Online Courses (MOOCs)&lt;/strong&gt; to provide students with exposure to emerging technologies, industry practices, professional skills, interdisciplinary learning and global learning resources.&lt;/p&gt;
+    &lt;p style=&quot;margin: 0 0 3px 0;&quot;&gt;&amp;bull; These courses are designed to complement the regular curriculum and contribute to the development of graduate attributes, employability skills and overall student development&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;box-container&quot; style=&quot;margin-top: 4px;&quot;&gt;
+    &lt;p style=&quot;margin: 0 0 4px 0;&quot;&gt;&lt;strong&gt;Objectives of Value Added Courses - &lt;/strong&gt;The major objectives of the Value Added Courses are:&lt;/p&gt;
+    &lt;ol class=&quot;clean-ol&quot; style=&quot;margin-top: 2px; margin-bottom: 2px;&quot;&gt;
+      &lt;li&gt;To supplement the knowledge acquired through the regular curriculum.&lt;/li&gt;
+      &lt;li&gt;To provide exposure to emerging technologies and industry practices.&lt;/li&gt;
+      &lt;li&gt;To develop employability and professional skills.&lt;/li&gt;
+      &lt;li&gt;To promote interdisciplinary and experiential learning.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;section-heading&quot;&gt;Detail of Value Added Courses&lt;/div&gt;
+  &lt;table class=&quot;bordered-table&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th style=&quot;width: 7%;&quot;&gt;S. No.&lt;/th&gt;
+        &lt;th style=&quot;width: 25%;&quot;&gt;Course Name&lt;/th&gt;
+        &lt;th style=&quot;width: 12%;&quot;&gt;Duration (Hours)&lt;/th&gt;
+        &lt;th style=&quot;width: 13%;&quot;&gt;Mode Offline/ Online/ Hybrid&lt;/th&gt;
+        &lt;th style=&quot;width: 19%;&quot;&gt;Resource Person/ Agency&lt;/th&gt;
+        &lt;th style=&quot;width: 12%;&quot;&gt;No. of Students Enrolled&lt;/th&gt;
+        &lt;th style=&quot;width: 12%;&quot;&gt;No. of Students Completed&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      {% for c in courses %}
+      &lt;tr&gt;
+        &lt;td class=&quot;text-center&quot;&gt;{{ forloop.counter }}&lt;/td&gt;
+        &lt;td&gt;{{ c.courseName|default:&quot;&quot; }}&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;{{ c.durationHours|default:&quot;&quot; }}&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;{{ c.mode|default:&quot;Offline&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ c.resourcePerson|default:&quot;&quot; }}&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;{{ c.enrolled|default:&quot;&quot; }}&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;{{ c.completed|default:&quot;&quot; }}&lt;/td&gt;
+      &lt;/tr&gt;
+      {% empty %}
+      &lt;tr&gt;
+        &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      {% endfor %}
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;div class=&quot;section-heading&quot;&gt;Course Content/Syllabus&lt;/div&gt;
+  &lt;table class=&quot;bordered-table&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th style=&quot;width: 15%;&quot;&gt;Module&lt;/th&gt;
+        &lt;th style=&quot;width: 65%;&quot;&gt;Topic&lt;/th&gt;
+        &lt;th style=&quot;width: 20%;&quot;&gt;No. of Hours&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      {% for s in syllabus %}
+      &lt;tr&gt;
+        &lt;td class=&quot;text-center&quot;&gt;{{ s.module|default:forloop.counter }}&lt;/td&gt;
+        &lt;td&gt;{{ s.topic|default:&quot;&quot; }}&lt;/td&gt;
+        &lt;td class=&quot;text-center&quot;&gt;{{ s.hours|default:&quot;&quot; }}&lt;/td&gt;
+      &lt;/tr&gt;
+      {% empty %}
+      &lt;tr&gt;&lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td class=&quot;text-center&quot;&gt;2&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td class=&quot;text-center&quot;&gt;3&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td class=&quot;text-center&quot;&gt;4&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+      {% endfor %}
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;div class=&quot;page-break&quot;&gt;&lt;/div&gt;
+  &lt;table class=&quot;header-table&quot;&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;width: 20%; vertical-align: middle; text-align: left;&quot;&gt;
+        &lt;span style=&quot;font-size: 20pt; font-weight: bold; color: #00236f; font-family: serif;&quot;&gt;KIET&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td style=&quot;width: 80%; text-align: right; vertical-align: middle;&quot;&gt;
+        &lt;div class=&quot;inst-title&quot;&gt;KIET UNIVERSITY&lt;/div&gt;
+        &lt;div class=&quot;inst-sub&quot;&gt;DELHI-NCR, INDIA &amp;bull; (Under Section 3 of the UGC Act, 1956)&lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;div class=&quot;section-heading&quot; style=&quot;margin-top: 6px;&quot;&gt;Learning Outcomes: - After successful completion of the course, students will be able to:&lt;/div&gt;
+  {% if learningOutcomes %}
+  &lt;ul class=&quot;clean-list&quot;&gt;
+    {% for lo in learningOutcomes %}
+      {% if lo %}&lt;li&gt;{{ lo }}&lt;/li&gt;{% endif %}
+    {% endfor %}
+  &lt;/ul&gt;
+  {% else %}
+  &lt;p style=&quot;margin: 4px 0 10px 0; font-size: 8.5pt;&quot;&gt;&amp;bull; ____________________________________________________________________________&lt;br&gt;&amp;bull; ____________________________________________________________________________&lt;/p&gt;
+  {% endif %}
+  &lt;div class=&quot;section-heading&quot;&gt;Assessment and Certification&lt;/div&gt;
+  &lt;table class=&quot;bordered-table&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th style=&quot;width: 45%; text-align: left;&quot;&gt;Particular&lt;/th&gt;
+        &lt;th style=&quot;width: 55%; text-align: left;&quot;&gt;Details&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;bold&quot;&gt;Assessment Method&lt;/td&gt;
+        &lt;td&gt;{{ assessment.method|default:&quot;—&quot; }}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;bold&quot;&gt;Minimum Attendance Requirement&lt;/td&gt;
+        &lt;td&gt;{{ assessment.minAttendance|default:&quot;—&quot; }}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;bold&quot;&gt;Passing/Completion Criteria&lt;/td&gt;
+        &lt;td&gt;{{ assessment.passingCriteria|default:&quot;—&quot; }}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;bold&quot;&gt;Certificate Issuing Authority&lt;/td&gt;
+        &lt;td&gt;{{ assessment.issuingAuthority|default:&quot;—&quot; }}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;bold&quot;&gt;Number of Certificates Issued&lt;/td&gt;
+        &lt;td&gt;{{ assessment.certificatesIssued|default:&quot;—&quot; }}&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;div class=&quot;section-heading&quot; style=&quot;margin-top: 10px;&quot;&gt;OUTCOME AND IMPACT&lt;/div&gt;
+  &lt;div style=&quot;font-weight: bold; font-size: 9pt; margin-bottom: 4px;&quot;&gt;Suggested Impact Indicators&lt;/div&gt;
+  &lt;ul class=&quot;clean-list&quot;&gt;
+    &lt;li&gt;&amp;bull; Improvement in technical/professional skills{% if outcomeAndImpact.technicalSkills %}: &lt;strong&gt;{{ outcomeAndImpact.technicalSkills }}&lt;/strong&gt;{% endif %}&lt;/li&gt;
+    &lt;li&gt;&amp;bull; Improvement in employability skills{% if outcomeAndImpact.employability %}: &lt;strong&gt;{{ outcomeAndImpact.employability }}&lt;/strong&gt;{% endif %}&lt;/li&gt;
+    &lt;li&gt;&amp;bull; Industry certification obtained{% if outcomeAndImpact.industryCert %}: &lt;strong&gt;{{ outcomeAndImpact.industryCert }}&lt;/strong&gt;{% endif %}&lt;/li&gt;
+    &lt;li&gt;&amp;bull; Successful completion/certification rate{% if outcomeAndImpact.completionRate %}: &lt;strong&gt;{{ outcomeAndImpact.completionRate }}&lt;/strong&gt;{% endif %}&lt;/li&gt;
+    &lt;li&gt;&amp;bull; Internship opportunities{% if outcomeAndImpact.internships %}: &lt;strong&gt;{{ outcomeAndImpact.internships }}&lt;/strong&gt;{% endif %}&lt;/li&gt;
+    &lt;li&gt;&amp;bull; Placement support/outcomes{% if outcomeAndImpact.placementSupport %}: &lt;strong&gt;{{ outcomeAndImpact.placementSupport }}&lt;/strong&gt;{% endif %}&lt;/li&gt;
+    &lt;li&gt;&amp;bull; Student projects developed{% if outcomeAndImpact.studentProjects %}: &lt;strong&gt;{{ outcomeAndImpact.studentProjects }}&lt;/strong&gt;{% endif %}&lt;/li&gt;
+    &lt;li&gt;&amp;bull; Participation in competitions/hackathons{% if outcomeAndImpact.hackathons %}: &lt;strong&gt;{{ outcomeAndImpact.hackathons }}&lt;/strong&gt;{% endif %}&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div style=&quot;margin-top: 10px; font-weight: bold; font-size: 9pt;&quot;&gt;
+    Student Feedback Summary: - Overall Feedback Score: &lt;u&gt;&amp;nbsp;{{ feedback.score|default:&quot;____&quot; }}&amp;nbsp;&lt;/u&gt; / 5
+  &lt;/div&gt;
+  &lt;div style=&quot;font-weight: bold; font-size: 8.5pt; margin-top: 6px; margin-bottom: 4px;&quot;&gt;Major Suggestions Received:&lt;/div&gt;
+  &lt;ol class=&quot;clean-ol&quot; style=&quot;margin-top: 2px;&quot;&gt;
+    {% for sug in feedback.suggestions %}
+      &lt;li&gt;{{ sug|default:&quot;____________________________________________________________________&quot; }}&lt;/li&gt;
+    {% empty %}
+      &lt;li&gt;____________________________________________________________________&lt;/li&gt;
+      &lt;li&gt;____________________________________________________________________&lt;/li&gt;
+      &lt;li&gt;____________________________________________________________________&lt;/li&gt;
+    {% endfor %}
+  &lt;/ol&gt;
+  &lt;table class=&quot;sig-table&quot;&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Prepared By:&lt;/strong&gt;&lt;br&gt;
+        Name: {{ preparedBy.name|default:&quot;______________________________&quot; }}&lt;br&gt;
+        Designation: {{ preparedBy.designation|default:&quot;________________________&quot; }}&lt;br&gt;
+        Signature: {{ preparedBy.signature|default:&quot;___________________________&quot; }}&lt;br&gt;
+        Date: {{ preparedBy.date|default:&quot;_______________________________&quot; }}
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;strong&gt;Approved By:&lt;/strong&gt;&lt;br&gt;
+        Name: {{ approvedBy.name|default:&quot;______________________________&quot; }}&lt;br&gt;
+        Designation: {{ approvedBy.designation|default:&quot;________________________&quot; }}&lt;br&gt;
+        Signature: {{ approvedBy.signature|default:&quot;___________________________&quot; }}&lt;br&gt;
+        Date: {{ approvedBy.date|default:&quot;_______________________________&quot; }}
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;div class=&quot;page-break&quot;&gt;&lt;/div&gt;
+  &lt;table class=&quot;header-table&quot;&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;width: 20%; vertical-align: middle; text-align: left;&quot;&gt;
+        &lt;span style=&quot;font-size: 20pt; font-weight: bold; color: #00236f; font-family: serif;&quot;&gt;KIET&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td style=&quot;width: 80%; text-align: right; vertical-align: middle;&quot;&gt;
+        &lt;div class=&quot;inst-title&quot;&gt;KIET UNIVERSITY&lt;/div&gt;
+        &lt;div class=&quot;inst-sub&quot;&gt;DELHI-NCR, INDIA &amp;bull; (Under Section 3 of the UGC Act, 1956)&lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;div class=&quot;section-heading&quot; style=&quot;margin-top: 10px; font-size: 10pt;&quot;&gt;
+    List of Supporting Documents: - The following documents shall be maintained for each VAC/Add-on Course:
+  &lt;/div&gt;
+  &lt;ul class=&quot;clean-list&quot; style=&quot;margin-top: 10px; line-height: 1.6;&quot;&gt;
+    {% for doc_title in supportingDocsList %}
+    &lt;li&gt;
+      &amp;bull; {{ doc_title }}
+      {% for att in supportingDocuments %}
+        {% if att.title == doc_title and att.attached %}
+          &lt;span style=&quot;color: #0b6623; font-weight: bold; font-size: 8pt;&quot;&gt; [Attached: {{ att.fileName }}]&lt;/span&gt;
+        {% endif %}
+      {% endfor %}
+    &lt;/li&gt;
+    {% endfor %}
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</file><file path="tracker/__init__.py"></file><file path="tracker/admin.py"></file><file path="tracker/apps.py">class TrackerConfig(AppConfig)
+⋮----
+name = &apos;tracker&apos;</file><file path="tracker/kra_reports.py">KIET_BLUE = RGBColor(0, 35, 111)
+KIET_MAROON = RGBColor(98, 36, 35)
+KIET_LIGHT = RGBColor(232, 237, 247)
+⋮----
+def _get_logo_path() -&gt; str
+⋮----
+possible = [
+⋮----
+def _get_logo_b64() -&gt; str
+⋮----
+def _normalize_rows(raw_rows, expected_keys, expected_cols_count)
+⋮----
+&quot;&quot;&quot;
+    Normalizes rows into a list of lists of strings, handling both list of dicts
+    and list of lists/tuples, ensuring S.No. is at index 0.
+    &quot;&quot;&quot;
+rows = []
+⋮----
+row = [str(i + 1)] + [str(item.get(k, &apos;&apos;) if item.get(k) is not None else &apos;&apos;) for k in expected_keys]
+⋮----
+def _set_cell_bg(cell, hex_color: str)
+⋮----
+&quot;&quot;&quot;Set background color for a Word table cell.&quot;&quot;&quot;
+tc = cell._tc
+tcPr = tc.get_or_add_tcPr()
+shd = OxmlElement(&apos;w:shd&apos;)
+⋮----
+run = para.add_run(text)
+⋮----
+&quot;&quot;&quot;Add standard KIET header and info block to a document.&quot;&quot;&quot;
+logo_path = _get_logo_path()
+⋮----
+logo_para = doc.add_paragraph()
+⋮----
+run = logo_para.add_run()
+⋮----
+# Institution heading
+heading = doc.add_paragraph()
+⋮----
+sub = doc.add_paragraph()
+⋮----
+# Divider
+border_para = doc.add_paragraph()
+⋮----
+pPr = border_para._p.get_or_add_pPr()
+pBdr = OxmlElement(&apos;w:pBdr&apos;)
+bottom = OxmlElement(&apos;w:bottom&apos;)
+⋮----
+# Report title
+t_para = doc.add_paragraph()
+⋮----
+kn_para = doc.add_paragraph()
+⋮----
+# Info table
+tbl = doc.add_table(rows=3, cols=4)
+⋮----
+data = [
+⋮----
+row = tbl.rows[r_idx]
+⋮----
+cell = row.cells[c_idx]
+⋮----
+def _add_section_heading(doc: Document, text: str)
+⋮----
+para = doc.add_paragraph()
+⋮----
+shading = para._p.get_or_add_pPr()
+# inline highlight using character shading isn&apos;t trivial; use bold + color only
+⋮----
+def _add_table(doc: Document, columns: list, rows: list)
+⋮----
+&quot;&quot;&quot;Generic bordered table with header row.&quot;&quot;&quot;
+⋮----
+tbl = doc.add_table(rows=1 + len(rows), cols=len(columns))
+⋮----
+# Header
+hdr = tbl.rows[0]
+⋮----
+cell = hdr.cells[c_idx]
+⋮----
+# Rows
+⋮----
+row = tbl.rows[r_idx + 1]
+⋮----
+def _add_kv_table(doc: Document, items: list)
+⋮----
+&quot;&quot;&quot;Key-value table for extra sections.&quot;&quot;&quot;
+tbl = doc.add_table(rows=len(items), cols=2)
+⋮----
+# set column widths
+⋮----
+def _add_signatures(doc: Document, prepared_by: str, designation: str, dept: str, report_date: str)
+⋮----
+&quot;&quot;&quot;Two-column signature block.&quot;&quot;&quot;
+tbl = doc.add_table(rows=1, cols=2)
+left = tbl.rows[0].cells[0]
+right = tbl.rows[0].cells[1]
+⋮----
+p = cell.add_paragraph()
+⋮----
+r = p.add_run(f&apos;Name: {name}\nDesignation: {role}\nDate: {report_date}&apos;)
+⋮----
+# ─────────────────────────────────────────────────────────────────────────────
+# Context builders — produce the template context for the generic HTML template
+⋮----
+def _base_ctx(data: dict, kra_num: str, title: str) -&gt; dict
+⋮----
+today = date.today().strftime(&apos;%d/%m/%Y&apos;)
+⋮----
+def build_generic_ctx(data: dict, kra_num: str, title: str) -&gt; dict
+⋮----
+&quot;&quot;&quot;
+    Build a template context for the generic HTML PDF template.
+    data must contain: department, cycle, academicYear, columns, rows,
+    and optionally: tablTitle, extraSections, narrative, surveyQuestions,
+    overallSatisfaction, suggestions, ratingOptions.
+    &quot;&quot;&quot;
+ctx = _base_ctx(data, kra_num, title)
+⋮----
+# DOCX generators — one per KRA family
+⋮----
+KRA_TITLES = {
+⋮----
+def _feedback_docx(data: dict, kra_num: str, title: str, respondent_label: str) -&gt; bytes
+⋮----
+&quot;&quot;&quot;
+    Generic DOCX for structured feedback KRAs (8, 9, 10).
+    data keys: department, cycle, academicYear, respondentName, designation,
+               email, mobileNumber, organization, subject,
+               ratings (dict {q_id: rating_value}),
+               overallSatisfaction, suggestions, surveyQuestions
+    &quot;&quot;&quot;
+doc = Document()
+⋮----
+questions = data.get(&apos;surveyQuestions&apos;, [])
+ratings = data.get(&apos;ratings&apos;, {})
+rating_labels = {1: &apos;Poor&apos;, 2: &apos;Satisfactory&apos;, 3: &apos;Good&apos;, 4: &apos;Very Good&apos;, 5: &apos;Excellent&apos;}
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Survey Statement&apos;, &apos;Rating (1–5)&apos;, &apos;Rating Label&apos;]
+⋮----
+qid = str(q.get(&apos;id&apos;, &apos;&apos;))
+rating_val = ratings.get(qid) or ratings.get(int(qid) if qid.isdigit() else qid)
+⋮----
+buf = io.BytesIO()
+⋮----
+def generate_kra8_docx(data: dict) -&gt; bytes
+⋮----
+def generate_kra9_docx(data: dict) -&gt; bytes
+⋮----
+suffix = data.get(&apos;alumniType&apos;, &apos;lt4&apos;)
+label = &apos;Alumni (&lt; 4 Years)&apos; if suffix == &apos;lt4&apos; else &apos;Alumni (&gt; 4 Years)&apos;
+⋮----
+def generate_kra10_docx(data: dict) -&gt; bytes
+⋮----
+def generate_kra11_docx(data: dict) -&gt; bytes
+⋮----
+&quot;&quot;&quot;KRA 11 — Bridge Courses.&quot;&quot;&quot;
+⋮----
+courses = data.get(&apos;courses&apos;) or data.get(&apos;rows&apos;) or []
+cols = [&apos;S.No.&apos;, &apos;Course Name&apos;, &apos;Duration (Hours)&apos;, &apos;Mode&apos;, &apos;Resource Person&apos;, &apos;Enrolled&apos;, &apos;Completed&apos;]
+keys = [&apos;courseName&apos;, &apos;duration&apos;, &apos;mode&apos;, &apos;resourcePerson&apos;, &apos;enrolled&apos;, &apos;completed&apos;]
+rows = _normalize_rows(courses, keys, 7)
+⋮----
+syllabus = data.get(&apos;syllabus&apos;, [])
+⋮----
+def generate_kra13_docx(data: dict) -&gt; bytes
+⋮----
+members = data.get(&apos;members&apos;) or data.get(&apos;rows&apos;) or []
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Name&apos;, &apos;Designation&apos;, &apos;Organization&apos;, &apos;Domain&apos;]
+keys = [&apos;name&apos;, &apos;designation&apos;, &apos;organization&apos;, &apos;domain&apos;]
+rows = _normalize_rows(members, keys, 5)
+⋮----
+def generate_kra18_docx(data: dict) -&gt; bytes
+⋮----
+activities = data.get(&apos;activities&apos;) or data.get(&apos;rows&apos;) or []
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Activity Description&apos;, &apos;Date&apos;, &apos;No. of Beneficiaries&apos;, &apos;Outcome&apos;]
+keys = [&apos;description&apos;, &apos;date&apos;, &apos;beneficiaries&apos;, &apos;outcome&apos;]
+rows = _normalize_rows(activities, keys, 5)
+⋮----
+def generate_kra19_docx(data: dict) -&gt; bytes
+⋮----
+students = data.get(&apos;students&apos;) or data.get(&apos;rows&apos;) or []
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Student Name&apos;, &apos;Roll No.&apos;, &apos;Year/Sem&apos;, &apos;Feedback Score (1-5)&apos;]
+keys = [&apos;name&apos;, &apos;rollNo&apos;, &apos;year&apos;, &apos;feedbackScore&apos;]
+rows = _normalize_rows(students, keys, 5)
+⋮----
+def generate_kra23_docx(data: dict) -&gt; bytes
+⋮----
+sessions = data.get(&apos;sessions&apos;) or data.get(&apos;rows&apos;) or []
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Session Topic&apos;, &apos;Resource Person&apos;, &apos;Date&apos;, &apos;Duration (Hrs)&apos;]
+keys = [&apos;topic&apos;, &apos;resourcePerson&apos;, &apos;date&apos;, &apos;hours&apos;]
+rows = _normalize_rows(sessions, keys, 5)
+⋮----
+def generate_kra33_docx(data: dict) -&gt; bytes
+⋮----
+alumni = data.get(&apos;alumni&apos;) or data.get(&apos;rows&apos;) or []
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Name&apos;, &apos;Batch/Year&apos;, &apos;Current Designation&apos;, &apos;Organization&apos;, &apos;Contact&apos;]
+keys = [&apos;name&apos;, &apos;batch&apos;, &apos;designation&apos;, &apos;organization&apos;, &apos;contact&apos;]
+rows = _normalize_rows(alumni, keys, 6)
+⋮----
+def generate_kra36_37_docx(data: dict) -&gt; bytes
+⋮----
+kra_num = data.get(&apos;kraNum&apos;, &apos;36-37&apos;)
+title = &apos;Report on Faculty Development Programs (FDP) and Staff Training Programs (STP)&apos;
+⋮----
+participants = data.get(&apos;participants&apos;) or data.get(&apos;rows&apos;) or []
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Name&apos;, &apos;Designation&apos;, &apos;Department&apos;, &apos;Certificate Received&apos;]
+keys = [&apos;name&apos;, &apos;designation&apos;, &apos;dept&apos;, &apos;certificateReceived&apos;]
+rows = _normalize_rows(participants, keys, 5)
+⋮----
+topics = data.get(&apos;topics&apos;, [])
+⋮----
+def generate_kra44_docx(data: dict) -&gt; bytes
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Session Topic&apos;, &apos;Mode&apos;, &apos;Date&apos;, &apos;Participants&apos;, &apos;Resource Person&apos;]
+keys = [&apos;topic&apos;, &apos;mode&apos;, &apos;date&apos;, &apos;participants&apos;, &apos;resourcePerson&apos;]
+rows = _normalize_rows(sessions, keys, 6)
+⋮----
+def generate_kra45_docx(data: dict) -&gt; bytes
+⋮----
+events = data.get(&apos;subEvents&apos;) or data.get(&apos;rows&apos;) or []
+⋮----
+cols = [&apos;S.No.&apos;, &apos;Event/Session Title&apos;, &apos;Date&apos;, &apos;Participants&apos;, &apos;Winners/Outcome&apos;]
+keys = [&apos;title&apos;, &apos;date&apos;, &apos;participants&apos;, &apos;outcome&apos;]
+rows = _normalize_rows(events, keys, 5)
+⋮----
+DOCX_GENERATORS = {
+⋮----
+def get_kra_title(kra_num: str) -&gt; str
+⋮----
+def generate_generic_kra_docx(kra_num: str, data: dict) -&gt; bytes
+⋮----
+title = data.get(&apos;reportTitle&apos;) or get_kra_title(kra_num)
+⋮----
+columns = data.get(&apos;columns&apos;, [])
+rows = data.get(&apos;rows&apos;, [])
+table_title = data.get(&apos;tableTitle&apos;, &apos;Activity &amp; Performance Records&apos;)
+⋮----
+extra_sections = data.get(&apos;extraSections&apos;, [])
+⋮----
+items = [(item.get(&apos;label&apos;, &apos;&apos;), item.get(&apos;value&apos;, &apos;&apos;)) for item in sec.get(&apos;items&apos;, [])]
+⋮----
+narrative = data.get(&apos;narrative&apos;, &apos;&apos;)
+⋮----
+p = doc.add_paragraph()
+run = p.add_run(narrative)
+⋮----
+def generate_kra_docx(kra_num: str, data: dict) -&gt; bytes
+⋮----
+gen = DOCX_GENERATORS.get(kra_num)</file><file path="tracker/kra7_reports.py">def set_cell_text(cell, text, bold=False, align=WD_ALIGN_PARAGRAPH.LEFT, size_pt=10)
+⋮----
+p = cell.paragraphs[0]
+⋮----
+run = p.add_run(text)
+⋮----
+def generate_kra7_docx(data)
+⋮----
+possible_paths = [
+tpl_path = None
+⋮----
+tpl_path = p
+⋮----
+doc = docx.Document(tpl_path)
+⋮----
+t0 = doc.tables[0]
+faculty_name = data.get(&apos;facultyName&apos;, &apos;&apos;)
+designation = data.get(&apos;designation&apos;, &apos;&apos;)
+name_and_desig = f&quot;{faculty_name}, {designation}&quot; if designation and faculty_name else (faculty_name or designation or &quot;Faculty Member&quot;)
+⋮----
+email = data.get(&apos;email&apos;, &apos;&apos;)
+⋮----
+mobile = data.get(&apos;mobileNumber&apos;, &apos;&apos;)
+⋮----
+acad_year = data.get(&apos;academicYear&apos;, &apos;2026-2027&apos;)
+semester = data.get(&apos;semester&apos;, &apos;&apos;)
+acad_sem = f&quot;{acad_year} / {semester}&quot; if semester else acad_year
+⋮----
+department = data.get(&apos;department&apos;, &apos;&apos;)
+⋮----
+subject = data.get(&apos;subject&apos;, &apos;&apos;)
+⋮----
+# 2. Populate Table 1: Feedback Survey Form (Questions 1 to 10)
+# Row 0: Header &quot;Feedback Survey Form for Faculty member&quot;
+# Row 1: Columns [S No., Tick Any Grading from 1 to 5, Poor (1), Satisfactory (2), Good (3), Very Good (4), Excellent (5 )]
+# Rows 2 to 11: Questions 1 to 10
+t1 = doc.tables[1]
+col_map = {1: 2, 2: 3, 3: 4, 4: 5, 5: 6}
+ratings = data.get(&apos;ratings&apos;, {})
+⋮----
+row_idx = q_idx + 1
+rating_val = None
+⋮----
+rating_val = ratings[q_idx]
+⋮----
+rating_val = ratings[str(q_idx)]
+⋮----
+target_col = col_map[int(rating_val)]
+⋮----
+t2 = doc.tables[2]
+sat_score = data.get(&apos;overallSatisfaction&apos;)
+⋮----
+sat_num = int(sat_score)
+⋮----
+num_val = c_idx + 1
+⋮----
+shd = parse_xml(f&apos;&lt;w:shd {nsdecls(&quot;w&quot;)} w:fill=&quot;D5E3FC&quot;/&gt;&apos;)
+⋮----
+# 4. Populate Table 3: Suggestions if Any
+# Row 0: &quot;Suggestions if Any:&quot;
+# Row 1: Text box
+t3 = doc.tables[3]
+suggestions = data.get(&apos;suggestions&apos;, &apos;&apos;)
+⋮----
+# 5. Faculty Signature verification
+sig_name = data.get(&apos;signatureName&apos;) or faculty_name
+sig_date = data.get(&apos;signatureDate&apos;, &apos;&apos;)
+# Add signatory name under the signature paragraph if found
+⋮----
+p_extra = doc.add_paragraph()
+⋮----
+r_name = p_extra.add_run(f&quot;\n{sig_name}\nDate: {sig_date}\n[ Digitally Verified via KIET Portal ]&quot;)
+⋮----
+buffer = io.BytesIO()</file><file path="tracker/models.py">class BiMonthlyCycle(models.Model)
+⋮----
+CYCLE_CHOICES = (
+⋮----
+academic_year = models.CharField(max_length=9, help_text=&quot;e.g. 2026-2027&quot;)
+cycle_name = models.CharField(max_length=20, choices=CYCLE_CHOICES)
+deadline = models.DateField(help_text=&quot;Deadline for submission. Emails sent 5 days prior.&quot;)
+is_active = models.BooleanField(default=True)
+⋮----
+def __str__(self)
+⋮----
+class Meta
+⋮----
+unique_together = (&apos;academic_year&apos;, &apos;cycle_name&apos;)
+⋮----
+class CycleException(models.Model)
+⋮----
+cycle = models.ForeignKey(BiMonthlyCycle, on_delete=models.CASCADE, related_name=&apos;exceptions&apos;)
+department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name=&apos;cycle_exceptions&apos;, null=True, blank=True, help_text=&quot;Leave blank to reopen for all departments.&quot;)
+open_until = models.DateField(help_text=&quot;The new deadline for this exception.&quot;)
+reason = models.TextField(help_text=&quot;Reason for reopening.&quot;)
+opened_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
+⋮----
+dept_name = self.department.name if self.department else &quot;All Departments&quot;
+⋮----
+class Achievement(models.Model)
+⋮----
+STATUS_CHOICES = (
+⋮----
+department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name=&apos;achievements&apos;)
+kra_metric = models.ForeignKey(KRAMetric, on_delete=models.CASCADE, related_name=&apos;achievements&apos;)
+cycle = models.ForeignKey(BiMonthlyCycle, on_delete=models.CASCADE, related_name=&apos;achievements&apos;)
+⋮----
+status = models.CharField(max_length=20, choices=STATUS_CHOICES, default=&apos;DRAFT&apos;)
+review_comment = models.TextField(blank=True, null=True, help_text=&quot;Comment from Super Admin upon review/rejection.&quot;)
+numeric_value = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True, help_text=&quot;Used for targets with Numeric/Percentage types&quot;)
+remarks = models.TextField(blank=True, null=True)
+custom_data = models.JSONField(default=dict, blank=True, help_text=&quot;Dynamic per-KRA form fields and uploaded evidence details.&quot;)
+⋮----
+submitted_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
+updated_at = models.DateTimeField(auto_now=True)
+⋮----
+@property
+    def dynamic_target(self)
+⋮----
+&quot;&quot;&quot;
+        Dynamically calculate the target for this department based on faculty strength.
+        Assumes kra_metric.annual_target is a numeric string if it&apos;s meant to be multiplied.
+        &quot;&quot;&quot;
+⋮----
+base_target = float(self.kra_metric.annual_target)
+⋮----
+# Multiply the base target by the department&apos;s faculty strength
+⋮----
+# If the annual_target is not a number (e.g. &quot;Boolean&quot; or text), just return it as is.
+⋮----
+unique_together = (&apos;department&apos;, &apos;kra_metric&apos;, &apos;cycle&apos;)
+⋮----
+class Evidence(models.Model)
+⋮----
+achievement = models.ForeignKey(Achievement, on_delete=models.CASCADE, related_name=&apos;evidence&apos;)
+document_data = models.JSONField(default=dict, help_text=&quot;Stores the raw form data input by the faculty for the template.&quot;)
+generated_pdf = models.FileField(upload_to=&apos;evidence_pdfs/%Y/%m/&apos;, blank=True, null=True, help_text=&quot;The final PDF generated by the system upon export.&quot;)
+last_edited_at = models.DateTimeField(auto_now=True)
+⋮----
+class UploadedEvidenceFile(models.Model)
+⋮----
+achievement = models.ForeignKey(Achievement, on_delete=models.CASCADE, related_name=&apos;uploaded_files&apos;)
+document_type = models.CharField(max_length=255, help_text=&quot;e.g. Approval/permission for conducting the course&quot;)
+file = models.FileField(upload_to=&apos;kra_evidence/%Y/%m/&apos;)
+filename = models.CharField(max_length=255)
+file_size_kb = models.FloatField(default=0.0)
+uploaded_at = models.DateTimeField(auto_now_add=True)
+uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)</file><file path="tracker/pdf_templates.py">class BasePDFTemplate
+⋮----
+def __init__(self, buffer)
+⋮----
+def draw_header(self, title)
+⋮----
+def draw_footer(self)
+⋮----
+def save(self)
+⋮----
+class CountBasedTemplate(BasePDFTemplate)
+⋮----
+def render(self, data)
+⋮----
+class FeedbackTemplate(BasePDFTemplate)
+⋮----
+TEMPLATE_REGISTRY = {</file><file path="tracker/serializers.py">class BiMonthlyCycleSerializer(serializers.ModelSerializer)
+⋮----
+class Meta
+⋮----
+model = BiMonthlyCycle
+fields = &apos;__all__&apos;
+⋮----
+class EvidenceSerializer(serializers.ModelSerializer)
+⋮----
+model = Evidence
+fields = [&apos;id&apos;, &apos;document_data&apos;, &apos;generated_pdf&apos;, &apos;last_edited_at&apos;]
+⋮----
+class AchievementSerializer(serializers.ModelSerializer)
+⋮----
+evidence = EvidenceSerializer(many=True, read_only=True)
+department_name = serializers.CharField(source=&apos;department.name&apos;, read_only=True)
+department_code = serializers.CharField(source=&apos;department.name&apos;, read_only=True)
+kra_metric_details = serializers.CharField(source=&apos;kra_metric.activity_description&apos;, read_only=True)
+kra_code = serializers.CharField(source=&apos;kra_metric.serial_number&apos;, read_only=True)
+cycle_display = serializers.CharField(source=&apos;cycle.get_cycle_name_display&apos;, read_only=True)
+cycle_name = serializers.CharField(source=&apos;cycle.cycle_name&apos;, read_only=True)
+⋮----
+model = Achievement
+fields = [
+read_only_fields = [&apos;department&apos;, &apos;dynamic_target&apos;, &apos;updated_at&apos;]
+⋮----
+def validate_status(self, value)
+⋮----
+request = self.context.get(&apos;request&apos;)
+user = getattr(request, &apos;user&apos;, None)</file><file path="tracker/tasks.py">User = get_user_model()
+⋮----
+@shared_task
+def send_deadline_reminders()
+⋮----
+target_date = timezone.now().date() + timedelta(days=5)
+⋮----
+upcoming_cycles = BiMonthlyCycle.objects.filter(deadline=target_date, is_active=True)
+⋮----
+pending_achievements = Achievement.objects.filter(cycle=cycle).exclude(status=&apos;Approved&apos;)
+⋮----
+departments_pending = pending_achievements.values_list(&apos;department&apos;, flat=True).distinct()
+⋮----
+users_to_email = User.objects.filter(department__in=departments_pending, role=&apos;DEAN&apos;)
+email_list = [user.email for user in users_to_email if user.email]
+⋮----
+@shared_task
+def export_evidence_zip(department_id=None, cycle_id=None)
+⋮----
+achievements = Achievement.objects.filter(status=&apos;APPROVED&apos;).select_related(&apos;department&apos;, &apos;kra_metric&apos;, &apos;cycle&apos;)
+⋮----
+achievements = achievements.filter(department_id=department_id)
+⋮----
+achievements = achievements.filter(cycle_id=cycle_id)
+⋮----
+zip_buffer = io.BytesIO()
+⋮----
+evidence = ach.evidence.first()
+⋮----
+json_data = evidence.document_data
+template_key = json_data.get(&apos;template_key&apos;, &apos;count_based&apos;)
+⋮----
+TemplateClass = TEMPLATE_REGISTRY.get(template_key, CountBasedTemplate)
+pdf_buffer = io.BytesIO()
+renderer = TemplateClass(pdf_buffer)
+⋮----
+filename = f&quot;{ach.department.name}_{ach.cycle.cycle_name}_{ach.kra_metric.serial_number}.pdf&quot;
+⋮----
+file_name = f&quot;exports/kra_export_{timezone.now().strftime(&apos;%Y%m%d%H%M%S&apos;)}.zip&quot;
+saved_path = default_storage.save(file_name, ContentFile(zip_buffer.getvalue()))</file><file path="tracker/tests.py"></file><file path="tracker/vac_reports.py">def set_cell_margins(cell, top=100, bottom=100, left=150, right=150)
+⋮----
+tcPr = cell._tc.get_or_add_tcPr()
+tcMar = OxmlElement(&apos;w:tcMar&apos;)
+⋮----
+node = OxmlElement(f&apos;w:{m}&apos;)
+⋮----
+def set_cell_shading(cell, color_hex=&quot;F2F4F8&quot;)
+⋮----
+shading_elm = parse_xml(f&apos;&lt;w:shd {nsdecls(&quot;w&quot;)} w:fill=&quot;{color_hex}&quot;/&gt;&apos;)
+⋮----
+def set_cell_borders(cell, top=&quot;000000&quot;, bottom=&quot;000000&quot;, left=&quot;000000&quot;, right=&quot;000000&quot;)
+⋮----
+tcBorders = OxmlElement(&apos;w:tcBorders&apos;)
+⋮----
+border = OxmlElement(f&apos;w:{b_name}&apos;)
+⋮----
+SUPPORTING_DOCS_LIST = [
+⋮----
+def generate_vac_docx(data)
+⋮----
+doc = Document()
+⋮----
+sections = doc.sections
+⋮----
+header_p = doc.add_paragraph()
+⋮----
+run_inst = header_p.add_run(&quot;KIET UNIVERSITY\n&quot;)
+⋮----
+run_sub = header_p.add_run(&quot;DELHI-NCR, INDIA\n(Under Section 3 of the UGC Act, 1956)\n&quot;)
+⋮----
+p_title = doc.add_paragraph()
+⋮----
+run_t1 = p_title.add_run(&quot;REPORT ON VALUE ADDED COURSES, ADD-ON COURSES AND MOOCs\n&quot;)
+⋮----
+run_t2 = p_title.add_run(&quot;KIET Deemed to be University, Ghaziabad&quot;)
+⋮----
+table_a = doc.add_table(rows=4, cols=2)
+⋮----
+labels_a = [
+⋮----
+row = table_a.rows[idx]
+cell_l = row.cells[0]
+cell_r = row.cells[1]
+⋮----
+# Section B: Introduction &amp; Objectives
+⋮----
+intro_table = doc.add_table(rows=2, cols=1)
+⋮----
+cell_intro = intro_table.rows[0].cells[0]
+⋮----
+p_in = cell_intro.paragraphs[0]
+⋮----
+r_in_head = p_in.add_run(&quot;Introduction - &quot;)
+⋮----
+r_in_body = p_in.add_run(&quot;KIET Deemed to be University is committed to providing students with opportunities for holistic development and enhancing their employability, professional competencies, interdisciplinary knowledge and lifelong learning skills.\n\nIn addition to the prescribed curriculum, the University offers Value Added Courses (VACs), Add-on Courses and Massive Open Online Courses (MOOCs) to provide students with exposure to emerging technologies, industry practices, professional skills, interdisciplinary learning and global learning resources.\n● These courses are designed to complement the regular curriculum and contribute to the development of graduate attributes, employability skills and overall student development&quot;)
+⋮----
+cell_obj = intro_table.rows[1].cells[0]
+⋮----
+p_obj = cell_obj.paragraphs[0]
+r_obj_head = p_obj.add_run(&quot;Objectives of Value Added Courses - &quot;)
+⋮----
+r_obj_body = p_obj.add_run(&quot;The major objectives of the Value Added Courses are:\n1. To supplement the knowledge acquired through the regular curriculum.\n2. To provide exposure to emerging technologies and industry practices.\n3. To develop employability and professional skills.\n4. To promote interdisciplinary and experiential learning.&quot;)
+⋮----
+# Section C: Detail of Value Added Courses
+p_c_title = doc.add_paragraph()
+⋮----
+r_c = p_c_title.add_run(&quot;Detail of Value Added Courses&quot;)
+⋮----
+courses = data.get(&apos;courses&apos;, [])
+num_course_rows = max(len(courses), 1) + 1
+table_c = doc.add_table(rows=num_course_rows, cols=7)
+⋮----
+headers_c = [&quot;S. No.&quot;, &quot;Course Name&quot;, &quot;Duration\n(Hours)&quot;, &quot;Mode\nOffline/\nOnline/\nHybrid&quot;, &quot;Resource\nPerson/\nAgency&quot;, &quot;No. of\nStudents\nEnrolled&quot;, &quot;No. of\nStudents\nCompleted&quot;]
+widths_c = [Inches(0.55), Inches(1.8), Inches(0.75), Inches(0.85), Inches(1.3), Inches(0.85), Inches(0.85)]
+⋮----
+cell = table_c.rows[0].cells[col_idx]
+⋮----
+row = table_c.rows[idx + 1]
+row_data = [
+⋮----
+cell = row.cells[col_idx]
+⋮----
+row = table_c.rows[1]
+⋮----
+# Section D: Course Content/Syllabus
+p_d_title = doc.add_paragraph()
+⋮----
+r_d = p_d_title.add_run(&quot;Course Content/Syllabus&quot;)
+⋮----
+syllabus = data.get(&apos;syllabus&apos;, [])
+num_syl_rows = max(len(syllabus), 4) + 1
+table_d = doc.add_table(rows=num_syl_rows, cols=3)
+⋮----
+headers_d = [&quot;Module&quot;, &quot;Topic&quot;, &quot;No. of Hours&quot;]
+widths_d = [Inches(1.0), Inches(4.7), Inches(1.3)]
+⋮----
+cell = table_d.rows[0].cells[col_idx]
+⋮----
+row = table_d.rows[i + 1]
+⋮----
+item = syllabus[i]
+mod_val = str(item.get(&apos;module&apos;, i + 1))
+topic_val = str(item.get(&apos;topic&apos;, &apos;&apos;))
+hours_val = str(item.get(&apos;hours&apos;, &apos;&apos;))
+⋮----
+mod_val = str(i + 1)
+topic_val = &quot;&quot;
+hours_val = &quot;&quot;
+⋮----
+# PAGE BREAK -&gt; PAGE 2
+⋮----
+# Section E: Learning Outcomes
+p_e = doc.add_paragraph()
+⋮----
+r_e = p_e.add_run(&quot;Learning Outcomes: - After successful completion of the course, students will be able to:&quot;)
+⋮----
+learning_outcomes = data.get(&apos;learningOutcomes&apos;, [])
+⋮----
+p_lo = doc.add_paragraph(style=&apos;List Bullet&apos;)
+⋮----
+r_lo = p_lo.add_run(str(lo).strip())
+⋮----
+p_blank = doc.add_paragraph()
+⋮----
+p_f = doc.add_paragraph()
+⋮----
+r_f = p_f.add_run(&quot;Assessment and Certification&quot;)
+⋮----
+table_f = doc.add_table(rows=6, cols=2)
+⋮----
+assess = data.get(&apos;assessment&apos;, {})
+rows_f = [
+⋮----
+row = table_f.rows[idx + 1]
+c0 = row.cells[0]
+c1 = row.cells[1]
+⋮----
+# Section G: OUTCOME AND IMPACT
+p_g = doc.add_paragraph()
+⋮----
+r_g1 = p_g.add_run(&quot;OUTCOME AND IMPACT\n&quot;)
+⋮----
+r_g2 = p_g.add_run(&quot;Suggested Impact Indicators&quot;)
+⋮----
+impact_dict = data.get(&apos;outcomeAndImpact&apos;, {})
+impact_items = [
+⋮----
+p_imp = doc.add_paragraph(style=&apos;List Bullet&apos;)
+⋮----
+r_lbl = p_imp.add_run(f&quot;{label}&quot;)
+⋮----
+r_desc = p_imp.add_run(f&quot;: {str(desc).strip()}&quot;)
+⋮----
+# Section H: Student Feedback Summary
+fb = data.get(&apos;feedback&apos;, {})
+score_val = fb.get(&apos;score&apos;, &apos;&apos;)
+p_h = doc.add_paragraph()
+⋮----
+r_h1 = p_h.add_run(&quot;Student Feedback Summary: - Overall Feedback Score: &quot;)
+⋮----
+r_h2 = p_h.add_run(f&quot;{score_val or &apos;____&apos;} / 5\n\n&quot;)
+⋮----
+r_h3 = p_h.add_run(&quot;Major Suggestions Received:&quot;)
+⋮----
+suggs = fb.get(&apos;suggestions&apos;, [])
+⋮----
+val = suggs[idx] if idx &lt; len(suggs) else &quot;&quot;
+p_sug = doc.add_paragraph()
+⋮----
+r_s = p_sug.add_run(f&quot;{idx + 1}. {val if val else &apos;________________________________________________________________________&apos;}&quot;)
+⋮----
+# Section I: Prepared By and Approved By
+p_sig_space = doc.add_paragraph()
+⋮----
+table_i = doc.add_table(rows=1, cols=2)
+⋮----
+prep = data.get(&apos;preparedBy&apos;, {})
+appr = data.get(&apos;approvedBy&apos;, {})
+⋮----
+c_prep = table_i.rows[0].cells[0]
+c_appr = table_i.rows[0].cells[1]
+⋮----
+p_p = c_prep.paragraphs[0]
+⋮----
+p_a = c_appr.paragraphs[0]
+⋮----
+# PAGE BREAK -&gt; PAGE 3
+⋮----
+# Section J: Supporting Documents List
+p_j_head = doc.add_paragraph()
+⋮----
+r_j1 = p_j_head.add_run(&quot;List of Supporting Documents: - &quot;)
+⋮----
+r_j2 = p_j_head.add_run(&quot;The following documents shall be maintained for each VAC/Add-on Course:&quot;)
+⋮----
+supp_docs = data.get(&apos;supportingDocuments&apos;, [])
+attached_map = {d.get(&apos;title&apos;): d for d in supp_docs if isinstance(d, dict)}
+⋮----
+p_doc = doc.add_paragraph(style=&apos;List Bullet&apos;)
+⋮----
+r_doc = p_doc.add_run(s_doc)
+⋮----
+info = attached_map.get(s_doc)
+⋮----
+r_att = p_doc.add_run(f&quot;  [Attached: {info.get(&apos;fileName&apos;, &apos;File&apos;)}]&quot;)
+⋮----
+buf = io.BytesIO()</file><file path=".dockerignore">venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+.env
+.git/
+.gitignore
+db.sqlite3
+.pytest_cache/
+*.log</file><file path="desktop.ini">[ViewState]
+Mode=
+Vid=
+FolderType=Generic
+[.ShellClassInfo]
+IconResource=C:\Users\Lenovo\Downloads\Screenshot 2026-09-28 073628.ico,0</file><file path="docker-compose.yml">version: &apos;3.8&apos;
+services:
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=kra_db
+      - POSTGRES_USER=kra_user
+      - POSTGRES_PASSWORD=kra_password
+    ports:
+      - &quot;5432:5432&quot;
+  redis:
+    image: redis:alpine
+    ports:
+      - &quot;6379:6379&quot;
+  api:
+    build: .
+    command: gunicorn kra_tracker_backend.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - &quot;8000:8000&quot;
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=kra_tracker_backend.settings
+      - DATABASE_URL=postgres://kra_user:kra_password@db:5432/kra_db
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+  celery_worker:
+    build: .
+    command: celery -A kra_tracker_backend worker -l info
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=kra_tracker_backend.settings
+      - DATABASE_URL=postgres://kra_user:kra_password@db:5432/kra_db
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+      - api
+  celery_beat:
+    build: .
+    command: celery -A kra_tracker_backend beat -l info
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=kra_tracker_backend.settings
+      - DATABASE_URL=postgres://kra_user:kra_password@db:5432/kra_db
+      - CELERY_BROKER_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+      - api
+volumes:
+  postgres_data:</file><file path="Dockerfile"># Use an official Python runtime as a parent image
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Set work directory
+WORKDIR /app
+
+# Install system dependencies (needed for psycopg2, ReportLab, etc.)
+RUN apt-get update &amp;&amp; apt-get install -y \
+    gcc \
+    libpq-dev \
+    &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY requirements.txt /app/
+RUN pip install --upgrade pip &amp;&amp; pip install -r requirements.txt
+
+# Copy project
+COPY . /app/
+
+# Expose port (Optional here, defined in compose)
+EXPOSE 8000</file><file path="manage.py">def main()</file><file path="requirements.txt">aiohappyeyeballs==2.6.1
+aiohttp==3.13.5
+aiohttp-retry==2.9.1
+aiosignal==1.4.0
+amqp==5.4.0
+annotated-types==0.7.0
+anyio==4.13.0
+asgiref==3.12.1
+asttokens==3.0.2
+attrs==26.1.0
+autobahn==26.7.1
+Automat==25.4.16
+billiard==4.3.0
+cbor2==6.1.4
+celery==5.4.0
+certifi==2026.2.25
+cffi==2.0.0
+channels==4.3.2
+channels_redis==4.3.0
+chardet==7.6.0
+charset-normalizer==3.4.7
+click==8.5.0
+click-didyoumean==0.3.1
+click-plugins==1.1.1.2
+click-repl==0.4.0
+cloudpickle==3.1.2
+colorama==0.4.6
+comm==0.2.3
+constantly==23.10.4
+contourpy==1.3.3
+cryptography==50.0.1
+cycler==0.12.1
+daphne==4.2.3
+debugpy==1.8.21
+distro==1.9.0
+dj-database-url==3.1.2
+Django==6.1.1
+django-cors-headers==4.9.0
+django-filter==26.1
+djangorestframework==3.18.1
+djangorestframework_simplejwt==5.5.1
+edge-tts==7.2.8
+executing==2.2.1
+fonttools==4.62.1
+frozenlist==1.8.0
+google-auth==2.49.2
+google-genai==1.73.1
+greenlet==3.4.0
+h11==0.16.0
+httpcore==1.0.9
+httpx==0.28.1
+hyperlink==21.0.0
+idna==3.11
+Incremental==24.11.0
+ipykernel==7.3.0
+ipython==9.16.1
+ipython_pygments_lexers==1.1.1
+jedi==0.20.0
+jiter==0.14.0
+joblib==1.6.0
+jupyter_client==8.9.1
+jupyter_core==5.9.1
+kiwisolver==1.5.0
+kombu==5.6.2
+lxml==6.1.1
+Markdown==3.10.3
+matplotlib==3.10.9
+matplotlib-inline==0.2.2
+MouseInfo==0.1.3
+msgpack==1.2.2
+multidict==6.7.1
+narwhals==2.25.0
+nest-asyncio2==1.7.2
+numpy==2.4.4
+openai==2.32.0
+packaging==26.2
+pandas==3.0.2
+parso==0.8.7
+pillow==12.2.0
+platformdirs==4.11.3
+playwright==1.58.0
+prompt_toolkit==3.0.53
+propcache==0.4.1
+psutil==7.2.2
+psycopg2==2.9.13
+psycopg2-binary==2.9.12
+pure_eval==0.2.3
+pyamaze==1.0.1
+pyasn1==0.6.3
+pyasn1_modules==0.4.2
+PyAutoGUI==0.9.54
+pycparser==3.0
+pydantic==2.13.2
+pydantic_core==2.46.2
+pyee==13.0.1
+PyGetWindow==0.0.9
+Pygments==2.21.0
+PyJWT==2.14.0
+PyMsgBox==2.0.1
+pyOpenSSL==26.4.0
+pyparsing==3.3.2
+pyperclip==1.11.0
+PyRect==0.2.0
+PyScreeze==1.0.1
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.3
+python-pptx==1.0.2
+pytweening==1.2.0
+pyzmq==27.2.0
+redis==5.0.3
+reportlab==4.1.0
+requests==2.33.1
+scikit-learn==1.9.0
+scipy==1.18.1
+service-identity==26.1.0
+six==1.17.0
+sniffio==1.3.1
+sqlparse==0.6.0
+stack-data==0.6.3
+tabulate==0.10.0
+tenacity==9.1.4
+threadpoolctl==3.6.0
+tornado==6.5.8
+tqdm==4.67.3
+traitlets==5.16.1
+twilio==9.11.1
+Twisted==26.4.0
+txaio==26.6.1
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata==2026.3
+ujson==5.13.0
+urllib3==2.6.3
+vine==5.1.0
+wcwidth==0.8.2
+websockets==16.0
+whitenoise==6.12.0
+xgboost==3.4.1
+xlsxwriter==3.2.9
+yarl==1.23.0
+zope.interface==8.6
+gunicorn==21.2.0</file><file path="frontend/components/dean/SplitTemplateEditor.tsx">import React from &apos;react&apos;;
+import { useApp } from &apos;../../context/AppContext&apos;;
+import { KRASubmission } from &apos;../../types/kra&apos;;
+import SmartVACReportBuilder from &apos;../kra-forms/SmartVACReportBuilder&apos;;
+import SmartKRA7ReportBuilder from &apos;../kra-forms/SmartKRA7ReportBuilder&apos;;
+import SmartUniversalReportBuilder from &apos;../kra-forms/SmartUniversalReportBuilder&apos;;
+⋮----
+export default function SplitTemplateEditor({
+  kraCode,
+  onClose,
+  onPreviewSubmission,
+}: {
+  kraCode: string;
+onClose: ()
+⋮----
+// KRA 1: Value Added Courses &amp; Add-on Courses</file><file path="frontend/components/kra-forms/KRAFormRegistry.tsx">import React from &apos;react&apos;;
+import { KRAFormProps } from &apos;./types&apos;;
+import KRA1Form from &apos;./KRA1Form&apos;;
+import KRAFeedbackSurveyForm from &apos;./KRAFeedbackSurveyForm&apos;;
+import KRAActivityReportForm from &apos;./KRAActivityReportForm&apos;;
+import KRATemplateDataForm from &apos;./KRATemplateDataForm&apos;;
+⋮----
+export default function KRAFormRegistry(props: KRAFormProps)
+⋮----
+// KRA 1: Value Added Courses</file><file path="tracker/urls.py">router = DefaultRouter()
+⋮----
+urlpatterns = [</file><file path="tracker/views.py">class BiMonthlyCycleViewSet(viewsets.ReadOnlyModelViewSet)
+⋮----
+queryset = BiMonthlyCycle.objects.filter(is_active=True)
+serializer_class = BiMonthlyCycleSerializer
+permission_classes = [AllowAny]
+⋮----
+@action(detail=True, methods=[&apos;post&apos;])
+    def submit(self, request, pk=None)
+⋮----
+cycle = self.get_object()
+user = request.user
+⋮----
+achievements = Achievement.objects.filter(
+⋮----
+class AchievementViewSet(viewsets.ModelViewSet)
+⋮----
+&quot;&quot;&quot; Core CRUD endpoint for Deans to submit their KRA data. &quot;&quot;&quot;
+serializer_class = AchievementSerializer
+⋮----
+def _check_window_open(self, cycle, department)
+⋮----
+today = timezone.now().date()
+⋮----
+# Check if an exception exists for this department or all departments
+exception = CycleException.objects.filter(
+⋮----
+def get_queryset(self)
+⋮----
+user = self.request.user
+qs = Achievement.objects.select_related(&apos;department&apos;, &apos;kra_metric&apos;, &apos;cycle&apos;).prefetch_related(&apos;evidence&apos;)
+⋮----
+def perform_create(self, serializer)
+⋮----
+user = self.request.user if (self.request.user and self.request.user.is_authenticated) else None
+dept = getattr(user, &apos;department&apos;, None) if user else None
+⋮----
+dept = Department.objects.first()
+status_val = serializer.validated_data.get(&apos;status&apos;, &apos;DRAFT&apos;)
+⋮----
+status_val = &apos;DRAFT&apos;
+⋮----
+def perform_update(self, serializer)
+⋮----
+new_status = serializer.validated_data.get(&apos;status&apos;)
+⋮----
+@action(detail=False, methods=[&apos;post&apos;])
+    def upsert(self, request)
+⋮----
+&quot;&quot;&quot; Dean or Admin upserts an achievement with full custom_data. &quot;&quot;&quot;
+user = request.user if (request.user and request.user.is_authenticated) else None
+dept_name = request.data.get(&apos;department&apos;) or request.data.get(&apos;dept&apos;)
+department = getattr(user, &apos;department&apos;, None) if user else None
+⋮----
+department = Department.objects.filter(Q(name__iexact=str(dept_name)) | Q(name__icontains=str(dept_name))).first()
+⋮----
+department = Department.objects.first()
+⋮----
+user = User.objects.filter(department=department).first() or User.objects.filter(role=&apos;SUPER_ADMIN&apos;).first()
+⋮----
+kra_code_raw = str(request.data.get(&apos;kra_code&apos;, &apos;&apos;))
+cycle_raw = str(request.data.get(&apos;cycle&apos;, &apos;&apos;))
+status_raw = str(request.data.get(&apos;status&apos;, &apos;DRAFT&apos;)).upper()
+⋮----
+status_raw = &apos;DRAFT&apos;
+⋮----
+custom_data = request.data.get(&apos;custom_data&apos;, {})
+remarks = request.data.get(&apos;remarks&apos;, &apos;&apos;)
+numeric_value = request.data.get(&apos;numeric_value&apos;, None)
+⋮----
+# Match KRA Metric by numeric id in serial_number
+⋮----
+m = re.search(r&apos;(\d+)&apos;, kra_code_raw)
+⋮----
+kra_num = m.group(1)
+kra = KRAMetric.objects.filter(serial_number__iexact=f&quot;KRA {kra_num}&quot;).first()
+⋮----
+kra = KRAMetric.objects.filter(serial_number__icontains=kra_num).first()
+⋮----
+# Match Cycle
+cycle_map = {
+mapped_cycle_name = cycle_map.get(cycle_raw.strip().upper(), cycle_raw.strip().upper())
+cycle = BiMonthlyCycle.objects.filter(
+⋮----
+cycle = BiMonthlyCycle.objects.filter(is_active=True).first() or BiMonthlyCycle.objects.first()
+⋮----
+serializer = self.get_serializer(achievement)
+⋮----
+class TemplatePreviewView(APIView)
+⋮----
+def post(self, request, *args, **kwargs)
+⋮----
+json_data = request.data
+achievement_id = json_data.get(&apos;achievement_id&apos;)
+kra_code = str(json_data.get(&apos;kraCode&apos;, &apos;KRA 1&apos;)).upper()
+clean_num = &apos;&apos;.join(filter(str.isdigit, kra_code)) or &apos;1&apos;
+⋮----
+template_path = &apos;tracker/vac_report_official.html&apos;
+⋮----
+template_path = &apos;tracker/kra_7_report_official.html&apos;
+⋮----
+template_path = &apos;tracker/kra_11_report.html&apos;
+⋮----
+template_path = &apos;tracker/kra_12_template.html&apos;
+⋮----
+template_path = &apos;tracker/kra_generic_report.html&apos;
+⋮----
+achievement = Achievement.objects.get(id=achievement_id, department=request.user.department)
+⋮----
+context = {
+⋮----
+html_string = render_to_string(template_path, context)
+⋮----
+buffer = io.BytesIO()
+pisa_status = pisa.CreatePDF(html_string, dest=buffer)
+⋮----
+response = HttpResponse(buffer, content_type=&apos;application/pdf&apos;)
+⋮----
+class VACReportExportPDFView(APIView)
+⋮----
+data = request.data
+⋮----
+dept_name = data.get(&apos;department&apos;) or (user.department.name if user and getattr(user, &apos;department&apos;, None) else &apos;CSE&apos;)
+faculty_coord = data.get(&apos;facultyCoordinator&apos;) or (user.get_full_name() or user.username if user else &apos;Faculty Coordinator&apos;)
+⋮----
+html_string = render_to_string(&apos;tracker/vac_report_official.html&apos;, context)
+⋮----
+dept_slug = context[&apos;department&apos;].replace(&apos; &apos;, &apos;_&apos;)
+filename = f&quot;KIET_VAC_Report_{dept_slug}.pdf&quot;
+response = HttpResponse(buffer.getvalue(), content_type=&apos;application/pdf&apos;)
+⋮----
+class VACReportExportDOCXView(APIView)
+⋮----
+&quot;&quot;&quot; Downloads the official editable Microsoft Word (.docx) document for the Value Added Courses report. &quot;&quot;&quot;
+⋮----
+buffer = generate_vac_docx(data)
+dept_slug = (data.get(&apos;department&apos;) or &apos;KRA&apos;).replace(&apos; &apos;, &apos;_&apos;)
+filename = f&quot;KIET_VAC_Report_{dept_slug}.docx&quot;
+response = HttpResponse(
+⋮----
+class KRA7ReportExportDOCXView(APIView)
+⋮----
+&quot;&quot;&quot; Downloads the official editable Microsoft Word (.docx) document for KRA 7 Curriculum Feedback. &quot;&quot;&quot;
+⋮----
+buffer = generate_kra7_docx(data)
+dept_slug = (data.get(&apos;department&apos;) or &apos;KRA7&apos;).replace(&apos; &apos;, &apos;_&apos;)
+filename = f&quot;KRA_7_Curriculum_Feedback_Faculty_{dept_slug}.docx&quot;
+⋮----
+class KRA7ReportExportPDFView(APIView)
+⋮----
+&quot;&quot;&quot; Downloads the official 2-page PDF for KRA 7 Curriculum Feedback. &quot;&quot;&quot;
+⋮----
+department = data.get(&apos;department&apos;) or (user.department.name if user and getattr(user, &apos;department&apos;, None) else &apos;CSE&apos;)
+faculty_name = data.get(&apos;facultyName&apos;) or ((user.get_full_name() or user.username) if user else &apos;Faculty Member&apos;)
+⋮----
+ratings = data.get(&apos;ratings&apos;, {})
+survey_statements = [
+⋮----
+q_page1 = []
+⋮----
+r_val = ratings.get(q_id) if q_id in ratings else ratings.get(str(q_id))
+⋮----
+q_page2 = []
+⋮----
+html_string = render_to_string(&apos;tracker/kra_7_report_official.html&apos;, context)
+⋮----
+dept_slug = department.replace(&apos; &apos;, &apos;_&apos;) if department else &apos;KRA7&apos;
+filename = f&quot;KRA_7_Curriculum_Feedback_Faculty_{dept_slug}.pdf&quot;
+⋮----
+class KRAReportExportDOCXView(APIView)
+⋮----
+&quot;&quot;&quot; Unified endpoint to download official editable Word (.docx) document for any KRA. &quot;&quot;&quot;
+⋮----
+raw_code = str(data.get(&apos;kraNumber&apos;) or data.get(&apos;kraCode&apos;, &apos;&apos;) or &apos;&apos;).strip()
+kra_num = &apos;&apos;.join(filter(str.isdigit, raw_code)) or raw_code
+⋮----
+name = (user.get_full_name() or user.username) if user else &apos;Faculty Coordinator&apos;
+⋮----
+docx_bytes = generate_kra_docx(kra_num, data)
+⋮----
+title = get_kra_title(kra_num).replace(&apos; &apos;, &apos;_&apos;).replace(&apos;/&apos;, &apos;_&apos;)
+filename = f&quot;KIET_KRA_{kra_num}_{title}_{dept_slug}.docx&quot;
+⋮----
+class KRAReportExportPDFView(APIView)
+⋮----
+&quot;&quot;&quot; Unified endpoint to download official PDF document for any KRA using kra_generic_report.html. &quot;&quot;&quot;
+⋮----
+title = data.get(&apos;reportTitle&apos;) or get_kra_title(kra_num)
+context = build_generic_ctx(data, kra_num, title)
+⋮----
+html_string = render_to_string(&apos;tracker/kra_generic_report.html&apos;, context)
+⋮----
+filename = f&quot;KIET_KRA_{kra_num}_{dept_slug}.pdf&quot;
+⋮----
+class EvidenceFileUploadView(APIView)
+⋮----
+&quot;&quot;&quot; Secure endpoint for uploading and managing KRA evidence files. &quot;&quot;&quot;
+⋮----
+file_obj = request.FILES.get(&apos;file&apos;)
+⋮----
+allowed_exts = [&apos;.pdf&apos;, &apos;.docx&apos;, &apos;.doc&apos;, &apos;.jpg&apos;, &apos;.jpeg&apos;, &apos;.png&apos;, &apos;.xlsx&apos;, &apos;.xls&apos;]
+⋮----
+dept_raw = request.data.get(&apos;department&apos;) or request.data.get(&apos;dept&apos;)
+⋮----
+department = Department.objects.filter(Q(name__iexact=str(dept_raw)) | Q(name__icontains=str(dept_raw))).first()
+⋮----
+kra_code_raw = request.data.get(&apos;kra_code&apos;, &apos;KRA 1&apos;)
+doc_type = request.data.get(&apos;document_type&apos;, &apos;Supporting Evidence&apos;)
+⋮----
+m = re.search(r&apos;(\d+)&apos;, str(kra_code_raw))
+kra_num = m.group(1) if m else &apos;1&apos;
+⋮----
+uploaded = UploadedEvidenceFile.objects.create(
+⋮----
+def delete(self, request, pk=None)
+⋮----
+uploaded = UploadedEvidenceFile.objects.get(id=pk)
+⋮----
+class ExportEvidenceView(APIView)
+⋮----
+permission_classes = [IsAuthenticated]
+⋮----
+department_id = request.data.get(&apos;department_id&apos;)
+cycle_id = request.data.get(&apos;cycle_id&apos;)
+⋮----
+task = export_evidence_zip.delay(department_id, cycle_id)
+⋮----
+class DashboardStatsView(APIView)
+⋮----
+def get(self, request, *args, **kwargs)
+⋮----
+total_achievements = Achievement.objects.count()
+approved_achievements = Achievement.objects.filter(status=&apos;APPROVED&apos;).count()
+pending_achievements = Achievement.objects.exclude(status=&apos;APPROVED&apos;).count()
+⋮----
+dept_stats = []
+departments = Department.objects.all()
+⋮----
+dept_total = Achievement.objects.filter(department=dept).count()
+dept_approved = Achievement.objects.filter(department=dept, status=&apos;APPROVED&apos;).count()
+completion_rate = (dept_approved / dept_total * 100) if dept_total &gt; 0 else 0</file><file path=".gitignore">venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+db.sqlite3
+.env
+.idea/
+.vscode/
+
+# Environments
+.env
+.env.*
+
+# Logs &amp; temporary files
+*.log
+django_production.log
+scratch/</file><file path="README.md"># KIET-KRA (kra-kiet-new-)
+Faculty KRA tracking and universal report generation system for KIET.</file></files><instruction># REPOMIX AI CODING INSTRUCTIONS
+## Project: KIET KRA Tracker &amp; Universal Accreditation Reporting System
+
+Welcome AI Agent. This file is an optimized Repomix bundle containing the core architecture, data schemas, backend endpoints, and frontend components for the KIET KRA Tracker.
+
+### 1. Essential Mental Model
+- This is an enterprise web app replacing an Excel sheet for 13 academic departments tracking ~50 Key Result Areas (KRAs) for NBA &amp; NAAC accreditation.
+- **Backend:** Django 5 + Django REST Framework + Celery/Redis. Base apps: `core`, `accounts`, `tracker`.
+- **Frontend:** Next.js 14+ (App Router), React 18, Tailwind CSS, TypeScript in `frontend/`.
+- **Key Models:**
+  - `KRAMetric` (`serial_number`, `annual_target`, `target_type`)
+  - `Department` (`faculty_strength`, `student_strength`)
+  - `BiMonthlyCycle` (`JUL-AUG`, `SEP-OCT`, etc., `deadline`)
+  - `Achievement` (links `department` + `kra_metric` + `cycle`; stores structured form data in `custom_data` JSONField)
+- **Target Scaling:** `dynamic_target = base_target * department.faculty_strength` (for Numeric KRAs).
+
+### 2. KRA Form &amp; Report Pipeline
+- Deans fill KRA reports using `SplitTemplateEditor.tsx` (left: form, right: live official preview `OfficialKRAReportPreview.tsx`).
+- Forms are routed via `frontend/components/kra-forms/KRAFormRegistry.tsx`.
+- Form state is stored directly in `achievement.custom_data`.
+- Dual Document Exporting:
+  - **PDF:** `POST /api/tracker/export-kra-pdf/` -&gt; `tracker/views.py` renders `tracker/templates/tracker/kra_generic_report.html` via `xhtml2pdf`.
+  - **Word DOCX:** `POST /api/tracker/export-kra-docx/` -&gt; `tracker/kra_reports.py` builds `.docx` via `python-docx`.
+
+### 3. Key Conventions for Modifications
+- When adding/modifying forms: update `frontend/components/kra-forms/` and register in `KRAFormRegistry.tsx`.
+- When updating report formats: maintain consistency between `OfficialKRAReportPreview.tsx`, `kra_generic_report.html`, and `kra_reports.py`.
+- Preserve existing comments and docstrings.
+- Always check `AI_PROJECT_CONTEXT.md` at the top of this bundle for deep architectural references.
+</instruction></repomix>
